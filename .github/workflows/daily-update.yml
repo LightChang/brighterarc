@@ -1,0 +1,109 @@
+name: Daily Legislative Data Update
+
+on:
+  schedule:
+    # 每天 UTC 18:30（台北時間 2:30）
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+    # 允許手動觸發
+    inputs:
+      limit:
+        description: '抓取資料筆數'
+        required: false
+        default: '100'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # 需要 fetch 完整歷史以便 push
+          fetch-depth: 0
+
+      - name: Setup environment
+        run: |
+          # 安裝必要的工具
+          sudo apt-get update
+          sudo apt-get install -y jq curl gzip
+
+          # 檢查腳本權限
+          chmod +x *.sh
+
+      - name: Fetch legislative data
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "📥 抓取立法院資料..."
+          LIMIT="${{ github.event.inputs.limit || '100' }}"
+          ./fetch_legislative_data.sh --limit "$LIMIT"
+
+          # 檢查是否有產生檔案
+          TODAY=$(date +%Y-%m-%d)
+          if [[ ! -f "data/daily/${TODAY}.jsonl" ]]; then
+            echo "❌ 資料抓取失敗：檔案不存在"
+            exit 1
+          fi
+
+          echo "✅ 資料抓取完成"
+
+      - name: Update Qdrant
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+        run: |
+          echo "📤 上傳資料到 Qdrant..."
+          TODAY=$(date +%Y-%m-%d)
+          ./update_legislative_qdrant.sh --input "data/daily/${TODAY}.jsonl"
+
+          echo "✅ Qdrant 更新完成"
+
+      - name: Build monthly release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🚀 建立/更新月度 Release..."
+          TODAY=$(date +%Y-%m-%d)
+          ./build_legislative_release.sh --input "data/daily/${TODAY}.jsonl"
+
+          echo "✅ Release 更新完成"
+
+      - name: Commit daily data
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          TODAY=$(date +%Y-%m-%d)
+
+          # 只 commit 新增的每日資料
+          git add "data/daily/${TODAY}.jsonl"
+
+          # 如果有變更才 commit
+          if git diff --staged --quiet; then
+            echo "ℹ️  沒有需要提交的變更"
+          else
+            git commit -m "Add data for ${TODAY}
+
+- Fetched and embedded legislative data
+- Updated Qdrant
+- Updated monthly release
+
+Co-Authored-By: GitHub Actions <actions@github.com>"
+
+            # Push 到 main 分支
+            git push origin main
+
+            echo "✅ 資料已提交到 Git"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "========================================="
+          echo "每日更新完成"
+          echo "========================================="
+          echo "日期: $(date +%Y-%m-%d)"
+          echo "狀態: ${{ job.status }}"
+          echo "========================================="

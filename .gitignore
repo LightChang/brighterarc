@@ -1,0 +1,46 @@
+# 環境變數檔案（包含 API keys）
+.env
+*.env
+
+# 日誌檔案
+*.log
+
+# 暫存檔案
+*.tmp
+.DS_Store
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if any)
+node_modules/
+
+# Python (if any)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Output files
+*.output
+
+# 資料檔案（透過 Release 分發）
+data/daily/*.jsonl
+data/daily/*.jsonl.gz
+data/monthly/*.jsonl
+data/monthly/*.jsonl.gz
+
+# 保留目錄結構
+!data/**/.gitkeep
