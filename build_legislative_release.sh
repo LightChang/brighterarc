@@ -28,6 +28,78 @@ source "${SCRIPT_DIR}/lib/args.sh"
 require_cmd jq gh gzip
 
 ########################################
+# 網路重試函式
+########################################
+
+# gh_release_exists TAG
+# 檢查 Release 是否存在，有網路重試機制
+# 返回: 0=存在, 1=不存在, 2=網路錯誤
+gh_release_exists() {
+  local tag="$1"
+  local max_retries=3
+  local retry_delay=5
+  local attempt=1
+
+  while [[ $attempt -le $max_retries ]]; do
+    local output
+    local exit_code
+
+    output="$(gh release view "$tag" 2>&1)" && {
+      # 成功，Release 存在
+      return 0
+    }
+    exit_code=$?
+
+    # 檢查是否為 "release not found" 錯誤
+    if echo "$output" | grep -qi "release not found\|not found"; then
+      # Release 確實不存在
+      return 1
+    fi
+
+    # 其他錯誤（網路問題等），重試
+    echo "⚠️  gh release view 失敗 (嘗試 $attempt/$max_retries): $output" >&2
+
+    if [[ $attempt -lt $max_retries ]]; then
+      echo "   ${retry_delay} 秒後重試..." >&2
+      sleep "$retry_delay"
+    fi
+
+    ((attempt++))
+  done
+
+  # 所有重試都失敗
+  echo "❌ 無法確認 Release 狀態，網路錯誤" >&2
+  return 2
+}
+
+# gh_with_retry COMMAND...
+# 執行 gh 命令，有網路重試機制
+gh_with_retry() {
+  local max_retries=3
+  local retry_delay=5
+  local attempt=1
+
+  while [[ $attempt -le $max_retries ]]; do
+    if "$@"; then
+      return 0
+    fi
+
+    local exit_code=$?
+    echo "⚠️  命令失敗 (嘗試 $attempt/$max_retries): $*" >&2
+
+    if [[ $attempt -lt $max_retries ]]; then
+      echo "   ${retry_delay} 秒後重試..." >&2
+      sleep "$retry_delay"
+    fi
+
+    ((attempt++))
+  done
+
+  echo "❌ 命令執行失敗: $*" >&2
+  return 1
+}
+
+########################################
 # 解析參數
 ########################################
 parse_args "$@"
@@ -72,10 +144,21 @@ cd "$TMP_DIR"
 echo "📥 檢查現有 Release..."
 
 EXISTING_FILE=""
-if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+RELEASE_EXISTS=""
+
+gh_release_exists "$RELEASE_TAG"
+release_check_result=$?
+
+if [[ $release_check_result -eq 2 ]]; then
+  # 網路錯誤，無法確認狀態，終止腳本避免覆蓋資料
+  echo "❌ 無法確認 Release 狀態，為避免覆蓋現有資料，終止執行"
+  exit 1
+elif [[ $release_check_result -eq 0 ]]; then
+  # Release 存在
+  RELEASE_EXISTS="true"
   echo "✅ Release ${RELEASE_TAG} 已存在，下載中..."
 
-  if gh release download "$RELEASE_TAG" -p "$RELEASE_FILE_GZ" 2>/dev/null; then
+  if gh_with_retry gh release download "$RELEASE_TAG" -p "$RELEASE_FILE_GZ"; then
     echo "✅ 下載成功"
 
     # 解壓縮
@@ -89,9 +172,12 @@ if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
     EXISTING_COUNT="$(wc -l < "$EXISTING_FILE" | tr -d ' ')"
     echo "✅ 現有資料：${EXISTING_COUNT} points"
   else
-    echo "⚠️  下載失敗，視為新 Release"
+    echo "❌ 下載失敗，終止執行以避免覆蓋資料"
+    exit 1
   fi
 else
+  # Release 不存在
+  RELEASE_EXISTS=""
   echo "ℹ️  Release ${RELEASE_TAG} 不存在，將建立新 Release"
 fi
 
@@ -192,7 +278,7 @@ gh release download ${RELEASE_TAG} -p \"${RELEASE_FILE_GZ}\"
 🤖 由 GitHub Actions 自動更新
 "
 
-if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+if [[ -n "$RELEASE_EXISTS" ]]; then
   # Release 已存在，更新檔案
   echo "♻️  更新現有 Release ${RELEASE_TAG}..."
 
@@ -200,20 +286,28 @@ if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
   gh release delete-asset "$RELEASE_TAG" "$RELEASE_FILE_GZ" -y 2>/dev/null || true
 
   # 上傳新檔案
-  gh release upload "$RELEASE_TAG" "$RELEASE_FILE_GZ" --clobber
+  gh_with_retry gh release upload "$RELEASE_TAG" "$RELEASE_FILE_GZ" --clobber || {
+    echo "❌ 上傳檔案失敗"
+    exit 1
+  }
 
   # 更新 Release notes
-  echo "$RELEASE_NOTES" | gh release edit "$RELEASE_TAG" -F -
+  echo "$RELEASE_NOTES" | gh_with_retry gh release edit "$RELEASE_TAG" -F - || {
+    echo "⚠️  更新 Release notes 失敗（檔案已上傳）"
+  }
 
   echo "✅ Release 更新成功"
 else
   # Release 不存在，建立新 Release
   echo "🆕 建立新 Release ${RELEASE_TAG}..."
 
-  echo "$RELEASE_NOTES" | gh release create "$RELEASE_TAG" \
+  echo "$RELEASE_NOTES" | gh_with_retry gh release create "$RELEASE_TAG" \
     --title "立法院資料 ${RELEASE_YEAR}-${RELEASE_MONTH}" \
     -F - \
-    "$RELEASE_FILE_GZ"
+    "$RELEASE_FILE_GZ" || {
+    echo "❌ 建立 Release 失敗"
+    exit 1
+  }
 
   echo "✅ Release 建立成功"
 fi

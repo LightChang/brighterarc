@@ -3,7 +3,9 @@ name: Daily Legislative Data Update
 
 on:
   schedule:
-    # 每天 UTC 18:30（台北時間 2:30）
+    # 每天 UTC 18:30（台北時間 02:30 隔天）
+    # 注意：cron 使用 UTC 時間，但 job 內的 TZ 設為 Asia/Taipei
+    # 所以 date 命令會返回台北時間的日期
     - cron: '30 18 * * *'
   workflow_dispatch:
     # 允許手動觸發
@@ -19,6 +21,8 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Taipei  # 使用台北時區
 
     steps:
       - name: Checkout repository
