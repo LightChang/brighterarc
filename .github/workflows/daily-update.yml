@@ -1,4 +1,5 @@
 name: Daily Legislative Data Update
+# Workflow for automated daily data pipeline
 
 on:
   schedule:
