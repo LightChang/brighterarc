@@ -88,13 +88,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "ℹ️  沒有需要提交的變更"
           else
-            git commit -m "Add data for ${TODAY}
-
-- Fetched and embedded legislative data
-- Updated Qdrant
-- Updated monthly release
-
-Co-Authored-By: GitHub Actions <actions@github.com>"
+            git commit -m "Add data for ${TODAY}" -m "- Fetched and embedded legislative data" -m "- Updated Qdrant" -m "- Updated monthly release" -m "Co-Authored-By: GitHub Actions <actions@github.com>"
 
             # Push 到 main 分支
             git push origin main
