@@ -56,6 +56,9 @@ if [[ ! -f "$INPUT_FILE" ]]; then
   exit 1
 fi
 
+# 轉換為絕對路徑（cd 到臨時目錄後仍可存取）
+INPUT_FILE="$(cd "$(dirname "$INPUT_FILE")" && pwd)/$(basename "$INPUT_FILE")"
+
 # 建立臨時目錄
 TMP_DIR="$(mktemp -d)"
 trap "rm -rf '$TMP_DIR'" EXIT
