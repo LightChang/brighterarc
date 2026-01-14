@@ -27,6 +27,13 @@ source "${SCRIPT_DIR}/lib/args.sh"
 # 檢查必要指令
 require_cmd jq gh gzip
 
+# 取得 repo 名稱（在 cd 到臨時目錄前）
+REPO_NAME="$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo "")"
+if [[ -z "$REPO_NAME" ]]; then
+  echo "❌ 無法取得 repository 名稱，請確認已在 git repository 內"
+  exit 1
+fi
+
 ########################################
 # 網路重試函式
 ########################################
@@ -44,7 +51,7 @@ gh_release_exists() {
     local output
     local exit_code
 
-    output="$(gh release view "$tag" 2>&1)" && {
+    output="$(gh release view "$tag" -R "$REPO_NAME" 2>&1)" && {
       # 成功，Release 存在
       return 0
     }
@@ -158,7 +165,7 @@ elif [[ $release_check_result -eq 0 ]]; then
   RELEASE_EXISTS="true"
   echo "✅ Release ${RELEASE_TAG} 已存在，下載中..."
 
-  if gh_with_retry gh release download "$RELEASE_TAG" -p "$RELEASE_FILE_GZ"; then
+  if gh_with_retry gh release download "$RELEASE_TAG" -p "$RELEASE_FILE_GZ" -R "$REPO_NAME"; then
     echo "✅ 下載成功"
 
     # 解壓縮
@@ -320,6 +327,5 @@ echo "========================================="
 echo "Release 更新完成"
 echo "========================================="
 echo "Release Tag: ${RELEASE_TAG}"
-REPO_NAME="$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo "LightChang/brighterarc")"
 echo "Release URL: https://github.com/${REPO_NAME}/releases/tag/${RELEASE_TAG}"
 echo "========================================="
