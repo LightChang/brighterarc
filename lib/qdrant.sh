@@ -106,8 +106,9 @@ qdrant_create_collection() {
   resp="$(cat "$tmp_body")"
   rm -f "$tmp_body"
 
-  # HTTP 200 = 成功創建或已存在
-  if [[ "$http_code" == "200" ]]; then
+  # HTTP 200 = 成功創建
+  # HTTP 409 = Collection 已存在（也視為成功）
+  if [[ "$http_code" == "200" ]] || [[ "$http_code" == "409" ]]; then
     return 0
   fi
 
@@ -382,6 +383,79 @@ qdrant_point_exists() {
   done
 
   return 1
+}
+
+########################################
+# Batch Get (檢查多個 points 是否存在)
+########################################
+
+# qdrant_get_existing_ids COLLECTION_NAME IDS_JSON
+#
+# 功能：
+#   - 批次查詢哪些 point IDs 已存在
+#
+# 參數：
+#   COLLECTION_NAME: collection 名稱
+#   IDS_JSON: JSON array of point IDs，例如 ["id1", "id2", "id3"]
+#
+# stdout:
+#   已存在的 IDs (JSON array)，例如 ["id1", "id3"]
+#
+# 回傳值：
+#   0  = 成功
+#   >0 = 失敗
+qdrant_get_existing_ids() {
+  local collection_name="$1"
+  local ids_json="$2"
+
+  require_cmd curl jq || return 1
+
+  local payload
+  payload="$(
+    printf '%s' "$ids_json" | jq -c '{
+      ids: .,
+      with_payload: false,
+      with_vector: false
+    }'
+  )"
+
+  local tmp_body http_code
+  tmp_body="$(mktemp)"
+
+  local curl_args=(
+    -sS -X POST "${QDRANT_URL%/}/collections/${collection_name}/points"
+    -H "Content-Type: application/json"
+    --data-raw "$payload"
+    -w '%{http_code}' -o "$tmp_body"
+  )
+
+  if [[ -n "${QDRANT_API_KEY:-}" ]]; then
+    curl_args+=( -H "api-key: ${QDRANT_API_KEY}" )
+  fi
+
+  http_code="$(curl "${curl_args[@]}" 2>/dev/null)" || {
+    local rc=$?
+    echo "❌ [qdrant_get_existing_ids] curl 失敗 exit=${rc}" >&2
+    rm -f "$tmp_body"
+    return 1
+  }
+
+  local resp
+  resp="$(cat "$tmp_body")"
+  rm -f "$tmp_body"
+
+  if [[ "$http_code" != "200" ]]; then
+    echo "❌ [qdrant_get_existing_ids] HTTP=${http_code}" >&2
+    if jq -e . >/dev/null 2>&1 <<<"$resp"; then
+      echo "$resp" | jq -C '.' >&2
+    else
+      echo "$resp" >&2
+    fi
+    return 1
+  fi
+
+  # 提取已存在的 IDs
+  printf '%s' "$resp" | jq -c '[.result[].id]'
 }
 
 ########################################

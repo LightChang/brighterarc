@@ -12,6 +12,9 @@ on:
         required: false
         default: '100'
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest

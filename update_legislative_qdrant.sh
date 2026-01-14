@@ -130,68 +130,97 @@ BATCH_NUM=0
 # 建立臨時批次檔案
 BATCH_FILE="${TMP_DIR}/batch.json"
 
-# 處理每一筆資料
-while IFS= read -r line; do
-  # 提取 point ID
-  POINT_ID="$(printf '%s' "$line" | jq -r '.id')"
+# 處理函式：上傳一個批次（會先檢查已存在的 IDs）
+upload_batch() {
+  local batch_file="$1"
+  local batch_count
+  batch_count="$(wc -l < "$batch_file" | tr -d ' ')"
 
-  # 如果設定跳過已存在的點
+  if [[ $batch_count -eq 0 ]]; then
+    return 0
+  fi
+
+  BATCH_NUM=$((BATCH_NUM + 1))
+  echo ""
+  echo "📦 處理批次 #${BATCH_NUM} (${batch_count} points)..."
+
+  # 組合成 JSON array
+  local batch_json
+  batch_json="$(jq -s '.' < "$batch_file")"
+
+  # 如果設定跳過已存在的點，批次查詢已存在的 IDs
   if [[ "$SKIP_EXISTING" == "1" ]]; then
-    if qdrant_point_exists "$COLLECTION_NAME" "$POINT_ID" 2>/dev/null; then
-      echo "⏭️  [$POINT_ID] 已存在，跳過"
-      SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
-      continue
+    # 提取所有 IDs
+    local all_ids
+    all_ids="$(printf '%s' "$batch_json" | jq -c '[.[].id]')"
+
+    # 批次查詢已存在的 IDs
+    local existing_ids
+    if existing_ids="$(qdrant_get_existing_ids "$COLLECTION_NAME" "$all_ids" 2>/dev/null)"; then
+      local existing_count
+      existing_count="$(printf '%s' "$existing_ids" | jq 'length')"
+
+      if [[ $existing_count -gt 0 ]]; then
+        echo "⏭️  發現 ${existing_count} 筆已存在，過濾中..."
+        SKIPPED_COUNT=$((SKIPPED_COUNT + existing_count))
+
+        # 過濾掉已存在的 points
+        batch_json="$(printf '%s\n%s' "$batch_json" "$existing_ids" | jq -sc '
+          .[0] as $points |
+          .[1] as $existing |
+          $points | map(select(.id as $id | $existing | index($id) | not))
+        ')"
+
+        batch_count="$(printf '%s' "$batch_json" | jq 'length')"
+        echo "📝 剩餘 ${batch_count} 筆需要上傳"
+      fi
+    else
+      echo "⚠️  批次查詢已存在 IDs 失敗，直接上傳全部"
     fi
   fi
 
+  # 如果過濾後沒有資料需要上傳
+  if [[ $batch_count -eq 0 ]] || [[ "$(printf '%s' "$batch_json" | jq 'length')" -eq 0 ]]; then
+    echo "✅ 批次 #${BATCH_NUM} 全部已存在，跳過"
+    return 0
+  fi
+
+  # 上傳批次
+  if qdrant_upsert_points_batch "$COLLECTION_NAME" "$batch_json"; then
+    local uploaded
+    uploaded="$(printf '%s' "$batch_json" | jq 'length')"
+    echo "✅ 批次 #${BATCH_NUM} 上傳成功 (${uploaded} points)"
+    UPLOADED_COUNT=$((UPLOADED_COUNT + uploaded))
+  else
+    echo "❌ 批次 #${BATCH_NUM} 上傳失敗"
+    local failed
+    failed="$(printf '%s' "$batch_json" | jq 'length')"
+    ERROR_COUNT=$((ERROR_COUNT + failed))
+  fi
+
+  # 顯示進度
+  local total_processed=$((UPLOADED_COUNT + SKIPPED_COUNT + ERROR_COUNT))
+  local progress_pct=$((total_processed * 100 / TOTAL_POINTS))
+  echo "進度: ${total_processed}/${TOTAL_POINTS} (${progress_pct}%)"
+}
+
+# 處理每一筆資料
+while IFS= read -r line; do
   # 將此筆加入批次
   echo "$line" >> "$BATCH_FILE"
 
   # 當批次達到指定大小時，上傳
   BATCH_COUNT="$(wc -l < "$BATCH_FILE" | tr -d ' ')"
   if [[ $BATCH_COUNT -ge $BATCH_SIZE ]]; then
-    BATCH_NUM=$((BATCH_NUM + 1))
-    echo ""
-    echo "📦 上傳批次 #${BATCH_NUM} (${BATCH_COUNT} points)..."
-
-    # 組合成 JSON array
-    BATCH_JSON="$(jq -s '.' < "$BATCH_FILE")"
-
-    # 上傳批次
-    if qdrant_upsert_points_batch "$COLLECTION_NAME" "$BATCH_JSON"; then
-      echo "✅ 批次 #${BATCH_NUM} 上傳成功"
-      UPLOADED_COUNT=$((UPLOADED_COUNT + BATCH_COUNT))
-    else
-      echo "❌ 批次 #${BATCH_NUM} 上傳失敗"
-      ERROR_COUNT=$((ERROR_COUNT + BATCH_COUNT))
-    fi
-
+    upload_batch "$BATCH_FILE"
     # 清空批次檔案
     > "$BATCH_FILE"
-
-    # 顯示進度
-    TOTAL_PROCESSED=$((UPLOADED_COUNT + SKIPPED_COUNT + ERROR_COUNT))
-    PROGRESS_PCT=$((TOTAL_PROCESSED * 100 / TOTAL_POINTS))
-    echo "進度: ${TOTAL_PROCESSED}/${TOTAL_POINTS} (${PROGRESS_PCT}%)"
   fi
 done < "$WORKING_FILE"
 
 # 處理最後一個不滿批次的資料
 if [[ -s "$BATCH_FILE" ]]; then
-  BATCH_COUNT="$(wc -l < "$BATCH_FILE" | tr -d ' ')"
-  BATCH_NUM=$((BATCH_NUM + 1))
-  echo ""
-  echo "📦 上傳最後批次 #${BATCH_NUM} (${BATCH_COUNT} points)..."
-
-  BATCH_JSON="$(jq -s '.' < "$BATCH_FILE")"
-
-  if qdrant_upsert_points_batch "$COLLECTION_NAME" "$BATCH_JSON"; then
-    echo "✅ 批次 #${BATCH_NUM} 上傳成功"
-    UPLOADED_COUNT=$((UPLOADED_COUNT + BATCH_COUNT))
-  else
-    echo "❌ 批次 #${BATCH_NUM} 上傳失敗"
-    ERROR_COUNT=$((ERROR_COUNT + BATCH_COUNT))
-  fi
+  upload_batch "$BATCH_FILE"
 fi
 
 echo ""

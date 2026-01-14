@@ -518,7 +518,7 @@ for (( term=START_TERM; term>=8; term-- )); do
       EMPTY_SESSION_COUNT=$((EMPTY_SESSION_COUNT + 1))
 
       # 如果連續 3 個會期都沒有新資料，停止抓取
-      if [[ $EMPTY_SESSION_COUNT -ge 3 ]]; then
+      if [[ $EMPTY_SESSION_COUNT -ge 10 ]]; then
         echo ""
         echo "⚠️  連續 ${EMPTY_SESSION_COUNT} 個會期都沒有新資料"
         echo "⚠️  停止抓取"
