@@ -36,8 +36,8 @@ ENV/
 # Output files
 *.output
 
-# 資料檔案（透過 Release 分發）
-data/daily/*.jsonl
+# 資料檔案
+# data/daily/*.jsonl 會提交到 Git（每日資料）
 data/daily/*.jsonl.gz
 data/monthly/*.jsonl
 data/monthly/*.jsonl.gz
