@@ -278,18 +278,18 @@ qdrant_upsert_points_batch() {
 
   require_cmd curl jq || return 1
 
-  local payload
-  payload="$(
-    printf '%s' "$points_json" | jq -c '{points: .}'
-  )"
-
-  local tmp_body http_code
+  # 使用臨時檔案避免命令行參數過長
+  local tmp_payload tmp_body http_code
+  tmp_payload="$(mktemp)"
   tmp_body="$(mktemp)"
+
+  # 將 payload 寫入臨時檔案
+  printf '%s' "$points_json" | jq -c '{points: .}' > "$tmp_payload"
 
   local curl_args=(
     -sS -X PUT "${QDRANT_URL%/}/collections/${collection_name}/points"
     -H "Content-Type: application/json"
-    --data-raw "$payload"
+    -d "@${tmp_payload}"
     -w '%{http_code}' -o "$tmp_body"
   )
 
@@ -300,13 +300,13 @@ qdrant_upsert_points_batch() {
   http_code="$(curl "${curl_args[@]}" 2>/dev/null)" || {
     local rc=$?
     echo "❌ [qdrant_upsert_points_batch] curl 失敗 exit=${rc}" >&2
-    rm -f "$tmp_body"
+    rm -f "$tmp_payload" "$tmp_body"
     return 1
   }
 
   local resp
   resp="$(cat "$tmp_body")"
-  rm -f "$tmp_body"
+  rm -f "$tmp_payload" "$tmp_body"
 
   if [[ "$http_code" == "200" ]]; then
     return 0
@@ -410,22 +410,22 @@ qdrant_get_existing_ids() {
 
   require_cmd curl jq || return 1
 
-  local payload
-  payload="$(
-    printf '%s' "$ids_json" | jq -c '{
-      ids: .,
-      with_payload: false,
-      with_vector: false
-    }'
-  )"
-
-  local tmp_body http_code
+  # 使用臨時檔案避免命令行參數過長
+  local tmp_payload tmp_body http_code
+  tmp_payload="$(mktemp)"
   tmp_body="$(mktemp)"
+
+  # 將 payload 寫入臨時檔案
+  printf '%s' "$ids_json" | jq -c '{
+    ids: .,
+    with_payload: false,
+    with_vector: false
+  }' > "$tmp_payload"
 
   local curl_args=(
     -sS -X POST "${QDRANT_URL%/}/collections/${collection_name}/points"
     -H "Content-Type: application/json"
-    --data-raw "$payload"
+    -d "@${tmp_payload}"
     -w '%{http_code}' -o "$tmp_body"
   )
 
@@ -436,13 +436,13 @@ qdrant_get_existing_ids() {
   http_code="$(curl "${curl_args[@]}" 2>/dev/null)" || {
     local rc=$?
     echo "❌ [qdrant_get_existing_ids] curl 失敗 exit=${rc}" >&2
-    rm -f "$tmp_body"
+    rm -f "$tmp_payload" "$tmp_body"
     return 1
   }
 
   local resp
   resp="$(cat "$tmp_body")"
-  rm -f "$tmp_body"
+  rm -f "$tmp_payload" "$tmp_body"
 
   if [[ "$http_code" != "200" ]]; then
     echo "❌ [qdrant_get_existing_ids] HTTP=${http_code}" >&2
