@@ -18,6 +18,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$SCRIPT_DIR"
 
 # 載入模組
 source "${SCRIPT_DIR}/lib/core.sh"
@@ -156,6 +157,12 @@ echo ""
 ########################################
 echo "🚀 更新 GitHub Release..."
 
+# 切換回 repo 目錄（gh 需要 git repo）
+cd "$REPO_DIR"
+
+# 複製壓縮檔到 repo 目錄
+cp "${TMP_DIR}/${RELEASE_FILE_GZ}" "./${RELEASE_FILE_GZ}"
+
 # 準備 Release 說明
 RELEASE_YEAR="${TARGET_MONTH:0:4}"
 RELEASE_MONTH="${TARGET_MONTH:4:2}"
@@ -211,10 +218,14 @@ else
   echo "✅ Release 建立成功"
 fi
 
+# 清理複製的檔案
+rm -f "./${RELEASE_FILE_GZ}"
+
 echo ""
 echo "========================================="
 echo "Release 更新完成"
 echo "========================================="
 echo "Release Tag: ${RELEASE_TAG}"
-echo "Release URL: https://github.com/$(gh repo view --json nameWithOwner -q .nameWithOwner)/releases/tag/${RELEASE_TAG}"
+REPO_NAME="$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo "LightChang/brighterarc")"
+echo "Release URL: https://github.com/${REPO_NAME}/releases/tag/${RELEASE_TAG}"
 echo "========================================="
