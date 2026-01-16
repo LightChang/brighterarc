@@ -68,6 +68,54 @@ jobs:
 
           echo "✅ Qdrant 更新完成"
 
+      - name: Verify Qdrant upload
+        env:
+          QDRANT_URL: ${{ secrets.QDRANT_URL }}
+          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
+        run: |
+          echo "🔍 驗證 Qdrant 資料..."
+          TODAY=$(date +%Y-%m-%d)
+          DATA_FILE="data/daily/${TODAY}.jsonl"
+
+          # 取得今天上傳的第一筆和最後一筆 ID 作為驗證樣本
+          FIRST_ID=$(head -1 "$DATA_FILE" | jq -r '.id')
+          LAST_ID=$(tail -1 "$DATA_FILE" | jq -r '.id')
+          SAMPLE_IDS="[\"$FIRST_ID\", \"$LAST_ID\"]"
+          SAMPLE_COUNT=2
+
+          echo "📊 驗證樣本數: $SAMPLE_COUNT"
+
+          # 查詢 Qdrant 確認這些 ID 存在
+          RESPONSE=$(curl -sS --connect-timeout 15 --max-time 30 --retry 3 --retry-delay 2 \
+            -X POST "${QDRANT_URL}/collections/legislative_replies/points" \
+            -H "Content-Type: application/json" \
+            -H "api-key: ${QDRANT_API_KEY}" \
+            -d "{\"ids\": $SAMPLE_IDS, \"with_payload\": false, \"with_vector\": false}")
+
+          # 檢查回傳結果
+          if ! echo "$RESPONSE" | jq -e '.result' > /dev/null 2>&1; then
+            echo "❌ Qdrant 查詢失敗"
+            echo "$RESPONSE"
+            exit 1
+          fi
+
+          FOUND_COUNT=$(echo "$RESPONSE" | jq '.result | length')
+          echo "✅ 找到 $FOUND_COUNT / $SAMPLE_COUNT 筆資料"
+
+          if [[ "$FOUND_COUNT" -lt "$SAMPLE_COUNT" ]]; then
+            echo "⚠️  部分資料未寫入 Qdrant"
+            echo "預期: $SAMPLE_COUNT, 實際: $FOUND_COUNT"
+            exit 1
+          fi
+
+          # 顯示總 points 數
+          TOTAL=$(curl -sS --connect-timeout 15 --max-time 30 --retry 3 --retry-delay 2 \
+            -H "api-key: ${QDRANT_API_KEY}" \
+            "${QDRANT_URL}/collections/legislative_replies" | jq '.result.points_count')
+          echo "📈 Qdrant 總資料筆數: $TOTAL"
+
+          echo "✅ Qdrant 驗證通過"
+
       - name: Build monthly release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

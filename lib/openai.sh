@@ -70,6 +70,9 @@ openai_create_embedding() {
 
   require_cmd curl jq || return 1
 
+  local max_retries=3
+  local retry_delay=1
+
   local payload
   payload="$(
     jq -n \
@@ -81,48 +84,62 @@ openai_create_embedding() {
       }'
   )"
 
-  local tmp_body http_code
-  tmp_body="$(mktemp)"
+  for ((attempt=1; attempt<=max_retries; attempt++)); do
+    local tmp_body http_code
+    tmp_body="$(mktemp)"
 
-  local curl_args=(
-    -sS -X POST "${OPENAI_BASE_URL%/}/embeddings"
-    -H "Content-Type: application/json"
-    -H "Authorization: Bearer ${OPENAI_API_KEY}"
-    --data-raw "$payload"
-    -w '%{http_code}' -o "$tmp_body"
-  )
+    local curl_args=(
+      -sS -X POST "${OPENAI_BASE_URL%/}/embeddings"
+      -H "Content-Type: application/json"
+      -H "Authorization: Bearer ${OPENAI_API_KEY}"
+      --data-raw "$payload"
+      -w '%{http_code}' -o "$tmp_body"
+      --connect-timeout 10
+      --max-time 30
+    )
 
-  http_code="$(curl "${curl_args[@]}" 2>/dev/null)" || {
-    local rc=$?
-    echo "❌ [openai_create_embedding] curl 失敗 exit=${rc}" >&2
-    rm -f "$tmp_body"
-    return 1
-  }
+    http_code="$(curl "${curl_args[@]}" 2>/dev/null)"
+    local curl_exit=$?
 
-  local resp
-  resp="$(cat "$tmp_body")"
-  rm -f "$tmp_body"
+    if [[ $curl_exit -eq 0 ]]; then
+      local resp
+      resp="$(cat "$tmp_body")"
+      rm -f "$tmp_body"
 
-  if [[ "$http_code" != "200" ]]; then
-    echo "❌ [openai_create_embedding] HTTP=${http_code}" >&2
-    if jq -e . >/dev/null 2>&1 <<<"$resp"; then
-      echo "$resp" | jq -C '.' >&2
-    else
-      echo "$resp" >&2
+      if [[ "$http_code" == "200" ]]; then
+        # 提取 embedding vector
+        local embedding
+        embedding="$(printf '%s' "$resp" | jq '.data[0].embedding')" || return 1
+
+        if [[ -z "$embedding" || "$embedding" == "null" ]]; then
+          echo "❌ [openai_create_embedding] 無法提取 embedding" >&2
+          return 1
+        fi
+
+        printf '%s\n' "$embedding"
+        return 0
+      fi
+
+      echo "❌ [openai_create_embedding] HTTP=${http_code}" >&2
+      if jq -e . >/dev/null 2>&1 <<<"$resp"; then
+        echo "$resp" | jq -C '.' >&2
+      else
+        echo "$resp" >&2
+      fi
+      return 1
     fi
-    return 1
-  fi
 
-  # 提取 embedding vector
-  local embedding
-  embedding="$(printf '%s' "$resp" | jq '.data[0].embedding')" || return 1
+    rm -f "$tmp_body"
+    if [[ $attempt -lt $max_retries ]]; then
+      echo "⚠️  [openai_create_embedding] curl 失敗 (exit=$curl_exit)，重試 $attempt/$max_retries..." >&2
+      sleep $retry_delay
+    else
+      echo "❌ [openai_create_embedding] curl 失敗 (exit=$curl_exit)，已重試 $max_retries 次" >&2
+      return 1
+    fi
+  done
 
-  if [[ -z "$embedding" || "$embedding" == "null" ]]; then
-    echo "❌ [openai_create_embedding] 無法提取 embedding" >&2
-    return 1
-  fi
-
-  printf '%s\n' "$embedding"
+  return 1
 }
 
 # openai_create_embedding_batch MODEL INPUT_ARRAY_JSON

@@ -16,9 +16,9 @@ _qdrant_lib_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ########################################
 qdrant_init_env() {
   # 環境變數：
-  # QDRANT_URL: Qdrant 伺服器 URL (例如 https://xxx.gcp.cloud.qdrant.io:6333)
+  # QDRANT_URL 或 QDRANT_ENDPOINT: Qdrant 伺服器 URL (例如 https://xxx.gcp.cloud.qdrant.io:6333)
   # QDRANT_API_KEY: API key (Qdrant Cloud 需要)
-  : "${QDRANT_URL:=http://localhost:6333}"
+  : "${QDRANT_URL:=${QDRANT_ENDPOINT:-http://localhost:6333}}"
   : "${QDRANT_API_KEY:=}"
 
   local err=0
@@ -482,6 +482,9 @@ qdrant_search() {
 
   require_cmd curl jq || return 1
 
+  local max_retries=3
+  local retry_delay=1
+
   local payload
   payload="$(
     printf '%s' "$vector_json" | jq -c \
@@ -493,40 +496,54 @@ qdrant_search() {
       }'
   )"
 
-  local tmp_body http_code
-  tmp_body="$(mktemp)"
+  for ((attempt=1; attempt<=max_retries; attempt++)); do
+    local tmp_body http_code
+    tmp_body="$(mktemp)"
 
-  local curl_args=(
-    -sS -X POST "${QDRANT_URL%/}/collections/${collection_name}/points/search"
-    -H "Content-Type: application/json"
-    --data-raw "$payload"
-    -w '%{http_code}' -o "$tmp_body"
-  )
+    local curl_args=(
+      -sS -X POST "${QDRANT_URL%/}/collections/${collection_name}/points/search"
+      -H "Content-Type: application/json"
+      --data-raw "$payload"
+      -w '%{http_code}' -o "$tmp_body"
+      --connect-timeout 10
+      --max-time 30
+    )
 
-  if [[ -n "${QDRANT_API_KEY:-}" ]]; then
-    curl_args+=( -H "api-key: ${QDRANT_API_KEY}" )
-  fi
-
-  http_code="$(curl "${curl_args[@]}" 2>/dev/null)" || {
-    local rc=$?
-    echo "❌ [qdrant_search] curl 失敗 exit=${rc}" >&2
-    rm -f "$tmp_body"
-    return 1
-  }
-
-  local resp
-  resp="$(cat "$tmp_body")"
-  rm -f "$tmp_body"
-
-  if [[ "$http_code" != "200" ]]; then
-    echo "❌ [qdrant_search] HTTP=${http_code}" >&2
-    if jq -e . >/dev/null 2>&1 <<<"$resp"; then
-      echo "$resp" | jq -C '.' >&2
-    else
-      echo "$resp" >&2
+    if [[ -n "${QDRANT_API_KEY:-}" ]]; then
+      curl_args+=( -H "api-key: ${QDRANT_API_KEY}" )
     fi
-    return 1
-  fi
 
-  printf '%s\n' "$resp"
+    http_code="$(curl "${curl_args[@]}" 2>/dev/null)"
+    local curl_exit=$?
+
+    if [[ $curl_exit -eq 0 ]]; then
+      local resp
+      resp="$(cat "$tmp_body")"
+      rm -f "$tmp_body"
+
+      if [[ "$http_code" == "200" ]]; then
+        printf '%s\n' "$resp"
+        return 0
+      fi
+
+      echo "❌ [qdrant_search] HTTP=${http_code}" >&2
+      if jq -e . >/dev/null 2>&1 <<<"$resp"; then
+        echo "$resp" | jq -C '.' >&2
+      else
+        echo "$resp" >&2
+      fi
+      return 1
+    fi
+
+    rm -f "$tmp_body"
+    if [[ $attempt -lt $max_retries ]]; then
+      echo "⚠️  [qdrant_search] curl 失敗 (exit=$curl_exit)，重試 $attempt/$max_retries..." >&2
+      sleep $retry_delay
+    else
+      echo "❌ [qdrant_search] curl 失敗 (exit=$curl_exit)，已重試 $max_retries 次" >&2
+      return 1
+    fi
+  done
+
+  return 1
 }
