@@ -1,0 +1,474 @@
+name: Action Health Check
+# Monitor daily-update workflow, analyze failures, and provide solutions
+
+on:
+  schedule:
+    # Every 6 hours: 00:00, 06:00, 12:00, 18:00 UTC
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:
+    # Allow manual trigger for testing
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+jobs:
+  check-health:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Taipei
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check recent workflow runs
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🔍 檢查 daily-update workflow 狀態..."
+
+          # Get the most recent run of daily-update workflow
+          RECENT_RUN=$(gh run list \
+            --repo ${{ github.repository }} \
+            --workflow "daily-update.yml" \
+            --limit 1 \
+            --json status,conclusion,createdAt,databaseId,headSha \
+            2>/dev/null || echo "[]")
+
+          if [[ "$RECENT_RUN" == "[]" ]] || [[ -z "$RECENT_RUN" ]]; then
+            echo "⚠️ 無法取得 workflow 執行記錄"
+            echo "status=unknown" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          STATUS=$(echo "$RECENT_RUN" | jq -r '.[0].status')
+          CONCLUSION=$(echo "$RECENT_RUN" | jq -r '.[0].conclusion')
+          CREATED_AT=$(echo "$RECENT_RUN" | jq -r '.[0].createdAt')
+          RUN_ID=$(echo "$RECENT_RUN" | jq -r '.[0].databaseId')
+          HEAD_SHA=$(echo "$RECENT_RUN" | jq -r '.[0].headSha')
+
+          echo "最近執行時間: $CREATED_AT"
+          echo "狀態: $STATUS"
+          echo "結果: $CONCLUSION"
+          echo "Run ID: $RUN_ID"
+
+          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+          echo "created_at=$CREATED_AT" >> $GITHUB_OUTPUT
+          echo "head_sha=$HEAD_SHA" >> $GITHUB_OUTPUT
+
+          if [[ "$STATUS" == "completed" && "$CONCLUSION" == "failure" ]]; then
+            echo "❌ 最近的執行失敗了！"
+            echo "status=failure" >> $GITHUB_OUTPUT
+          elif [[ "$STATUS" == "completed" && "$CONCLUSION" == "success" ]]; then
+            echo "✅ 最近的執行成功"
+            echo "status=success" >> $GITHUB_OUTPUT
+          elif [[ "$STATUS" == "in_progress" ]] || [[ "$STATUS" == "queued" ]]; then
+            echo "⏳ 正在執行中"
+            echo "status=running" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ 未知狀態: $STATUS / $CONCLUSION"
+            echo "status=unknown" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check for stale runs
+        id: stale
+        run: |
+          CREATED_AT="${{ steps.check.outputs.created_at }}"
+
+          if [[ -z "$CREATED_AT" ]]; then
+            echo "is_stale=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          CREATED_TS=$(date -d "$CREATED_AT" +%s 2>/dev/null || echo "0")
+          NOW_TS=$(date +%s)
+          DIFF_HOURS=$(( (NOW_TS - CREATED_TS) / 3600 ))
+
+          echo "距離上次執行: ${DIFF_HOURS} 小時"
+
+          if [[ "$DIFF_HOURS" -gt 36 ]]; then
+            echo "⚠️ 超過 36 小時未執行！"
+            echo "is_stale=true" >> $GITHUB_OUTPUT
+            echo "hours_ago=$DIFF_HOURS" >> $GITHUB_OUTPUT
+          else
+            echo "is_stale=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Analyze failure details
+        id: analyze
+        if: steps.check.outputs.status == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RUN_ID="${{ steps.check.outputs.run_id }}"
+          echo "📊 分析失敗原因..."
+
+          # Get failed jobs and steps
+          JOBS_JSON=$(gh api \
+            "repos/${{ github.repository }}/actions/runs/${RUN_ID}/jobs" \
+            --jq '.jobs[] | {name: .name, conclusion: .conclusion, steps: [.steps[] | {name: .name, conclusion: .conclusion, number: .number}]}' \
+            2>/dev/null || echo "{}")
+
+          # Find the failed step
+          FAILED_JOB=""
+          FAILED_STEP=""
+          FAILED_STEP_NUM=""
+
+          while IFS= read -r job; do
+            JOB_NAME=$(echo "$job" | jq -r '.name')
+            JOB_CONCLUSION=$(echo "$job" | jq -r '.conclusion')
+
+            if [[ "$JOB_CONCLUSION" == "failure" ]]; then
+              FAILED_JOB="$JOB_NAME"
+
+              # Find failed step within job
+              STEP_INFO=$(echo "$job" | jq -r '.steps[] | select(.conclusion == "failure") | "\(.number)|\(.name)"' | head -1)
+              if [[ -n "$STEP_INFO" ]]; then
+                FAILED_STEP_NUM=$(echo "$STEP_INFO" | cut -d'|' -f1)
+                FAILED_STEP=$(echo "$STEP_INFO" | cut -d'|' -f2)
+              fi
+              break
+            fi
+          done <<< "$(gh api "repos/${{ github.repository }}/actions/runs/${RUN_ID}/jobs" --jq '.jobs[]' 2>/dev/null)"
+
+          echo "失敗的 Job: $FAILED_JOB"
+          echo "失敗的 Step: $FAILED_STEP"
+
+          echo "failed_job=$FAILED_JOB" >> $GITHUB_OUTPUT
+          echo "failed_step=$FAILED_STEP" >> $GITHUB_OUTPUT
+
+          # Download and analyze logs
+          echo "📥 下載執行日誌..."
+          mkdir -p /tmp/logs
+          gh run download "$RUN_ID" --repo ${{ github.repository }} --dir /tmp/logs 2>/dev/null || true
+
+          # Also try to get logs via API
+          gh run view "$RUN_ID" --repo ${{ github.repository }} --log 2>/dev/null > /tmp/run_log.txt || true
+
+          # Extract error messages from logs
+          ERROR_CONTEXT=""
+          if [[ -f /tmp/run_log.txt ]]; then
+            # Look for common error patterns
+            ERROR_CONTEXT=$(grep -A 5 -B 2 -E "(error|Error|ERROR|failed|Failed|FAILED|exit code|❌)" /tmp/run_log.txt | tail -50 || true)
+          fi
+
+          # Save error context to file for later use
+          echo "$ERROR_CONTEXT" > /tmp/error_context.txt
+
+          # Determine error category and root cause
+          ERROR_CATEGORY="unknown"
+          ROOT_CAUSE=""
+          SOLUTION=""
+
+          case "$FAILED_STEP" in
+            *"Fetch legislative data"*)
+              ERROR_CATEGORY="data_fetch"
+              if echo "$ERROR_CONTEXT" | grep -qi "timeout\|timed out"; then
+                ROOT_CAUSE="立法院 API 連線超時"
+                SOLUTION="1. 檢查立法院 API 狀態: https://data.ly.gov.tw\n2. 稍後重試（可能是暫時性問題）\n3. 如持續發生，考慮增加超時設定"
+              elif echo "$ERROR_CONTEXT" | grep -qi "openai\|embedding"; then
+                ROOT_CAUSE="OpenAI API 錯誤"
+                SOLUTION="1. 檢查 OPENAI_API_KEY 是否有效\n2. 確認 API 額度是否足夠\n3. 檢查 OpenAI 服務狀態: https://status.openai.com"
+              elif echo "$ERROR_CONTEXT" | grep -qi "rate limit"; then
+                ROOT_CAUSE="API 速率限制"
+                SOLUTION="1. 等待速率限制重置\n2. 考慮降低請求頻率\n3. 升級 API 方案"
+              else
+                ROOT_CAUSE="資料抓取過程中發生未知錯誤"
+                SOLUTION="1. 檢查執行日誌了解詳情\n2. 手動執行 ./fetch_legislative_data.sh 測試"
+              fi
+              ;;
+            *"Update Qdrant"*)
+              ERROR_CATEGORY="qdrant_upload"
+              if echo "$ERROR_CONTEXT" | grep -qi "timeout\|connection"; then
+                ROOT_CAUSE="Qdrant 連線失敗"
+                SOLUTION="1. 檢查 QDRANT_URL 設定\n2. 確認 Qdrant 服務運作中\n3. 檢查網路連線"
+              elif echo "$ERROR_CONTEXT" | grep -qi "401\|403\|unauthorized"; then
+                ROOT_CAUSE="Qdrant 認證失敗"
+                SOLUTION="1. 檢查 QDRANT_API_KEY 是否正確\n2. 確認 API Key 未過期\n3. 檢查 Qdrant Cloud 控制台"
+              elif echo "$ERROR_CONTEXT" | grep -qi "collection"; then
+                ROOT_CAUSE="Qdrant collection 問題"
+                SOLUTION="1. 確認 legislative_replies collection 存在\n2. 檢查 collection 設定是否正確"
+              else
+                ROOT_CAUSE="Qdrant 上傳過程發生錯誤"
+                SOLUTION="1. 檢查 Qdrant 服務狀態\n2. 確認資料格式正確"
+              fi
+              ;;
+            *"Verify Qdrant"*)
+              ERROR_CATEGORY="qdrant_verify"
+              ROOT_CAUSE="Qdrant 驗證失敗，資料可能未成功寫入"
+              SOLUTION="1. 檢查 Qdrant 連線狀態\n2. 確認上傳步驟是否成功\n3. 手動查詢 Qdrant 確認資料"
+              ;;
+            *"Build monthly release"*)
+              ERROR_CATEGORY="github_release"
+              if echo "$ERROR_CONTEXT" | grep -qi "network\|timeout\|connection"; then
+                ROOT_CAUSE="GitHub API 連線問題"
+                SOLUTION="1. 這通常是暫時性問題，重新執行即可\n2. 檢查 GitHub 狀態: https://githubstatus.com"
+              elif echo "$ERROR_CONTEXT" | grep -qi "permission\|403"; then
+                ROOT_CAUSE="GitHub 權限不足"
+                SOLUTION="1. 確認 GITHUB_TOKEN 有 contents:write 權限\n2. 檢查 repository 設定"
+              else
+                ROOT_CAUSE="GitHub Release 建立/更新失敗"
+                SOLUTION="1. 檢查執行日誌了解詳情\n2. 手動執行 ./build_legislative_release.sh 測試"
+              fi
+              ;;
+            *"Commit daily data"*)
+              ERROR_CATEGORY="git_commit"
+              if echo "$ERROR_CONTEXT" | grep -qi "rejected\|fetch first"; then
+                ROOT_CAUSE="Git push 被拒絕，遠端有新提交"
+                SOLUTION="1. 這表示有其他提交，需要 rebase\n2. 手動執行: git pull --rebase origin main && git push"
+              else
+                ROOT_CAUSE="Git 提交過程發生錯誤"
+                SOLUTION="1. 檢查 Git 設定\n2. 確認有檔案需要提交"
+              fi
+              ;;
+            *)
+              ERROR_CATEGORY="unknown"
+              ROOT_CAUSE="未知錯誤，需要檢查執行日誌"
+              SOLUTION="1. 查看完整執行日誌\n2. 參考 CLAUDE.md 問題排除章節"
+              ;;
+          esac
+
+          echo "error_category=$ERROR_CATEGORY" >> $GITHUB_OUTPUT
+          echo "root_cause=$ROOT_CAUSE" >> $GITHUB_OUTPUT
+
+          # Save solution to file (multiline)
+          echo "$SOLUTION" > /tmp/solution.txt
+
+          echo "📋 分析結果:"
+          echo "  錯誤類別: $ERROR_CATEGORY"
+          echo "  根本原因: $ROOT_CAUSE"
+
+      - name: Check existing issues
+        id: existing
+        if: steps.check.outputs.status == 'failure' || steps.stale.outputs.is_stale == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh issue list \
+            --repo ${{ github.repository }} \
+            --label "action-health" \
+            --state open \
+            --limit 1 \
+            --json number \
+            2>/dev/null || echo "[]")
+
+          if [[ "$EXISTING" != "[]" ]] && [[ -n "$EXISTING" ]]; then
+            ISSUE_NUM=$(echo "$EXISTING" | jq -r '.[0].number')
+            echo "📋 已有開啟的 Issue: #$ISSUE_NUM"
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "issue_number=$ISSUE_NUM" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create detailed failure issue
+        if: steps.check.outputs.status == 'failure' && steps.existing.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RUN_ID="${{ steps.check.outputs.run_id }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${RUN_ID}"
+          CREATED_AT="${{ steps.check.outputs.created_at }}"
+          FAILED_JOB="${{ steps.analyze.outputs.failed_job }}"
+          FAILED_STEP="${{ steps.analyze.outputs.failed_step }}"
+          ERROR_CATEGORY="${{ steps.analyze.outputs.error_category }}"
+          ROOT_CAUSE="${{ steps.analyze.outputs.root_cause }}"
+
+          # Read solution from file
+          SOLUTION=$(cat /tmp/solution.txt 2>/dev/null || echo "請查看執行日誌")
+
+          # Read error context
+          ERROR_CONTEXT=$(cat /tmp/error_context.txt 2>/dev/null | head -30 || echo "無法取得錯誤內容")
+
+          # Determine labels based on category
+          case "$ERROR_CATEGORY" in
+            "data_fetch") EXTRA_LABEL=",api" ;;
+            "qdrant_upload"|"qdrant_verify") EXTRA_LABEL=",qdrant" ;;
+            "github_release"|"git_commit") EXTRA_LABEL=",github" ;;
+            *) EXTRA_LABEL="" ;;
+          esac
+
+          BODY=$(cat <<EOF
+          ## 🚨 問題摘要
+
+          **Daily Update workflow 執行失敗**
+
+          | 項目 | 內容 |
+          |------|------|
+          | 執行時間 | ${CREATED_AT} |
+          | 失敗位置 | ${FAILED_STEP:-未知} |
+          | 錯誤類別 | ${ERROR_CATEGORY} |
+
+          ## 🔍 根本原因分析
+
+          **${ROOT_CAUSE}**
+
+          ## 💡 建議解決方案
+
+          $(echo -e "$SOLUTION" | sed 's/^/> /')
+
+          ## 📋 錯誤日誌摘要
+
+          \`\`\`
+          ${ERROR_CONTEXT}
+          \`\`\`
+
+          ## 🔗 相關連結
+
+          - [執行日誌](${RUN_URL})
+          - [問題排除指南](./CLAUDE.md#常見問題排除)
+
+          ## ⚡ 快速操作
+
+          - [ ] 確認問題原因
+          - [ ] 執行建議解決方案
+          - [ ] 手動觸發重新執行（如適用）
+          - [ ] 關閉此 Issue
+
+          ---
+          *此 Issue 由 Action Health Check 自動建立*
+          EOF
+          )
+
+          gh issue create \
+            --repo ${{ github.repository }} \
+            --title "🚨 [${ERROR_CATEGORY}] Daily Update 失敗: ${ROOT_CAUSE}" \
+            --label "action-health,bug${EXTRA_LABEL}" \
+            --body "$BODY"
+
+          echo "✅ 已建立詳細分析 Issue"
+
+      - name: Create stale issue
+        if: steps.stale.outputs.is_stale == 'true' && steps.existing.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CREATED_AT="${{ steps.check.outputs.created_at }}"
+          HOURS_AGO="${{ steps.stale.outputs.hours_ago }}"
+
+          BODY=$(cat <<EOF
+          ## ⚠️ 問題摘要
+
+          **Daily Update workflow 超過 36 小時未執行**
+
+          | 項目 | 內容 |
+          |------|------|
+          | 上次執行 | ${CREATED_AT} |
+          | 已過時間 | ${HOURS_AGO} 小時 |
+
+          ## 🔍 可能原因
+
+          1. **GitHub Actions 排程延遲** - GitHub 有時會延遲執行排程任務
+          2. **Workflow 被停用** - 檢查 Actions 頁面確認 workflow 狀態
+          3. **Repository 閒置** - GitHub 會停用閒置 repo 的排程
+
+          ## 💡 建議解決方案
+
+          ### 立即行動
+          1. 前往 [Actions 頁面](https://github.com/${{ github.repository }}/actions)
+          2. 選擇 "Daily Legislative Data Update"
+          3. 點擊 "Run workflow" 手動觸發
+
+          ### 長期預防
+          - 確保 repository 保持活躍
+          - 定期檢查 workflow 狀態
+
+          ## ⚡ 快速操作
+
+          - [ ] 手動觸發 workflow
+          - [ ] 確認 workflow 未被停用
+          - [ ] 關閉此 Issue
+
+          ---
+          *此 Issue 由 Action Health Check 自動建立*
+          EOF
+          )
+
+          gh issue create \
+            --repo ${{ github.repository }} \
+            --title "⚠️ Daily Update 超過 ${HOURS_AGO} 小時未執行" \
+            --label "action-health" \
+            --body "$BODY"
+
+          echo "✅ 已建立 Issue"
+
+      - name: Update existing issue with new analysis
+        if: steps.check.outputs.status == 'failure' && steps.existing.outputs.exists == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUM="${{ steps.existing.outputs.issue_number }}"
+          RUN_ID="${{ steps.check.outputs.run_id }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${RUN_ID}"
+          FAILED_STEP="${{ steps.analyze.outputs.failed_step }}"
+          ROOT_CAUSE="${{ steps.analyze.outputs.root_cause }}"
+          CHECK_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+
+          SOLUTION=$(cat /tmp/solution.txt 2>/dev/null || echo "請查看執行日誌")
+
+          COMMENT=$(cat <<EOF
+          ## 🔄 健康檢查更新 - ${CHECK_TIME}
+
+          **問題仍未解決**
+
+          | 項目 | 內容 |
+          |------|------|
+          | 最新執行 | [Run #${RUN_ID}](${RUN_URL}) |
+          | 失敗位置 | ${FAILED_STEP:-未知} |
+          | 根本原因 | ${ROOT_CAUSE} |
+
+          ### 建議行動
+          $(echo -e "$SOLUTION" | sed 's/^/> /')
+
+          ---
+          *下次檢查將在 6 小時後進行*
+          EOF
+          )
+
+          gh issue comment "$ISSUE_NUM" \
+            --repo ${{ github.repository }} \
+            --body "$COMMENT"
+
+          echo "✅ 已更新 Issue #$ISSUE_NUM"
+
+      - name: Update existing stale issue
+        if: steps.stale.outputs.is_stale == 'true' && steps.existing.outputs.exists == 'true' && steps.check.outputs.status != 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUM="${{ steps.existing.outputs.issue_number }}"
+          HOURS_AGO="${{ steps.stale.outputs.hours_ago }}"
+          CHECK_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+
+          COMMENT=$(cat <<EOF
+          ## 🔄 健康檢查更新 - ${CHECK_TIME}
+
+          Workflow 仍未執行，已過 ${HOURS_AGO} 小時。
+
+          請手動觸發 workflow 或檢查是否被停用。
+          EOF
+          )
+
+          gh issue comment "$ISSUE_NUM" \
+            --repo ${{ github.repository }} \
+            --body "$COMMENT"
+
+          echo "✅ 已更新 Issue #$ISSUE_NUM"
+
+      - name: Summary
+        run: |
+          echo "========================================="
+          echo "健康檢查完成"
+          echo "========================================="
+          echo "時間: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo "Workflow 狀態: ${{ steps.check.outputs.status }}"
+          echo "是否過期: ${{ steps.stale.outputs.is_stale }}"
+          if [[ "${{ steps.check.outputs.status }}" == "failure" ]]; then
+            echo "失敗位置: ${{ steps.analyze.outputs.failed_step }}"
+            echo "錯誤類別: ${{ steps.analyze.outputs.error_category }}"
+            echo "根本原因: ${{ steps.analyze.outputs.root_cause }}"
+          fi
+          echo "========================================="
