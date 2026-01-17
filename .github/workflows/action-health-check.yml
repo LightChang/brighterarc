@@ -1,0 +1,235 @@
+name: Action Health Check
+# Monitor daily-update workflow and alert on failures
+
+on:
+  schedule:
+    # Every 6 hours: 00:00, 06:00, 12:00, 18:00 UTC
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:
+    # Allow manual trigger for testing
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-health:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Taipei
+
+    steps:
+      - name: Check recent workflow runs
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🔍 檢查 daily-update workflow 狀態..."
+
+          # Get the most recent run of daily-update workflow
+          RECENT_RUN=$(gh run list \
+            --repo ${{ github.repository }} \
+            --workflow "daily-update.yml" \
+            --limit 1 \
+            --json status,conclusion,createdAt,headBranch,databaseId \
+            2>/dev/null || echo "[]")
+
+          if [[ "$RECENT_RUN" == "[]" ]] || [[ -z "$RECENT_RUN" ]]; then
+            echo "⚠️ 無法取得 workflow 執行記錄"
+            echo "status=unknown" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          STATUS=$(echo "$RECENT_RUN" | jq -r '.[0].status')
+          CONCLUSION=$(echo "$RECENT_RUN" | jq -r '.[0].conclusion')
+          CREATED_AT=$(echo "$RECENT_RUN" | jq -r '.[0].createdAt')
+          RUN_ID=$(echo "$RECENT_RUN" | jq -r '.[0].databaseId')
+
+          echo "最近執行時間: $CREATED_AT"
+          echo "狀態: $STATUS"
+          echo "結果: $CONCLUSION"
+          echo "Run ID: $RUN_ID"
+
+          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+          echo "created_at=$CREATED_AT" >> $GITHUB_OUTPUT
+
+          # Check if the run failed
+          if [[ "$STATUS" == "completed" && "$CONCLUSION" == "failure" ]]; then
+            echo "❌ 最近的執行失敗了！"
+            echo "status=failure" >> $GITHUB_OUTPUT
+          elif [[ "$STATUS" == "completed" && "$CONCLUSION" == "success" ]]; then
+            echo "✅ 最近的執行成功"
+            echo "status=success" >> $GITHUB_OUTPUT
+          elif [[ "$STATUS" == "in_progress" ]] || [[ "$STATUS" == "queued" ]]; then
+            echo "⏳ 正在執行中"
+            echo "status=running" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ 未知狀態: $STATUS / $CONCLUSION"
+            echo "status=unknown" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check for stale runs
+        id: stale
+        run: |
+          # Check if last run was more than 36 hours ago (should run daily)
+          CREATED_AT="${{ steps.check.outputs.created_at }}"
+
+          if [[ -z "$CREATED_AT" ]]; then
+            echo "is_stale=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          CREATED_TS=$(date -d "$CREATED_AT" +%s 2>/dev/null || echo "0")
+          NOW_TS=$(date +%s)
+          DIFF_HOURS=$(( (NOW_TS - CREATED_TS) / 3600 ))
+
+          echo "距離上次執行: ${DIFF_HOURS} 小時"
+
+          if [[ "$DIFF_HOURS" -gt 36 ]]; then
+            echo "⚠️ 超過 36 小時未執行！"
+            echo "is_stale=true" >> $GITHUB_OUTPUT
+            echo "hours_ago=$DIFF_HOURS" >> $GITHUB_OUTPUT
+          else
+            echo "is_stale=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check existing issues
+        id: existing
+        if: steps.check.outputs.status == 'failure' || steps.stale.outputs.is_stale == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if there's already an open issue for this
+          EXISTING=$(gh issue list \
+            --repo ${{ github.repository }} \
+            --label "action-health" \
+            --state open \
+            --limit 1 \
+            --json number \
+            2>/dev/null || echo "[]")
+
+          if [[ "$EXISTING" != "[]" ]] && [[ -n "$EXISTING" ]]; then
+            ISSUE_NUM=$(echo "$EXISTING" | jq -r '.[0].number')
+            echo "📋 已有開啟的 Issue: #$ISSUE_NUM"
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "issue_number=$ISSUE_NUM" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create failure issue
+        if: steps.check.outputs.status == 'failure' && steps.existing.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RUN_ID="${{ steps.check.outputs.run_id }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${RUN_ID}"
+          CREATED_AT="${{ steps.check.outputs.created_at }}"
+
+          BODY=$(cat <<EOF
+          ## 問題描述
+
+          Daily Update workflow 執行失敗。
+
+          ## 詳細資訊
+
+          - **執行時間**: ${CREATED_AT}
+          - **Run ID**: ${RUN_ID}
+          - **執行記錄**: ${RUN_URL}
+
+          ## 建議檢查
+
+          1. 檢查 [執行記錄](${RUN_URL}) 了解失敗原因
+          2. 常見問題參考 CLAUDE.md 的問題排除章節
+          3. 檢查 API 連線狀態（立法院 API、OpenAI、Qdrant）
+
+          ## 自動關閉
+
+          此 Issue 在下次 workflow 執行成功後可手動關閉。
+          EOF
+          )
+
+          gh issue create \
+            --repo ${{ github.repository }} \
+            --title "🚨 Daily Update Workflow 執行失敗" \
+            --label "action-health,bug" \
+            --body "$BODY"
+
+          echo "✅ 已建立 Issue"
+
+      - name: Create stale issue
+        if: steps.stale.outputs.is_stale == 'true' && steps.existing.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CREATED_AT="${{ steps.check.outputs.created_at }}"
+          HOURS_AGO="${{ steps.stale.outputs.hours_ago }}"
+
+          BODY=$(cat <<EOF
+          ## 問題描述
+
+          Daily Update workflow 已超過 36 小時未執行。
+
+          ## 詳細資訊
+
+          - **上次執行**: ${CREATED_AT}
+          - **已過時間**: ${HOURS_AGO} 小時
+
+          ## 可能原因
+
+          1. GitHub Actions 排程延遲
+          2. Workflow 被停用
+          3. Repository 設定問題
+
+          ## 建議動作
+
+          1. 手動觸發 workflow: Actions → Daily Legislative Data Update → Run workflow
+          2. 檢查 workflow 是否被停用
+          EOF
+          )
+
+          gh issue create \
+            --repo ${{ github.repository }} \
+            --title "⚠️ Daily Update Workflow 超時未執行" \
+            --label "action-health" \
+            --body "$BODY"
+
+          echo "✅ 已建立 Issue"
+
+      - name: Update existing issue
+        if: (steps.check.outputs.status == 'failure' || steps.stale.outputs.is_stale == 'true') && steps.existing.outputs.exists == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUM="${{ steps.existing.outputs.issue_number }}"
+          RUN_ID="${{ steps.check.outputs.run_id }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${RUN_ID}"
+          CHECK_STATUS="${{ steps.check.outputs.status }}"
+          CHECK_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+
+          COMMENT=$(cat <<EOF
+          ## 健康檢查更新
+
+          - **檢查時間**: ${CHECK_TIME}
+          - **狀態**: ${CHECK_STATUS}
+          - **最近執行**: [Run #${RUN_ID}](${RUN_URL})
+
+          問題仍未解決。
+          EOF
+          )
+
+          gh issue comment "$ISSUE_NUM" \
+            --repo ${{ github.repository }} \
+            --body "$COMMENT"
+
+          echo "✅ 已更新 Issue #$ISSUE_NUM"
+
+      - name: Summary
+        run: |
+          echo "========================================="
+          echo "健康檢查完成"
+          echo "========================================="
+          echo "時間: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo "Workflow 狀態: ${{ steps.check.outputs.status }}"
+          echo "是否過期: ${{ steps.stale.outputs.is_stale }}"
+          echo "========================================="
