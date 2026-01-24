@@ -4,13 +4,16 @@
 # 功能：
 #   1. 讀取 JSONL 格式的立法院答復資料
 #   2. 使用 OpenAI 識別並萃取政策承諾
-#   3. 輸出結構化的承諾資料
+#   3. 產生 embedding 並上傳到 Qdrant
+#   4. 同時儲存到本地 JSONL 檔案
 #
 # 使用方式：
 #   ./extract_commitments.sh --input data/daily/2026-01-24.jsonl [--output commitments.jsonl]
 #
 # 環境變數：
 #   OPENAI_API_KEY: OpenAI API key
+#   QDRANT_URL: Qdrant 伺服器 URL
+#   QDRANT_API_KEY: Qdrant API key (Cloud 版需要)
 
 set -euo pipefail
 
@@ -20,6 +23,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "${SCRIPT_DIR}/lib/core.sh"
 source "${SCRIPT_DIR}/lib/args.sh"
 source "${SCRIPT_DIR}/lib/openai.sh"
+source "${SCRIPT_DIR}/lib/qdrant.sh"
+
+# 預設 collection 名稱
+COMMITMENT_COLLECTION="policy_commitments"
+VECTOR_SIZE=1536
 
 ########################################
 # 承諾萃取 Prompt
@@ -55,6 +63,27 @@ COMMITMENT_SYSTEM_PROMPT='你是一個專門分析台灣政府政策文件的助
 ########################################
 # 處理函式
 ########################################
+
+# 產生承諾 ID
+generate_commitment_id() {
+  local doc_id="$1"
+  local text="$2"
+
+  local unique_string="${doc_id}-${text}"
+  local hash
+  if command -v md5 >/dev/null 2>&1; then
+    hash="$(printf '%s' "$unique_string" | md5)"
+  elif command -v md5sum >/dev/null 2>&1; then
+    hash="$(printf '%s' "$unique_string" | md5sum | awk '{print $1}')"
+  fi
+
+  printf '%s-%s-%s-%s-%s\n' \
+    "${hash:0:8}" \
+    "${hash:8:4}" \
+    "${hash:12:4}" \
+    "${hash:16:4}" \
+    "${hash:20:12}"
+}
 
 # 從單一文件萃取承諾
 extract_from_document() {
@@ -97,19 +126,80 @@ ${content}"
 
   echo "   ✅ 找到 ${commitment_count} 個承諾"
 
-  # 為每個承諾加上來源資訊和 ID
+  # 處理每個承諾
   local now
   now="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
-  printf '%s' "$response" | jq -c --arg source_info "$source_info" --arg doc_id "$doc_id" --arg now "$now" '
-    .commitments[] |
-    . + {
-      id: (($doc_id) + "-" + (. | @base64 | .[0:8])),
-      source: ($source_info | fromjson),
-      status: "pending",
-      extracted_at: $now
-    }
-  '
+  local points_batch="[]"
+
+  while IFS= read -r commitment; do
+    local text
+    text="$(printf '%s' "$commitment" | jq -r '.text')"
+
+    # 產生唯一 ID
+    local commitment_id
+    commitment_id="$(generate_commitment_id "$doc_id" "$text")"
+
+    echo "      🔮 產生 embedding: ${commitment_id:0:8}..."
+
+    # 產生 embedding
+    local embedding
+    if ! embedding="$(openai_create_embedding "$EMBEDDING_MODEL" "$text" 2>&1)"; then
+      echo "      ⚠️  Embedding 失敗，跳過此承諾" >&2
+      continue
+    fi
+
+    # 組合完整的承諾資料
+    local full_commitment
+    full_commitment="$(printf '%s' "$commitment" | jq -c \
+      --arg id "$commitment_id" \
+      --arg doc_id "$doc_id" \
+      --arg now "$now" \
+      --argjson source "$source_info" \
+      '. + {
+        id: $id,
+        source: $source,
+        status: "pending",
+        extracted_at: $now
+      }'
+    )"
+
+    # 組合成 Qdrant point 格式
+    local point
+    point="$(printf '%s\n%s' "$embedding" "$full_commitment" | jq -sc \
+      --arg id "$commitment_id" \
+      '{
+        id: $id,
+        vector: .[0],
+        payload: .[1]
+      }'
+    )"
+
+    # 加入批次
+    points_batch="$(printf '%s\n%s' "$points_batch" "$point" | jq -sc '.[0] + [.[1]]')"
+
+    # 寫入本地檔案
+    echo "$full_commitment" >> "$OUTPUT_FILE"
+
+    COMMITMENT_COUNT=$((COMMITMENT_COUNT + 1))
+
+    # API rate limit 保護
+    sleep 0.3
+
+  done < <(printf '%s' "$response" | jq -c '.commitments[]')
+
+  # 批次上傳到 Qdrant
+  local batch_size
+  batch_size="$(printf '%s' "$points_batch" | jq 'length')"
+
+  if [[ "$batch_size" -gt 0 ]]; then
+    echo "      📤 上傳 ${batch_size} 個承諾到 Qdrant..."
+    if qdrant_upsert_points_batch "$COMMITMENT_COLLECTION" "$points_batch"; then
+      echo "      ✅ 上傳成功"
+    else
+      echo "      ⚠️  上傳失敗（資料已儲存到本地檔案）" >&2
+    fi
+  fi
 }
 
 ########################################
@@ -125,7 +215,8 @@ parse_args "$@"
 arg_required input INPUT_FILE
 arg_optional output OUTPUT_FILE ""
 arg_optional limit PROCESS_LIMIT "0"
-arg_optional model CHAT_MODEL "gpt-4o-mini"
+arg_optional model EMBEDDING_MODEL "text-embedding-3-small"
+arg_optional collection COMMITMENT_COLLECTION "policy_commitments"
 
 # 若未指定輸出檔案，自動產生
 if [[ -z "$OUTPUT_FILE" ]]; then
@@ -138,17 +229,25 @@ echo "政策承諾萃取引擎"
 echo "========================================="
 echo "輸入檔案: ${INPUT_FILE}"
 echo "輸出檔案: ${OUTPUT_FILE}"
+echo "Qdrant Collection: ${COMMITMENT_COLLECTION}"
 echo "處理限制: ${PROCESS_LIMIT:-無限制}"
-echo "使用模型: ${CHAT_MODEL}"
+echo "Embedding Model: ${EMBEDDING_MODEL}"
 echo "========================================="
 echo ""
 
-# 初始化 OpenAI
+# 初始化環境
 echo "🔧 初始化環境..."
+
 openai_init_env || {
   echo "❌ OpenAI 環境初始化失敗"
   exit 1
 }
+
+qdrant_init_env || {
+  echo "❌ Qdrant 環境初始化失敗"
+  exit 1
+}
+
 echo "✅ 環境初始化完成"
 echo ""
 
@@ -161,6 +260,18 @@ fi
 # 確保輸出目錄存在
 OUTPUT_DIR="$(dirname "$OUTPUT_FILE")"
 mkdir -p "$OUTPUT_DIR"
+
+# 確保 Qdrant collection 存在
+echo "🔧 確認 Qdrant collection..."
+if ! qdrant_collection_exists "$COMMITMENT_COLLECTION"; then
+  echo "   📦 建立 collection: ${COMMITMENT_COLLECTION}"
+  qdrant_create_collection "$COMMITMENT_COLLECTION" "$VECTOR_SIZE" "Cosine" || {
+    echo "❌ 無法建立 Qdrant collection"
+    exit 1
+  }
+fi
+echo "✅ Collection 就緒"
+echo ""
 
 # 統計
 TOTAL_DOCS=0
@@ -222,15 +333,7 @@ while IFS= read -r line; do
   }')"
 
   # 萃取承諾
-  if commitments="$(extract_from_document "$DOC_ID" "$SUBJECT" "$CONTENT" "$SOURCE_INFO")"; then
-    if [[ -n "$commitments" ]]; then
-      # 寫入輸出檔案
-      printf '%s\n' "$commitments" >> "$OUTPUT_FILE"
-      # 計算本次新增的承諾數
-      new_count="$(printf '%s' "$commitments" | wc -l | tr -d ' ')"
-      COMMITMENT_COUNT=$((COMMITMENT_COUNT + new_count))
-    fi
-  else
+  if ! extract_from_document "$DOC_ID" "$SUBJECT" "$CONTENT" "$SOURCE_INFO"; then
     ERROR_COUNT=$((ERROR_COUNT + 1))
   fi
 
@@ -247,6 +350,7 @@ echo "處理文件: ${PROCESSED_DOCS} 筆"
 echo "萃取承諾: ${COMMITMENT_COUNT} 筆"
 echo "失敗文件: ${ERROR_COUNT} 筆"
 echo "輸出檔案: ${OUTPUT_FILE}"
+echo "Qdrant Collection: ${COMMITMENT_COLLECTION}"
 echo "========================================="
 
 # 顯示承諾統計

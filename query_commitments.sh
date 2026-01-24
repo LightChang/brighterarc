@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
-# query_commitments.sh - 查詢與追蹤政策承諾
+# query_commitments.sh - 語意搜尋政策承諾
 #
 # 功能：
-#   1. 依關鍵字搜尋承諾
-#   2. 依分類篩選承諾
-#   3. 依目標日期篩選承諾
-#   4. 顯示即將到期的承諾
+#   1. 將查詢文字轉為 embedding
+#   2. 在 Qdrant 中搜尋最相似的承諾
+#   3. 格式化輸出結果
 #
 # 使用方式：
-#   ./query_commitments.sh --search "再生能源"
-#   ./query_commitments.sh --category "能源政策"
-#   ./query_commitments.sh --due-before 2025-12-31
-#   ./query_commitments.sh --upcoming 90  # 90 天內到期
+#   ./query_commitments.sh --query "再生能源目標"
+#   ./query_commitments.sh --query "碳中和承諾" --limit 20
+#   ./query_commitments.sh --query "教育政策" --format json
+#
+# 環境變數：
+#   OPENAI_API_KEY: OpenAI API key
+#   QDRANT_URL: Qdrant 伺服器 URL
+#   QDRANT_API_KEY: Qdrant API key (Cloud 版需要)
 
 set -euo pipefail
 
@@ -20,185 +23,150 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # 載入模組
 source "${SCRIPT_DIR}/lib/core.sh"
 source "${SCRIPT_DIR}/lib/args.sh"
-
-########################################
-# 輔助函式
-########################################
-
-# 日期轉 epoch（跨平台）
-date_to_epoch() {
-  local date_str="$1"
-  if date -j -f "%Y-%m-%d" "$date_str" "+%s" 2>/dev/null; then
-    return 0
-  elif date -d "$date_str" "+%s" 2>/dev/null; then
-    return 0
-  else
-    echo "0"
-  fi
-}
-
-# 格式化輸出單個承諾
-format_commitment() {
-  local commitment="$1"
-  local index="$2"
-
-  local text category target_date target_value confidence
-  local term session_period subject
-
-  text="$(printf '%s' "$commitment" | jq -r '.text')"
-  category="$(printf '%s' "$commitment" | jq -r '.category // "未分類"')"
-  target_date="$(printf '%s' "$commitment" | jq -r '.target_date // "無期限"')"
-  target_value="$(printf '%s' "$commitment" | jq -r '.target_value // "-"')"
-  confidence="$(printf '%s' "$commitment" | jq -r '.confidence // "medium"')"
-  responsible="$(printf '%s' "$commitment" | jq -r '.responsible_agency // "-"')"
-
-  term="$(printf '%s' "$commitment" | jq -r '.source.term')"
-  session_period="$(printf '%s' "$commitment" | jq -r '.source.sessionPeriod')"
-  subject="$(printf '%s' "$commitment" | jq -r '.source.subject // ""' | head -c 60)"
-
-  echo "-------------------------------------------"
-  echo "${index}. [${category}] ${confidence} 信心度"
-  echo ""
-  echo "   📋 承諾內容："
-  echo "   ${text}"
-  echo ""
-  echo "   📅 目標日期: ${target_date}"
-  echo "   📊 目標值: ${target_value}"
-  echo "   🏛️  負責機關: ${responsible}"
-  echo ""
-  echo "   📄 來源: 第 ${term} 屆第 ${session_period} 會期"
-  echo "   ${subject}..."
-}
-
-########################################
-# 主程式
-########################################
+source "${SCRIPT_DIR}/lib/openai.sh"
+source "${SCRIPT_DIR}/lib/qdrant.sh"
 
 # 檢查必要指令
-require_cmd jq
+require_cmd curl jq
 
+########################################
 # 解析參數
+########################################
 parse_args "$@"
 
-arg_optional input INPUT_FILE "data/commitments"
-arg_optional search SEARCH_TERM ""
-arg_optional category CATEGORY_FILTER ""
-arg_optional due-before DUE_BEFORE ""
-arg_optional due-after DUE_AFTER ""
-arg_optional upcoming UPCOMING_DAYS ""
-arg_optional status STATUS_FILTER ""
-arg_optional limit RESULT_LIMIT "20"
+arg_required query QUERY_TEXT "查詢文字"
+arg_optional limit RESULT_LIMIT "10"
+arg_optional collection COLLECTION_NAME "policy_commitments"
 arg_optional format OUTPUT_FORMAT "text"
+arg_optional model EMBEDDING_MODEL "text-embedding-3-small"
 
-echo "========================================="
-echo "政策承諾查詢系統"
-echo "========================================="
-
-# 準備輸入檔案列表
-INPUT_FILES=()
-if [[ -d "$INPUT_FILE" ]]; then
-  while IFS= read -r -d '' f; do
-    INPUT_FILES+=("$f")
-  done < <(find "$INPUT_FILE" -name "*.jsonl" -print0 2>/dev/null)
-elif [[ -f "$INPUT_FILE" ]]; then
-  INPUT_FILES+=("$INPUT_FILE")
-else
-  echo "❌ 找不到輸入檔案或目錄: ${INPUT_FILE}"
+########################################
+# 初始化
+########################################
+openai_init_env || {
+  echo "❌ OpenAI 環境初始化失敗" >&2
   exit 1
-fi
+}
 
-if [[ ${#INPUT_FILES[@]} -eq 0 ]]; then
-  echo "❌ 找不到任何 .jsonl 檔案"
+qdrant_init_env || {
+  echo "❌ Qdrant 環境初始化失敗" >&2
   exit 1
+}
+
+########################################
+# 產生查詢 embedding
+########################################
+if [[ "$OUTPUT_FORMAT" == "text" ]]; then
+  echo "🔮 產生查詢 embedding..." >&2
 fi
 
-echo "資料來源: ${#INPUT_FILES[@]} 個檔案"
+QUERY_EMBEDDING="$(openai_create_embedding "$EMBEDDING_MODEL" "$QUERY_TEXT")" || {
+  echo "❌ Embedding 產生失敗" >&2
+  exit 1
+}
 
-# 合併所有承諾資料
-ALL_COMMITMENTS="$(cat "${INPUT_FILES[@]}" 2>/dev/null | jq -s '.')"
-TOTAL_COUNT="$(printf '%s' "$ALL_COMMITMENTS" | jq 'length')"
-
-echo "總承諾數: ${TOTAL_COUNT}"
-echo "========================================="
-echo ""
-
-# 建立 jq 篩選條件
-JQ_FILTER="."
-
-# 關鍵字搜尋
-if [[ -n "$SEARCH_TERM" ]]; then
-  echo "🔍 搜尋: ${SEARCH_TERM}"
-  JQ_FILTER="${JQ_FILTER} | select(.text | test(\"${SEARCH_TERM}\"; \"i\"))"
+########################################
+# 搜尋 Qdrant
+########################################
+if [[ "$OUTPUT_FORMAT" == "text" ]]; then
+  echo "🔍 搜尋相似承諾..." >&2
+  echo "" >&2
 fi
 
-# 分類篩選
-if [[ -n "$CATEGORY_FILTER" ]]; then
-  echo "📁 分類: ${CATEGORY_FILTER}"
-  JQ_FILTER="${JQ_FILTER} | select(.category == \"${CATEGORY_FILTER}\")"
-fi
+SEARCH_RESULT="$(qdrant_search "$COLLECTION_NAME" "$QUERY_EMBEDDING" "$RESULT_LIMIT")" || {
+  echo "❌ 搜尋失敗" >&2
+  exit 1
+}
 
-# 狀態篩選
-if [[ -n "$STATUS_FILTER" ]]; then
-  echo "📌 狀態: ${STATUS_FILTER}"
-  JQ_FILTER="${JQ_FILTER} | select(.status == \"${STATUS_FILTER}\")"
-fi
-
-# 目標日期篩選
-if [[ -n "$DUE_BEFORE" ]]; then
-  echo "📅 到期日 ≤ ${DUE_BEFORE}"
-  JQ_FILTER="${JQ_FILTER} | select(.target_date != null and .target_date <= \"${DUE_BEFORE}\")"
-fi
-
-if [[ -n "$DUE_AFTER" ]]; then
-  echo "📅 到期日 ≥ ${DUE_AFTER}"
-  JQ_FILTER="${JQ_FILTER} | select(.target_date != null and .target_date >= \"${DUE_AFTER}\")"
-fi
-
-# 即將到期篩選
-if [[ -n "$UPCOMING_DAYS" ]]; then
-  TODAY="$(date +%Y-%m-%d)"
-  # 計算 N 天後的日期
-  if date -v+${UPCOMING_DAYS}d "+%Y-%m-%d" >/dev/null 2>&1; then
-    # macOS
-    FUTURE_DATE="$(date -v+${UPCOMING_DAYS}d "+%Y-%m-%d")"
-  else
-    # Linux
-    FUTURE_DATE="$(date -d "+${UPCOMING_DAYS} days" "+%Y-%m-%d")"
-  fi
-  echo "⏰ ${UPCOMING_DAYS} 天內到期 (${TODAY} ~ ${FUTURE_DATE})"
-  JQ_FILTER="${JQ_FILTER} | select(.target_date != null and .target_date >= \"${TODAY}\" and .target_date <= \"${FUTURE_DATE}\")"
-fi
-
-echo ""
-
-# 執行查詢
-RESULTS="$(printf '%s' "$ALL_COMMITMENTS" | jq -c "[.[] | ${JQ_FILTER}] | sort_by(.target_date) | .[0:${RESULT_LIMIT}]")"
-RESULT_COUNT="$(printf '%s' "$RESULTS" | jq 'length')"
-
-if [[ "$RESULT_COUNT" -eq 0 ]]; then
-  echo "ℹ️  沒有找到符合條件的承諾"
-  exit 0
-fi
-
-echo "找到 ${RESULT_COUNT} 筆結果"
-echo "==========================================="
+########################################
+# 格式化輸出
+########################################
 
 if [[ "$OUTPUT_FORMAT" == "json" ]]; then
-  # JSON 格式輸出
-  printf '%s' "$RESULTS" | jq '.'
+  # JSON 格式：直接輸出原始結果
+  printf '%s\n' "$SEARCH_RESULT" | jq '.result'
 else
-  # 文字格式輸出
-  INDEX=1
-  while IFS= read -r commitment; do
-    format_commitment "$commitment" "$INDEX"
-    INDEX=$((INDEX + 1))
-  done < <(printf '%s' "$RESULTS" | jq -c '.[]')
+  # Text 格式：友善的文字輸出
   echo "==========================================="
-fi
+  echo "查詢：${QUERY_TEXT}"
+  echo "政策承諾搜尋結果（Top ${RESULT_LIMIT}）"
+  echo "==========================================="
+  echo ""
 
-# 顯示分類統計
-if [[ "$OUTPUT_FORMAT" != "json" ]]; then
+  # 檢查是否有結果
+  RESULT_COUNT="$(printf '%s\n' "$SEARCH_RESULT" | jq '.result | length')"
+
+  if [[ "$RESULT_COUNT" -eq 0 ]]; then
+    echo "ℹ️  沒有找到相關的承諾"
+    echo ""
+    echo "提示：請確認 policy_commitments collection 中已有資料"
+    echo "     可先執行 ./extract_commitments.sh 萃取承諾"
+    exit 0
+  fi
+
+  # 解析並格式化每個結果
+  index=1
+  printf '%s\n' "$SEARCH_RESULT" | jq -r '.result[] | @json' | while IFS= read -r item; do
+    SCORE="$(printf '%s' "$item" | jq -r '.score')"
+    PAYLOAD="$(printf '%s' "$item" | jq -r '.payload')"
+
+    # 承諾資訊
+    TEXT="$(printf '%s' "$PAYLOAD" | jq -r '.text // ""')"
+    CATEGORY="$(printf '%s' "$PAYLOAD" | jq -r '.category // "未分類"')"
+    TARGET_DATE="$(printf '%s' "$PAYLOAD" | jq -r '.target_date // "無期限"')"
+    TARGET_VALUE="$(printf '%s' "$PAYLOAD" | jq -r '.target_value // "-"')"
+    CONFIDENCE="$(printf '%s' "$PAYLOAD" | jq -r '.confidence // "medium"')"
+    RESPONSIBLE="$(printf '%s' "$PAYLOAD" | jq -r '.responsible_agency // "-"')"
+    STATUS="$(printf '%s' "$PAYLOAD" | jq -r '.status // "pending"')"
+
+    # 來源資訊
+    TERM="$(printf '%s' "$PAYLOAD" | jq -r '.source.term // ""')"
+    SESSION_PERIOD="$(printf '%s' "$PAYLOAD" | jq -r '.source.sessionPeriod // ""')"
+    SUBJECT="$(printf '%s' "$PAYLOAD" | jq -r '.source.subject // ""')"
+    EY_NUMBER="$(printf '%s' "$PAYLOAD" | jq -r '.source.eyNumber // ""')"
+
+    # 格式化相似度分數（保留 4 位小數）
+    SCORE_FORMATTED="$(printf '%.4f' "$SCORE")"
+
+    # 狀態顯示
+    case "$STATUS" in
+      pending) STATUS_ICON="⏳" ;;
+      fulfilled) STATUS_ICON="✅" ;;
+      unfulfilled) STATUS_ICON="❌" ;;
+      modified) STATUS_ICON="🔄" ;;
+      *) STATUS_ICON="❓" ;;
+    esac
+
+    # 信心程度顯示
+    case "$CONFIDENCE" in
+      high) CONF_ICON="🟢" ;;
+      medium) CONF_ICON="🟡" ;;
+      low) CONF_ICON="🔴" ;;
+      *) CONF_ICON="⚪" ;;
+    esac
+
+    echo "${index}. [相似度: ${SCORE_FORMATTED}] ${STATUS_ICON} ${CATEGORY}"
+    echo ""
+    echo "   📋 承諾內容："
+    echo "   ${TEXT}"
+    echo ""
+    echo "   📅 目標日期: ${TARGET_DATE}"
+    echo "   📊 目標值: ${TARGET_VALUE}"
+    echo "   🏛️  負責機關: ${RESPONSIBLE}"
+    echo "   ${CONF_ICON} 信心程度: ${CONFIDENCE}"
+    echo ""
+    echo "   📄 來源: 第 ${TERM} 屆第 ${SESSION_PERIOD} 會期"
+    echo "   ${SUBJECT:0:60}..."
+    echo "   文號: ${EY_NUMBER}"
+    echo ""
+    echo "-------------------------------------------"
+    echo ""
+
+    index=$((index + 1))
+  done
+
+  # 顯示分類統計
   echo ""
   echo "📊 結果分類統計："
-  printf '%s' "$RESULTS" | jq -r '.[].category' | sort | uniq -c | sort -rn
+  printf '%s\n' "$SEARCH_RESULT" | jq -r '.result[].payload.category' | sort | uniq -c | sort -rn
 fi
