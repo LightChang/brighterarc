@@ -242,7 +242,7 @@ require_cmd curl jq
 
 parse_args "$@"
 
-arg_required input INPUT_FILE
+arg_required input INPUT_FILE "輸入 JSONL 檔案"
 
 echo "========================================="
 echo "政策承諾萃取"
