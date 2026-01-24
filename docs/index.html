@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>政策承諾追蹤 - BrighterArc</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* 側邊欄 */
+    .sidebar {
+      width: 320px;
+      background: #fff;
+      border-right: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .sidebar-header h1 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+
+    .stat {
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: #f0f0f0;
+    }
+
+    .stat.tracking { background: #e3f2fd; color: #1565c0; }
+    .stat.fulfilled { background: #e8f5e9; color: #2e7d32; }
+    .stat.delayed { background: #fff3e0; color: #ef6c00; }
+    .stat.stale { background: #fafafa; color: #757575; }
+
+    /* 篩選器 */
+    .filters {
+      padding: 15px 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .filter-group {
+      margin-bottom: 10px;
+    }
+
+    .filter-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .filter-group label {
+      display: block;
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .filter-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    /* 承諾列表 */
+    .commitment-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .category-section {
+      margin-bottom: 15px;
+    }
+
+    .category-header {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #666;
+      padding: 8px 10px;
+      background: #f9f9f9;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+
+    .commitment-item {
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 5px;
+    }
+
+    .commitment-item:hover {
+      background: #f5f5f5;
+    }
+
+    .commitment-item.active {
+      background: #e3f2fd;
+    }
+
+    .commitment-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .commitment-meta {
+      font-size: 0.8rem;
+      color: #666;
+      display: flex;
+      gap: 10px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+    }
+
+    .status-badge.追蹤中 { background: #e3f2fd; color: #1565c0; }
+    .status-badge.已達成 { background: #e8f5e9; color: #2e7d32; }
+    .status-badge.已延宕 { background: #fff3e0; color: #ef6c00; }
+    .status-badge.無更新 { background: #fafafa; color: #757575; }
+
+    /* 主內容區 */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .empty-state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #999;
+      font-size: 1.1rem;
+    }
+
+    .commitment-detail {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .commitment-detail h1 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .commitment-detail h2 {
+      font-size: 1.2rem;
+      margin: 25px 0 15px;
+      color: #333;
+    }
+
+    .commitment-detail h3 {
+      font-size: 1rem;
+      margin: 20px 0 10px;
+      color: #555;
+    }
+
+    .commitment-detail p {
+      margin-bottom: 15px;
+    }
+
+    .commitment-detail strong {
+      color: #333;
+    }
+
+    .detail-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 6px;
+    }
+
+    .meta-item {
+      font-size: 0.9rem;
+    }
+
+    .meta-item .label {
+      color: #666;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .meta-item .value {
+      font-weight: 500;
+    }
+
+    /* 載入狀態 */
+    .loading {
+      text-align: center;
+      padding: 50px;
+      color: #666;
+    }
+
+    .error {
+      text-align: center;
+      padding: 50px;
+      color: #c62828;
+    }
+
+    /* RWD */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        max-height: 50vh;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 側邊欄 -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>📋 政策承諾追蹤</h1>
+        <div class="stats" id="stats">
+          <span class="stat">載入中...</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group">
+          <label>狀態篩選</label>
+          <select id="statusFilter">
+            <option value="">全部狀態</option>
+            <option value="追蹤中">⏳ 追蹤中</option>
+            <option value="已達成">✅ 已達成</option>
+            <option value="已延宕">⚠️ 已延宕</option>
+            <option value="無更新">💤 無更新</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>分類篩選</label>
+          <select id="categoryFilter">
+            <option value="">全部分類</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="commitment-list" id="commitmentList">
+        <div class="loading">載入中...</div>
+      </div>
+    </div>
+
+    <!-- 主內容區 -->
+    <div class="main-content" id="mainContent">
+      <div class="empty-state">
+        👈 請從左側選擇一個承諾
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let indexData = null;
+    let currentCommitment = null;
+
+    // 載入索引
+    async function loadIndex() {
+      try {
+        const response = await fetch('commitments/index.json');
+        if (!response.ok) throw new Error('無法載入索引');
+        indexData = await response.json();
+        renderStats();
+        renderFilters();
+        renderList();
+      } catch (error) {
+        document.getElementById('commitmentList').innerHTML =
+          `<div class="error">❌ ${error.message}</div>`;
+      }
+    }
+
+    // 渲染統計
+    function renderStats() {
+      const stats = indexData.status_summary;
+      document.getElementById('stats').innerHTML = `
+        <span class="stat tracking">⏳ ${stats['追蹤中'] || 0}</span>
+        <span class="stat fulfilled">✅ ${stats['已達成'] || 0}</span>
+        <span class="stat delayed">⚠️ ${stats['已延宕'] || 0}</span>
+        <span class="stat stale">💤 ${stats['無更新'] || 0}</span>
+      `;
+    }
+
+    // 渲染篩選器
+    function renderFilters() {
+      const categoryFilter = document.getElementById('categoryFilter');
+      indexData.categories.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat.name;
+        option.textContent = `${cat.name} (${cat.count})`;
+        categoryFilter.appendChild(option);
+      });
+    }
+
+    // 渲染列表
+    function renderList() {
+      const statusFilter = document.getElementById('statusFilter').value;
+      const categoryFilter = document.getElementById('categoryFilter').value;
+
+      let html = '';
+
+      indexData.categories.forEach(category => {
+        if (categoryFilter && category.name !== categoryFilter) return;
+
+        const filteredCommitments = category.commitments.filter(c =>
+          !statusFilter || c.status === statusFilter
+        );
+
+        if (filteredCommitments.length === 0) return;
+
+        html += `
+          <div class="category-section">
+            <div class="category-header">${category.name} (${filteredCommitments.length})</div>
+            ${filteredCommitments.map(c => `
+              <div class="commitment-item" data-file="${c.file}" onclick="loadCommitment('${c.file}')">
+                <div class="commitment-title">${c.title}</div>
+                <div class="commitment-meta">
+                  <span class="status-badge ${c.status}">${c.status}</span>
+                  ${c.target_date ? `<span>📅 ${c.target_date}</span>` : ''}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      });
+
+      document.getElementById('commitmentList').innerHTML = html ||
+        '<div class="empty-state">沒有符合條件的承諾</div>';
+    }
+
+    // 載入承諾詳情
+    async function loadCommitment(file) {
+      try {
+        // 更新選中狀態
+        document.querySelectorAll('.commitment-item').forEach(el => {
+          el.classList.remove('active');
+        });
+        document.querySelector(`[data-file="${file}"]`)?.classList.add('active');
+
+        // 載入 Markdown
+        const response = await fetch(`commitments/${file}`);
+        if (!response.ok) throw new Error('無法載入承諾');
+        const markdown = await response.text();
+
+        // 解析 frontmatter
+        const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+        if (!frontmatterMatch) throw new Error('格式錯誤');
+
+        const frontmatter = parseFrontmatter(frontmatterMatch[1]);
+        const content = frontmatterMatch[2];
+
+        // 渲染詳情
+        renderDetail(frontmatter, content);
+      } catch (error) {
+        document.getElementById('mainContent').innerHTML =
+          `<div class="error">❌ ${error.message}</div>`;
+      }
+    }
+
+    // 解析 frontmatter
+    function parseFrontmatter(yaml) {
+      const result = {};
+      yaml.split('\n').forEach(line => {
+        const match = line.match(/^(\w+):\s*"?([^"]*)"?$/);
+        if (match) {
+          result[match[1]] = match[2];
+        }
+      });
+      return result;
+    }
+
+    // 渲染詳情
+    function renderDetail(meta, content) {
+      const statusIcons = {
+        '追蹤中': '⏳',
+        '已達成': '✅',
+        '已延宕': '⚠️',
+        '無更新': '💤'
+      };
+
+      document.getElementById('mainContent').innerHTML = `
+        <div class="commitment-detail">
+          <h1>${statusIcons[meta.status] || ''} ${meta.title}</h1>
+
+          <div class="detail-meta">
+            <div class="meta-item">
+              <span class="label">狀態</span>
+              <span class="value status-badge ${meta.status}">${meta.status}</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">分類</span>
+              <span class="value">${meta.category}</span>
+            </div>
+            ${meta.target_date && meta.target_date !== 'null' ? `
+            <div class="meta-item">
+              <span class="label">目標日期</span>
+              <span class="value">${meta.target_date}</span>
+            </div>
+            ` : ''}
+            ${meta.target_value && meta.target_value !== 'null' ? `
+            <div class="meta-item">
+              <span class="label">目標值</span>
+              <span class="value">${meta.target_value}</span>
+            </div>
+            ` : ''}
+            ${meta.responsible_agency && meta.responsible_agency !== 'null' ? `
+            <div class="meta-item">
+              <span class="label">負責機關</span>
+              <span class="value">${meta.responsible_agency}</span>
+            </div>
+            ` : ''}
+            <div class="meta-item">
+              <span class="label">最後更新</span>
+              <span class="value">${meta.last_updated}</span>
+            </div>
+          </div>
+
+          ${marked.parse(content)}
+        </div>
+      `;
+    }
+
+    // 事件監聽
+    document.getElementById('statusFilter').addEventListener('change', renderList);
+    document.getElementById('categoryFilter').addEventListener('change', renderList);
+
+    // 初始化
+    loadIndex();
+  </script>
+</body>
+</html>

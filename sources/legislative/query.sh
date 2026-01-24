@@ -17,12 +17,13 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 
 # 載入模組
-source "${SCRIPT_DIR}/lib/core.sh"
-source "${SCRIPT_DIR}/lib/args.sh"
-source "${SCRIPT_DIR}/lib/openai.sh"
-source "${SCRIPT_DIR}/lib/qdrant.sh"
+source "${ROOT_DIR}/lib/core.sh"
+source "${ROOT_DIR}/lib/args.sh"
+source "${ROOT_DIR}/lib/openai.sh"
+source "${ROOT_DIR}/lib/qdrant.sh"
 
 # 檢查必要指令
 require_cmd curl jq

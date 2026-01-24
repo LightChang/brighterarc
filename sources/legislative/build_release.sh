@@ -18,11 +18,12 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_DIR="$SCRIPT_DIR"
+ROOT_DIR="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+REPO_DIR="$ROOT_DIR"
 
 # 載入模組
-source "${SCRIPT_DIR}/lib/core.sh"
-source "${SCRIPT_DIR}/lib/args.sh"
+source "${ROOT_DIR}/lib/core.sh"
+source "${ROOT_DIR}/lib/args.sh"
 
 # 檢查必要指令
 require_cmd jq gh gzip
