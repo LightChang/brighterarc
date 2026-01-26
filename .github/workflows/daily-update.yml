@@ -38,7 +38,8 @@ jobs:
           sudo apt-get install -y jq curl gzip
 
           # 檢查腳本權限
-          chmod +x *.sh
+          chmod +x sources/legislative/*.sh
+          chmod +x commitments/*.sh
 
       - name: Fetch legislative data
         env:
@@ -46,7 +47,7 @@ jobs:
         run: |
           echo "📥 抓取立法院資料..."
           LIMIT="${{ github.event.inputs.limit || '100' }}"
-          ./fetch_legislative_data.sh --limit "$LIMIT"
+          ./sources/legislative/fetch.sh --limit "$LIMIT"
 
           # 檢查是否有產生檔案
           TODAY=$(date +%Y-%m-%d)
@@ -64,7 +65,7 @@ jobs:
         run: |
           echo "📤 上傳資料到 Qdrant..."
           TODAY=$(date +%Y-%m-%d)
-          ./update_legislative_qdrant.sh --input "data/daily/${TODAY}.jsonl"
+          ./sources/legislative/update_qdrant.sh --input "data/daily/${TODAY}.jsonl"
 
           echo "✅ Qdrant 更新完成"
 
@@ -122,7 +123,7 @@ jobs:
         run: |
           echo "🚀 建立/更新月度 Release..."
           TODAY=$(date +%Y-%m-%d)
-          ./build_legislative_release.sh --input "data/daily/${TODAY}.jsonl"
+          ./sources/legislative/build_release.sh --input "data/daily/${TODAY}.jsonl"
 
           echo "✅ Release 更新完成"
 
@@ -142,10 +143,54 @@ jobs:
           else
             git commit -m "Add data for ${TODAY}" -m "- Fetched and embedded legislative data" -m "- Updated Qdrant" -m "- Updated monthly release" -m "Co-Authored-By: GitHub Actions <actions@github.com>"
 
-            # Push 到 main 分支
-            git push origin main
+            # Push 到當前分支
+            git push origin HEAD
 
             echo "✅ 資料已提交到 Git"
+          fi
+
+      # ===== 承諾處理 =====
+      - name: Extract new commitments
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "📋 萃取新承諾..."
+          TODAY=$(date +%Y-%m-%d)
+          ./commitments/extract.sh --input "data/daily/${TODAY}.jsonl"
+          echo "✅ 承諾萃取完成"
+
+      - name: Update commitment status
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "🔄 更新承諾狀態..."
+          TODAY=$(date +%Y-%m-%d)
+          ./commitments/update_status.sh --input "data/daily/${TODAY}.jsonl"
+          echo "✅ 狀態更新完成"
+
+      - name: Build commitment index
+        run: |
+          echo "📊 產生承諾索引..."
+          ./commitments/build_index.sh
+          echo "✅ 索引產生完成"
+
+      - name: Commit commitments
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          TODAY=$(date +%Y-%m-%d)
+
+          # 加入承諾相關檔案
+          git add docs/commitments/
+
+          # 如果有變更才 commit
+          if git diff --staged --quiet; then
+            echo "ℹ️  沒有新的承諾變更"
+          else
+            git commit -m "Update commitments for ${TODAY}"
+            git push origin HEAD
+            echo "✅ 承諾已提交到 Git"
           fi
 
       - name: Summary

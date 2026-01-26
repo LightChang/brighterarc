@@ -215,3 +215,135 @@ openai_create_embedding_batch() {
 
   printf '%s\n' "$embeddings"
 }
+
+########################################
+# Chat Completions API
+########################################
+
+# openai_chat_completion MODEL SYSTEM_PROMPT USER_MESSAGE [RESPONSE_FORMAT]
+#
+# 功能：
+#   - 呼叫 OpenAI Chat Completions API
+#   - 支援 JSON 模式輸出
+#
+# 參數：
+#   MODEL: 模型名稱 (如 gpt-4o-mini)
+#   SYSTEM_PROMPT: 系統提示詞
+#   USER_MESSAGE: 使用者訊息
+#   RESPONSE_FORMAT: (可選) "json" 啟用 JSON 模式
+#
+# stdout:
+#   API 回應的 content
+#
+# 回傳值：
+#   0  = 成功
+#   >0 = 失敗
+openai_chat_completion() {
+  local model="$1"
+  local system_prompt="$2"
+  local user_message="$3"
+  local response_format="${4:-}"
+
+  require_cmd curl jq || return 1
+
+  local max_retries=3
+  local retry_delay=2
+
+  local payload
+  if [[ "$response_format" == "json" ]]; then
+    payload="$(
+      jq -n \
+        --arg model "$model" \
+        --arg system "$system_prompt" \
+        --arg user "$user_message" \
+        '{
+          model: $model,
+          messages: [
+            { role: "system", content: $system },
+            { role: "user", content: $user }
+          ],
+          response_format: { type: "json_object" }
+        }'
+    )"
+  else
+    payload="$(
+      jq -n \
+        --arg model "$model" \
+        --arg system "$system_prompt" \
+        --arg user "$user_message" \
+        '{
+          model: $model,
+          messages: [
+            { role: "system", content: $system },
+            { role: "user", content: $user }
+          ]
+        }'
+    )"
+  fi
+
+  for ((attempt=1; attempt<=max_retries; attempt++)); do
+    local tmp_body http_code
+    tmp_body="$(mktemp)"
+
+    local curl_args=(
+      -sS -X POST "${OPENAI_BASE_URL%/}/chat/completions"
+      -H "Content-Type: application/json"
+      -H "Authorization: Bearer ${OPENAI_API_KEY}"
+      --data-raw "$payload"
+      -w '%{http_code}' -o "$tmp_body"
+      --connect-timeout 30
+      --max-time 120
+    )
+
+    http_code="$(curl "${curl_args[@]}" 2>/dev/null)"
+    local curl_exit=$?
+
+    if [[ $curl_exit -eq 0 ]]; then
+      local resp
+      resp="$(cat "$tmp_body")"
+      rm -f "$tmp_body"
+
+      if [[ "$http_code" == "200" ]]; then
+        # 提取回應內容
+        local content
+        content="$(printf '%s' "$resp" | jq -r '.choices[0].message.content')" || return 1
+
+        if [[ -z "$content" || "$content" == "null" ]]; then
+          echo "❌ [openai_chat_completion] 無法提取回應內容" >&2
+          return 1
+        fi
+
+        printf '%s\n' "$content"
+        return 0
+      fi
+
+      # 處理 rate limit
+      if [[ "$http_code" == "429" ]]; then
+        echo "⚠️  [openai_chat_completion] Rate limit，等待 ${retry_delay}s 後重試..." >&2
+        sleep $retry_delay
+        retry_delay=$((retry_delay * 2))
+        continue
+      fi
+
+      echo "❌ [openai_chat_completion] HTTP=${http_code}" >&2
+      if jq -e . >/dev/null 2>&1 <<<"$resp"; then
+        echo "$resp" | jq -C '.' >&2
+      else
+        echo "$resp" >&2
+      fi
+      return 1
+    fi
+
+    rm -f "$tmp_body"
+    if [[ $attempt -lt $max_retries ]]; then
+      echo "⚠️  [openai_chat_completion] curl 失敗 (exit=$curl_exit)，重試 $attempt/$max_retries..." >&2
+      sleep $retry_delay
+      retry_delay=$((retry_delay * 2))
+    else
+      echo "❌ [openai_chat_completion] curl 失敗 (exit=$curl_exit)，已重試 $max_retries 次" >&2
+      return 1
+    fi
+  done
+
+  return 1
+}
