@@ -1,0 +1,2904 @@
+{
+  "generated_at": "2026-01-26T19:05:24Z",
+  "total_count": 310,
+  "status_summary": {
+    "追蹤中": 310,
+    "已達成": 0,
+    "已延宕": 0,
+    "無更新": 0
+  },
+  "categories": [
+    {
+      "name": "交通建設",
+      "count": 27,
+      "commitments": [
+        {
+          "id": "7544951e-a7cd-fda9-d16a-be1b61b2e282",
+          "title": "路燈復位作業完成",
+          "file": "交通建設/110-路燈復位.md",
+          "status": "追蹤中",
+          "target_date": "2021-11-11",
+          "target_value": "5支",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "87114fc6-f4e9-415d-fedd-132bf6f68e47",
+          "title": "養護道路平整狀況良好",
+          "file": "交通建設/110-道路養護.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3eded13e-bad6-b791-3536-5bbde5886343",
+          "title": "協助核發靠行車輛臨時證",
+          "file": "交通建設/2021-臨時證發放.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0963f958-7364-f8e2-3e79-9bcd1ac7dc51",
+          "title": "研議靠行制度修法",
+          "file": "交通建設/2021-靠行制度修法.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f6d3d349-1711-c989-2f98-ecb954746bb6",
+          "title": "加速臺中捷運藍線審查",
+          "file": "交通建設/2022-台中捷運藍線.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "faf801cb-43b9-9292-3856-8c8c91495ec9",
+          "title": "新豐親水公園啟用評估增設站位",
+          "file": "交通建設/2022-新豐親水公園站位.md",
+          "status": "追蹤中",
+          "target_date": "2022-04-30",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "aca319e5-612f-1113-f59e-d5cd2701cc70",
+          "title": "增設LED交通標誌提升夜間辨識",
+          "file": "交通建設/2023-LED交通標誌.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "4面",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6ff76316-f1d2-bf65-65f5-d8d6af164cb4",
+          "title": "推動T-NCAP計畫新車安全評等",
+          "file": "交通建設/2023-T-NCAP.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b5fc6e58-c304-ab83-e767-8a8931408ab5",
+          "title": "北北基捷運綜合規劃審查",
+          "file": "交通建設/2023-北北基捷運.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9dfc9fed-dc0d-a2db-1f3c-0aebf7c7f40e",
+          "title": "設置南迴公路候車亭",
+          "file": "交通建設/2023-南迴候車亭設置.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "12座",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a0bcfaa6-4ca7-00ff-2f5d-3416ba9fbb44",
+          "title": "設置台61線西服務區初步研究",
+          "file": "交通建設/2023-台61服務區研究.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "141f2e90-fe8f-4c47-426a-220ae11e6214",
+          "title": "台61線交通安全提升計畫",
+          "file": "交通建設/2023-台61線交通安全.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7db4c624-7875-029e-5b2e-195069020b19",
+          "title": "恢復台61線超速執法",
+          "file": "交通建設/2023-台61線超速執法恢復.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cb34d295-49c1-2678-10d3-cb5b440114b3",
+          "title": "儘速完成臺中捷運藍線規劃",
+          "file": "交通建設/2023-台中捷運藍線.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3fa017be-bee1-dc8d-dc24-cfcb0611dc95",
+          "title": "加強工地安全管理措施",
+          "file": "交通建設/2023-工地安全管理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "28505733-a009-920c-1756-006d4a43d0fb",
+          "title": "加速捷運東環段建設及環評通過",
+          "file": "交通建設/2023-捷運東環段.md",
+          "status": "追蹤中",
+          "target_date": "2023-01-25",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ded0904e-cd36-391e-9212-5a41816639b2",
+          "title": "枋山站廁所設置",
+          "file": "交通建設/2023-枋山站廁所設置.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "934ac694-b151-46a1-3880-60f8b48fcf4f",
+          "title": "桃園捷運綠線延伸大溪可行性研究",
+          "file": "交通建設/2023-桃園捷運綠線延伸.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7c991e73-680a-c72c-635a-2d704738b04f",
+          "title": "自駕車沙盒實驗路側設施建置",
+          "file": "交通建設/2023-自駕車沙盒路側.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "1.54億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ac7ae760-c1a2-3798-30dc-6eed024c051e",
+          "title": "鎮安站廁所設置規劃",
+          "file": "交通建設/2023-鎮安站廁所設置.md",
+          "status": "追蹤中",
+          "target_date": "2021-09-13",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "112c2337-a898-675f-3174-6188f7a06ace",
+          "title": "高雄捷運黃線綜合規劃報告審議",
+          "file": "交通建設/2023-高雄捷運黃線審議.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-20",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1968cadb-91c7-ccdb-ca8b-0a5adc1cbe15",
+          "title": "台9線南迴公路改善計畫",
+          "file": "交通建設/2024-台9線改善計畫.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-03",
+          "target_value": "4公里",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d1a70859-6388-4464-211b-608cf6b9c007",
+          "title": "花東鐵路雙軌電氣化計畫",
+          "file": "交通建設/2024-花東鐵路電氣化.md",
+          "status": "追蹤中",
+          "target_date": "2027-10-31",
+          "target_value": "456.27億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "54cbfaf0-2a4e-4084-744f-d4f179865d85",
+          "title": "國道3號增設八德交流道",
+          "file": "交通建設/2025-國道3號八德交流道.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2993baa4-f755-72f2-20ca-d9069632ab09",
+          "title": "長期改善計畫-土城至龍潭快速公路",
+          "file": "交通建設/2025-土城龍潭快速公路.md",
+          "status": "追蹤中",
+          "target_date": "2023-11-25",
+          "target_value": "358億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d0398d32-fff5-8c36-b0c0-f18131f0dc29",
+          "title": "增加屏東至大津班次",
+          "file": "交通建設/2025-屏東至大津54班次.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "54班次",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8fca3a26-8bee-987a-eb74-0154a6c3e324",
+          "title": "2030年電動車需求占比約0.91%",
+          "file": "交通建設/2030-電動車需求占比.md",
+          "status": "追蹤中",
+          "target_date": "2030-12-31",
+          "target_value": "0.91%",
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "其他",
+      "count": 35,
+      "commitments": [
+        {
+          "id": "57e2adc8-4dc8-ffd7-c07c-fa9b0c8e3e4a",
+          "title": "建構寵物分類分級管理制度",
+          "file": "其他/111-分類分級管理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2b252e83-4f74-b1cc-0508-c1ffb261ecb4",
+          "title": "制定寵物產業管理專法",
+          "file": "其他/111-專法制定.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5a1030cd-eb26-7a74-f46a-c8ce9696edd3",
+          "title": "成立寵物管理科",
+          "file": "其他/111-成立寵物管理科.md",
+          "status": "追蹤中",
+          "target_date": "2022-04-02",
+          "target_value": "6人",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2d0c0050-10f6-b91e-8e5e-b1e593954afa",
+          "title": "公投公報電子書設計",
+          "file": "其他/2021-公投公報電子書.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6b56859c-c04f-bbad-e21f-4c6922a1d017",
+          "title": "宣導公投意見發表會場次",
+          "file": "其他/2021-公投意見發表20場.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-18",
+          "target_value": "20場",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e0ff7822-0753-9834-e06b-0f038be73a2a",
+          "title": "機組修復以確保供電穩定",
+          "file": "其他/2022-供電穩定措施.md",
+          "status": "追蹤中",
+          "target_date": "2022-04-30",
+          "target_value": "72萬瓩",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bc546399-a199-dca6-ad08-c64f400ebbd6",
+          "title": "提升檢測能力",
+          "file": "其他/2022-檢測能力提升.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "70000件",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6121479f-1597-0862-e067-ef615cc42413",
+          "title": "入境旅客居家檢疫天數縮短",
+          "file": "其他/2022-檢疫縮短10天.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-07",
+          "target_value": "10天",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8e22dced-ac58-ded0-286e-b9fab2001f35",
+          "title": "穩定油氣價格措施",
+          "file": "其他/2022-油氣價格穩定.md",
+          "status": "追蹤中",
+          "target_date": "2023-04-30",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6f838557-8af7-baed-ea41-9c5753ffa8a5",
+          "title": "查緝物價不法行為",
+          "file": "其他/2022-物價查緝.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0b3a748d-3c1f-1e76-71e4-7eb034e8ec31",
+          "title": "年度進口食品檢測計畫",
+          "file": "其他/2022-進口食品檢測.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "518件",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "781752eb-4bd5-9da7-c257-2717a902916d",
+          "title": "逐批檢附雙證明",
+          "file": "其他/2022-雙證明要求.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "beac099d-8011-0c75-24b2-952359fb8794",
+          "title": "改為風險產品管制",
+          "file": "其他/2022-食品輸入風險管理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "339dd867-a004-c972-4d39-bd5db854a0a2",
+          "title": "強化人員訓練與風險意識",
+          "file": "其他/2023-人員訓練.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f0977b1c-2264-fb1b-7da2-6e2a4b9d62d1",
+          "title": "停止供電供水程序及督促查處",
+          "file": "其他/2023-停止供電供水.md",
+          "status": "追蹤中",
+          "target_date": "2023-04-30",
+          "target_value": "60日",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c12364b0-c8ef-a399-2233-eaed295101c2",
+          "title": "入境旅客居家檢疫縮短至10天",
+          "file": "其他/2023-入境居家檢疫10天.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-07",
+          "target_value": "10天",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "053f591b-b906-28bb-1728-2e6a18861069",
+          "title": "針對國產水產品進行輻射檢測",
+          "file": "其他/2023-國產水產品輻射檢測.md",
+          "status": "追蹤中",
+          "target_date": "2023-02-20",
+          "target_value": "2700件",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "311b7184-94a6-4240-dadd-7f69c207fa43",
+          "title": "邀集專家協助診斷",
+          "file": "其他/2023-專家診斷.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b6f520ea-9d7f-89fa-00b6-6e36a484dbf1",
+          "title": "提高電網管理層級",
+          "file": "其他/2023-提高電網管理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0af03bd0-2f34-c952-9130-a1e1fc4f75cb",
+          "title": "數位通訊傳播服務法草案研擬",
+          "file": "其他/2023-數通法草案研擬.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2acecd45-0af9-38f1-33c6-69b740fdd0cb",
+          "title": "查處疑似新增未登記工廠",
+          "file": "其他/2023-查處新增工廠.md",
+          "status": "追蹤中",
+          "target_date": "2023-01-31",
+          "target_value": "1700家",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "69bc2b73-b86f-6dbf-17d1-9bda838d2552",
+          "title": "改善網路詐騙及防治策略",
+          "file": "其他/2023-網路詐騙改善.md",
+          "status": "追蹤中",
+          "target_date": "2023-09-30",
+          "target_value": "761萬通、4403萬則",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c467e525-e2ba-6788-8165-75df690a0441",
+          "title": "調整日本食品輸入管制措施",
+          "file": "其他/2023-調整日本食品管制.md",
+          "status": "追蹤中",
+          "target_date": "2023-02-21",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5023fc13-9548-3e56-d658-034c78b09d20",
+          "title": "研議轉售規定以利買受人",
+          "file": "其他/2023-轉售規定研議.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4fb75660-b138-00eb-0783-19ac9a43d248",
+          "title": "違章工廠納管及查處進度追蹤",
+          "file": "其他/2023-違章工廠查處.md",
+          "status": "追蹤中",
+          "target_date": "2023-02-28",
+          "target_value": "1.8萬家",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "40bceab3-561a-d983-86d3-64087bbc09a2",
+          "title": "邊境查驗人力逐年增加",
+          "file": "其他/2023-邊境查驗人力增加.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "70000件",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2eae52ea-44eb-4338-dbdd-77bbc60ffe2d",
+          "title": "強化電網韌性設計",
+          "file": "其他/2023-電網韌性.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "77bf81ed-3a0d-27a6-e9ca-135dd198c92b",
+          "title": "調整露營設施規範",
+          "file": "其他/2023-露營設施規範.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5f105d67-9aaf-d939-135b-270ba1417528",
+          "title": "預售屋成交資訊申報期限為30天",
+          "file": "其他/2023-預售屋申報30天.md",
+          "status": "追蹤中",
+          "target_date": "2023-07-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5bd87d68-2185-f9c7-536d-f09fa68375e9",
+          "title": "限制預售屋轉售以維護市場秩序",
+          "file": "其他/2023-預售屋轉售限制.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f36d3653-783f-423a-c643-e5a7fcf1bff6",
+          "title": "設置風險管控專責單位",
+          "file": "其他/2023-風險管控.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b0fed8ae-0f30-a525-4317-39a73d5cbf83",
+          "title": "規劃2024巴黎奧運黃金計畫",
+          "file": "其他/2024-奧運黃金計畫.md",
+          "status": "追蹤中",
+          "target_date": "2024-07-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8ab3ac35-6cd4-2e40-d131-dd1b58d65fdb",
+          "title": "檢視信聯社理事及監事產生方式",
+          "file": "其他/2025-信聯社監事檢討.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b7c17f93-700f-ebc2-3e86-330bc0caa965",
+          "title": "檢討章程規定之合理性",
+          "file": "其他/2025-信聯社章程檢討.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f75467f8-f026-e26b-0edb-36d82c19f26c",
+          "title": "加速數位通訊傳播服務法製作",
+          "file": "其他/2025-數位通訊法.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "司法",
+      "count": 2,
+      "commitments": [
+        {
+          "id": "ee45ba59-b40d-91a9-1b8f-edbb073011c9",
+          "title": "保障弱勢證人司法權益",
+          "file": "司法/2014-性侵害法律修正.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "30%及60%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f766d9a2-9f3e-0915-9913-137d17b0da3b",
+          "title": "開放相關資料查詢權限",
+          "file": "司法/2016-性侵害訪談名冊.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "司法體系",
+      "count": 1,
+      "commitments": [
+        {
+          "id": "0cd19c42-6ccc-9b9c-9d00-0e6c4111fb0e",
+          "title": "擴大檢察官歷練制度",
+          "file": "司法體系/2020-檢察官輪調制度.md",
+          "status": "追蹤中",
+          "target_date": "2018-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "國防外交",
+      "count": 22,
+      "commitments": [
+        {
+          "id": "bcc90c19-eb25-3e85-1dd4-e107a4d78e70",
+          "title": "完成採購配套法規",
+          "file": "國防外交/2021-完成採購法規.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a0c71d07-4853-4c31-260d-95f3ff3577ea",
+          "title": "強化自我防衛能力",
+          "file": "國防外交/2023-強化防衛能力.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1f09652c-eb8e-18e9-ed3a-1c660f7197bb",
+          "title": "防空避難設施的年統計盤點",
+          "file": "國防外交/2023-防空設施統計.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e47ff2fe-08f4-776b-8b15-6faea8de8c5b",
+          "title": "透明防空避難處所資訊",
+          "file": "國防外交/2023-防空避難資訊.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "10萬5161",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0db7a453-d887-3fd8-4932-7cf264aaa4c3",
+          "title": "爭取資安預算保留",
+          "file": "國防外交/2024-資安預算保留.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "010964f0-446a-ce6c-abdb-83f08c130cd8",
+          "title": "持續推動加入CPTPP",
+          "file": "國防外交/2025-CPTPP加入計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "05c8b50e-9dc6-6c17-0084-8a49dab41885",
+          "title": "編製全民國防手冊（範本）",
+          "file": "國防外交/2025-全民國防手冊.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d088eea7-397f-f341-6bc0-91bb19295ef2",
+          "title": "推廣全民國防教育至各級學校",
+          "file": "國防外交/2025-全民國防教育推廣.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ea0265e3-9aa6-cc0e-a98d-519af36a4b99",
+          "title": "推動全民國防教育課程",
+          "file": "國防外交/2025-全民國防教育課程.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ea926f02-8610-5d6d-fd4f-55ba093ed132",
+          "title": "動員演練活動參與人數",
+          "file": "國防外交/2025-動員演練300萬人次.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "300萬人次",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4de15cb1-c0cf-5728-27c9-274ae58aff10",
+          "title": "制定年度全民國防教育工作規劃",
+          "file": "國防外交/2025-國防教育工作規劃.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "33daa003-bfad-9970-f266-27e4344ee5e7",
+          "title": "全民國防教育補充教材發行",
+          "file": "國防外交/2025-國防教育教材29萬冊.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "29萬冊",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "63809b77-1f2a-7a6e-fa76-dc1103214a2b",
+          "title": "每年報告採購執行進度",
+          "file": "國防外交/2025-報告採購進度.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9165c2c5-1510-8bc7-1c79-130c178030be",
+          "title": "戰備跑道啟用及防空部署",
+          "file": "國防外交/2025-戰備跑道啟用.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d7e65705-b3b3-f376-5974-0a730d523127",
+          "title": "國道戰備跑道增寬工程",
+          "file": "國防外交/2025-戰備跑道增寬.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e41d89cf-ee64-05b8-db63-fa3a63fa84a1",
+          "title": "增設科技犯罪防制中心員額",
+          "file": "國防外交/2025-科技犯罪防制中心員額增設.md",
+          "status": "追蹤中",
+          "target_date": "2020-12-16",
+          "target_value": "36名",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2bd9f654-f264-061c-a630-85440f963e61",
+          "title": "深化全民國防理念的跨部會合作",
+          "file": "國防外交/2025-跨部會國防合作.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "be6632d9-f168-71eb-9184-822f22a971df",
+          "title": "與美國國民警衛隊軍事訓練",
+          "file": "國防外交/國防-美國軍訓.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4c006d6e-8a01-962f-98df-b98a291e430f",
+          "title": "美方交流及我方觀摩",
+          "file": "國防外交/國防-美方觀摩.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0f4d3e96-605b-e161-9a2e-bf60f959c7c5",
+          "title": "提升台灣國際地位",
+          "file": "國防外交/提升國際地位.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3e1ff99d-56bc-4876-066f-ac01c0321534",
+          "title": "與理念相近國家深化關係",
+          "file": "國防外交/深化國際關係.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c7e42172-0370-a731-39e8-a6cdfd1a8fb4",
+          "title": "駐外機構使用台灣名稱",
+          "file": "國防外交/駐外名稱政策.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "教育",
+      "count": 26,
+      "commitments": [
+        {
+          "id": "da6d54ac-6929-c58b-e287-8f7a69e5ab7c",
+          "title": "推動中小學數位學習精進方案",
+          "file": "教育/111-114-中小學數位學習.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "200億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a75ae8d0-a5d4-a4aa-3159-d5f953947faf",
+          "title": "大學申請入學制度維持不變",
+          "file": "教育/2021-大學申請入學制度.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e0965ff5-9b5a-2edc-4017-cbd7c1835b80",
+          "title": "強化校園COVID-19防疫措施",
+          "file": "教育/2021-校園防疫精進.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "173d8880-124c-99e6-ac8d-c7ff45d60d6c",
+          "title": "發展身心障礙學生線上學習資源",
+          "file": "教育/2021-身心障礙線上學習.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "732168d0-ba54-7e44-55fc-8c0992afd4d1",
+          "title": "2歲幼兒入園率達35%",
+          "file": "教育/2022-2歲入園率35%.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": "35%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7b5d0cf1-6c38-7759-22f2-806e59c0f9c3",
+          "title": "提升偏遠地區高速寬頻網路",
+          "file": "教育/2022-偏鄉網路提升計畫.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "300Mbps",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1a378c15-9e3f-5317-b302-538c21598ee9",
+          "title": "增設3000班公共化幼兒園",
+          "file": "教育/2022-增設幼兒園3000班.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "3000班",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e55bdf20-ac8a-300a-7b60-513e8610e401",
+          "title": "設立國家重點研究學院",
+          "file": "教育/2023-國家重點研究學院.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f28ee339-59ba-8e7f-b454-7f5080c10a86",
+          "title": "族語專職老師加薪措施",
+          "file": "教育/2023-族語老師加薪.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-21",
+          "target_value": "3000元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4074843e-7877-bab5-6eca-517a208680cd",
+          "title": "綜合學習表現至少占50%",
+          "file": "教育/2023-綜合學習表現50%.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "50%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "148695aa-b2cc-f7a2-4757-fd69e903985c",
+          "title": "培訓全國教師數位教學能力",
+          "file": "教育/2024-教師數位教學能力.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "60%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f5357f7b-4548-a39d-4fd4-e06e3b4cf05f",
+          "title": "171年數位學習精進計畫",
+          "file": "教育/2024-數位學習計畫200億.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "200億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b9ad9ef1-72bd-edc5-9b34-4b37b7ac7892",
+          "title": "增設英語檢測量能",
+          "file": "教育/2024-英檢量能提升.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7f91f580-5218-2024-ac66-c660788dbbaf",
+          "title": "英語教學資源與數位平台推動",
+          "file": "教育/2024-英語學習資源.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b18bf2ab-781f-fc45-fad7-0511f6c29b87",
+          "title": "檢討升學制度並蒐集社會意見",
+          "file": "教育/2025-升學制度檢討.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a5f18f3d-a4c1-1c43-6707-251cfcebc9b5",
+          "title": "引進外籍英語教師支援雙語教學",
+          "file": "教育/2025-外籍教師引進計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f046ece9-cac8-42a1-4a47-2dd776c44a0b",
+          "title": "強化大學招生審查專業化",
+          "file": "教育/2025-大學招生專業化.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "dd3f9f58-7249-f136-7aac-fdfd03e8086e",
+          "title": "天天戶外活動120策略",
+          "file": "教育/2025-戶外活動120.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2fb32d44-6529-da44-dc8d-64138468c389",
+          "title": "推動班班有網路，生生用平板方案",
+          "file": "教育/2025-教學數位化.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a07cb02b-0bb6-520c-05a9-dc9fe6cc6a95",
+          "title": "能源重點學校推廣節能教育",
+          "file": "教育/2025-能源重點學校.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "25所",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "df20ef79-0de3-3f67-eea7-e43b3baeb21e",
+          "title": "控制學生螢幕使用時間",
+          "file": "教育/2025-螢幕使用控制.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d5deb8d1-3496-cbc0-09b4-8acdfee89309",
+          "title": "視力保健列為國小必選議題",
+          "file": "教育/2025-視力保健.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "747c59ab-723a-d884-bdb7-706123241ff2",
+          "title": "視力衛教與相關指引課程內容",
+          "file": "教育/2025-視力保健指引.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4ed2dbce-e597-b777-ce8e-fbef2f671647",
+          "title": "賽事場地安全標準規劃",
+          "file": "教育/2025-賽事安全規劃.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6e7aa0a7-ce90-5a27-f230-0f4cc6cfc3be",
+          "title": "設立運動選手培育體系",
+          "file": "教育/2025-運動選手培育.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9c9110f6-40e6-5bff-c931-5cd91d73ee92",
+          "title": "推動雙語國家政策的配套措施",
+          "file": "教育/2025-雙語國家政策.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "文化建設",
+      "count": 1,
+      "commitments": [
+        {
+          "id": "a71ec4c0-1a29-5b6f-3d3c-469e16cbf262",
+          "title": "推動再造歷史現場計畫",
+          "file": "文化建設/2016-再造歷史現場計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "文化產業",
+      "count": 2,
+      "commitments": [
+        {
+          "id": "cfc572e8-aacf-27de-bbd8-87ec923004b6",
+          "title": "獨立遊戲獎勵補助計畫",
+          "file": "文化產業/2025-獨立遊戲補助.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6d8f6dd1-092e-73ed-b445-7e8d52a21611",
+          "title": "擴大編劇人才養成",
+          "file": "文化產業/2025-編劇人才養成.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "水利政策",
+      "count": 2,
+      "commitments": [
+        {
+          "id": "1c689eed-2255-2033-4ea5-408b99f019d4",
+          "title": "改善無自來水區域供水計畫",
+          "file": "水利政策/106-114年無自來水計畫.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "155.46億元，11.3萬戶，95.5%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "864ed98a-d9f3-0f1c-3090-f6866f2838d4",
+          "title": "苗栗縣自來水普及率提升",
+          "file": "水利政策/苗栗水普及提升.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": "85.65%",
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "消費者保護",
+      "count": 5,
+      "commitments": [
+        {
+          "id": "c541bc0a-de1b-1408-b383-ebba03bff18a",
+          "title": "宣導消費者保護網站信息",
+          "file": "消費者保護/2023-消費者保護網站宣導.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "850a873b-02c5-1e2e-c07f-3cf795a9e501",
+          "title": "瘦身美容契約諮詢及宣導",
+          "file": "消費者保護/2023-瘦身美容契約宣導.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a4ad1e54-01ba-a738-92b7-589748da95d6",
+          "title": "短期補習班契約查核合格率",
+          "file": "消費者保護/2023-短期補習班查核99.99%.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "99.99%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1af918e4-7fe5-905d-78af-331cf33fd2e8",
+          "title": "宣導短期補習班退費規定",
+          "file": "消費者保護/2023-短期補習班退費宣導.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8733e083-ab1b-2ac3-d17b-44f4b0442c30",
+          "title": "網路教學服務每年抽查5家",
+          "file": "消費者保護/2023-網路教學抽查5家.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "5家",
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "環境保護",
+      "count": 16,
+      "commitments": [
+        {
+          "id": "e3dc3ebd-7bcb-e457-c4b4-316747b0321b",
+          "title": "防疫消毒大隊成立",
+          "file": "環境保護/2021-防疫消毒.md",
+          "status": "追蹤中",
+          "target_date": "2020-03-25",
+          "target_value": "8380處",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "05daa60b-1517-8dfe-071a-b667c71c7b97",
+          "title": "建立淨零排放政策架構",
+          "file": "環境保護/2022-淨零排放政策.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "af305e8c-532e-28b3-a3ed-4037a8d00162",
+          "title": "成立專案辦公室推動農業綠色轉型",
+          "file": "環境保護/2022-農業綠色轉型推動.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "27場座談會",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ccbe3a63-64f8-448c-25d8-9bdd6e987cb3",
+          "title": "垃圾分選燃料化計畫",
+          "file": "環境保護/2023-垃圾分選36.3萬噸.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "36.3萬公噸",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "94814244-6f9f-ad16-7ce5-68a3f34c4025",
+          "title": "海洋廢棄物回收計劃",
+          "file": "環境保護/2023-海洋廢棄物回收.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "122公噸",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3e343c71-423a-1d5c-b417-79908884b1a3",
+          "title": "澎湖減少水庫優養化計畫",
+          "file": "環境保護/2023-澎湖水庫計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d905727a-b26e-5243-5e81-92a492dc6214",
+          "title": "澎湖清除覆網計畫",
+          "file": "環境保護/2023-澎湖覆網清除.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "58b62467-b1a0-be6d-7cc9-e99b7f365a56",
+          "title": "老舊建築物環境清理改善",
+          "file": "環境保護/2023-老舊建築物清理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1a8030f0-9f4b-0f97-4c5e-4e7c4c7775ba",
+          "title": "持續推動廚餘生質能源化",
+          "file": "環境保護/2024-廚餘生質能源.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "150噸/日",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2d51f7b1-ae75-fe20-35cd-62e51f45493a",
+          "title": "推動海洋保育法草案",
+          "file": "環境保護/2025-海洋保育法推動.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "40511e1b-c283-bd2d-edfd-3344e3ccd684",
+          "title": "焚化廠升級整備計畫",
+          "file": "環境保護/2025-焚化廠升級整備9廠.md",
+          "status": "追蹤中",
+          "target_date": "2027-12-31",
+          "target_value": "9廠",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cf914130-3415-e5ee-0c93-1a309a19f33c",
+          "title": "2050淨零排放目標法制化",
+          "file": "環境保護/2050-淨零排放.md",
+          "status": "追蹤中",
+          "target_date": "2050-12-31",
+          "target_value": "淨零排放",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9624f9ea-7a1d-a148-2f22-80b1f07173cf",
+          "title": "2050年淨零排放目標",
+          "file": "環境保護/2050-淨零排放目標.md",
+          "status": "追蹤中",
+          "target_date": "2050-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8e2b4fb7-56ef-6361-9c25-44c3efd70895",
+          "title": "成立淨零排放路徑專案工作組",
+          "file": "環境保護/淨零排放路徑專案.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "88153a61-5868-2206-3132-5cf04cb61203",
+          "title": "初步碳費徵收推動",
+          "file": "環境保護/碳費-初步徵收.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5fa5953a-8c32-9226-cf39-7b05bc51ae46",
+          "title": "增訂徵收碳費及相關用途",
+          "file": "環境保護/碳費-專款專用.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "社會福利",
+      "count": 79,
+      "commitments": [
+        {
+          "id": "c83b1fd2-0778-d8fd-e9ec-4f425fd7199b",
+          "title": "允許臨登工廠業者續聘移工",
+          "file": "社會福利/109-臨登工廠續聘移工.md",
+          "status": "追蹤中",
+          "target_date": "109-04-29",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "99a4b8db-bad2-ec4a-1a85-91f4a2beda12",
+          "title": "成立身心障礙福利服務資源專案小組",
+          "file": "社會福利/110-專案小組成立.md",
+          "status": "追蹤中",
+          "target_date": "110-09-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "290cb2dd-f790-46bf-fa97-464955e7ffec",
+          "title": "身心障礙者服務人員資格提升",
+          "file": "社會福利/110-提升服務人員資格.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "88ce9396-966e-201d-c9f3-0ead16641ba0",
+          "title": "新增11所住宿式身心障礙福利機構",
+          "file": "社會福利/110-新增11所機構.md",
+          "status": "追蹤中",
+          "target_date": "113-12-31",
+          "target_value": "963人",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1fd8256a-2c82-9d61-f7f5-1ce1379f6c18",
+          "title": "經濟部評估特登業者申請移工",
+          "file": "社會福利/110-經濟部評估特登.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1d9c15d3-0924-6e44-7706-de9aad83bddf",
+          "title": "機構評鑑退場機制研修",
+          "file": "社會福利/110-退場機制研修.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0d9cad4d-1e19-dd3f-fa80-a3b21cda0856",
+          "title": "精神病人危機處理團隊試辦",
+          "file": "社會福利/111-精神病人危機處理計畫.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "8家",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "30aeee8c-4c9a-39d5-fc47-7576630a3b36",
+          "title": "調派移工至特登工廠",
+          "file": "社會福利/111-調派移工特登.md",
+          "status": "追蹤中",
+          "target_date": "111-03-23",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a261528d-66c4-a7c7-8738-8ef325184b32",
+          "title": "建立社區心理衛生中心",
+          "file": "社會福利/114-社區心理衛生中心71處.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "71處",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8420f00f-5d00-fd36-07e9-fd59b3061174",
+          "title": "逐年補實訪視人力",
+          "file": "社會福利/114-精神病人社區關懷員1288人.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "1288人",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ff66203c-0348-7772-521f-e27494780df4",
+          "title": "原住民族保留地禁伐補償措施",
+          "file": "社會福利/2020-原住民保留地禁伐補償.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": "6.3萬公頃",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "80c37336-37e4-974e-d1f4-fb6053875cd7",
+          "title": "原住民族土地主權回饋與補償機制修法",
+          "file": "社會福利/2020-原住民族土地主權補償.md",
+          "status": "追蹤中",
+          "target_date": "2020-12-31",
+          "target_value": "1470公頃",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2fb0c920-95de-5a7b-020d-fa22a88311c2",
+          "title": "109年達成直接興建4萬戶",
+          "file": "社會福利/2020-社會住宅4萬戶.md",
+          "status": "追蹤中",
+          "target_date": "2020-12-31",
+          "target_value": "40000戶",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "006a5410-a89b-5e06-9f5a-10065eec505e",
+          "title": "健保國民年金資格保障",
+          "file": "社會福利/2021-健保年金保障.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7599674a-3ace-3f92-41b6-78625a15bc70",
+          "title": "改善兒童遊戲場遊具多元化",
+          "file": "社會福利/2021-兒童遊具改善.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "848c41b0-6efe-33c9-0633-9fa76f35fd40",
+          "title": "推動公立國小遊戲場改善計畫",
+          "file": "社會福利/2021-公立國小改善.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "21億",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a038e9d6-e494-00a4-abf0-d880a1d66f84",
+          "title": "特定登記工廠移工申請待評估",
+          "file": "社會福利/2021-特登-移工評估.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "36de77d4-440a-a7dd-aad5-ab277cf82557",
+          "title": "紓困政策現金發放總額",
+          "file": "社會福利/2021-紓困現金1730億元.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-15",
+          "target_value": "1730億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f2a65ef3-8424-b358-1b58-c954fe73a1f1",
+          "title": "老年基本保證年金調整為3500元",
+          "file": "社會福利/2021-老年年金3500元.md",
+          "status": "追蹤中",
+          "target_date": "2021-01-01",
+          "target_value": "3500元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2b5b7ee6-cdea-72ee-2609-1290ef427a7e",
+          "title": "維持臨時登記工廠聘僱移工政策",
+          "file": "社會福利/2021-臨登-移工政策.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "48966178-9942-896e-c60b-18ef526a5a29",
+          "title": "建置被害人資訊獲知平臺",
+          "file": "社會福利/2021-被害人資訊平臺.md",
+          "status": "追蹤中",
+          "target_date": "2021-07-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "00c864a4-d48a-c2e1-1641-412adc138fe6",
+          "title": "選舉權登記規範",
+          "file": "社會福利/2021-選舉權登記.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4df1cf1b-fec0-1ae6-2a70-a88005e09baa",
+          "title": "三日內少年保護案件通報",
+          "file": "社會福利/2022-保護案件通報.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "24a31dfa-2f9e-e773-3ae7-fc84742d85ee",
+          "title": "修訂勞務採購契約範本",
+          "file": "社會福利/2022-勞務契約修訂.md",
+          "status": "追蹤中",
+          "target_date": "2022-02-08",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bac19d6f-6185-43e2-04c7-f45f3c54522b",
+          "title": "公開修正之契約範本",
+          "file": "社會福利/2022-契約範本公開.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bf880827-dbe0-3697-ba91-b4af30b7a1f6",
+          "title": "防範選舉賄選小組成立",
+          "file": "社會福利/2022-查察賄選小組.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bcb09e76-fb47-13de-a365-471510c0d250",
+          "title": "調派基準法規修正",
+          "file": "社會福利/2022-調派基準修正.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "78e5a17b-0de5-9063-2c87-8dcf4f304f8a",
+          "title": "建立智慧觀光虛擬實境服務",
+          "file": "社會福利/2023-VR平臺.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a4825ff5-f338-61b1-89f3-4f6c5693ab53",
+          "title": "自購住宅貸款利息補貼方案",
+          "file": "社會福利/2023-住宅貸款補貼.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1d0f02e4-0d39-cbcb-6e99-36a73b31c185",
+          "title": "保障留學生權益",
+          "file": "社會福利/2023-保障留學生.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8ab6325d-d9ac-ae64-8b38-c309bec33191",
+          "title": "每年4月為兒少保護宣導月",
+          "file": "社會福利/2023-兒少保護宣導月.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4ed26b69-ec71-e42f-d6e5-62cc5cd0269b",
+          "title": "強制成立公寓大廈管理委員會",
+          "file": "社會福利/2023-公寓大廈管理委員會.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e8c07e60-992f-455d-a166-decfe8e02dc1",
+          "title": "調高勞工基本工資",
+          "file": "社會福利/2023-基本工資提升.md",
+          "status": "追蹤中",
+          "target_date": "2023-01-01",
+          "target_value": "月薪25250元；時薪168元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4259f0df-57ef-15f6-23c9-1fa8ca395f62",
+          "title": "就學貸款畢業生還款緩繳政策",
+          "file": "社會福利/2023-就學貸款緩繳.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "8年",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4dc40d9c-c338-eb47-45c3-26090839b8d0",
+          "title": "就學貸款利息補貼計劃",
+          "file": "社會福利/2023-就學貸款補貼.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "2.28億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "dc8871c3-2916-a88d-d4b9-aad6e5015103",
+          "title": "新增農業災害救助品項",
+          "file": "社會福利/2023-新增救助品項.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b65a2379-ddf2-9d07-4467-cdf204c2315e",
+          "title": "春節防疫旅館補助期限延長",
+          "file": "社會福利/2023-春節防疫旅館.md",
+          "status": "追蹤中",
+          "target_date": "2022-06-30",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f874c2cf-db96-fa00-24bb-782b9a9d06a9",
+          "title": "鼓勵檢驗機構取得EN認證",
+          "file": "社會福利/2023-檢驗機構EN認證.md",
+          "status": "追蹤中",
+          "target_date": "2022-09-30",
+          "target_value": "50%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b034a308-10da-848a-464b-012eb4456210",
+          "title": "制定歐盟遊戲場標準為國家標準",
+          "file": "社會福利/2023-歐盟標準制定.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a2e00638-098e-cf63-9bb1-36e685cf842f",
+          "title": "推動比特犬代養機制",
+          "file": "社會福利/2023-比特犬代養.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a667e928-ae00-3482-6342-43e10f1c7c52",
+          "title": "比特犬正確照養與管理宣導",
+          "file": "社會福利/2023-比特犬宣導.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2a45e5b3-a754-2159-21ae-2c486cc8ebc1",
+          "title": "比特犬專案訪查及登記",
+          "file": "社會福利/2023-比特犬登記.md",
+          "status": "追蹤中",
+          "target_date": "2022-01-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "984a281e-df99-d4aa-4f64-f2b2b845895d",
+          "title": "維持民生氣價不調漲",
+          "file": "社會福利/2023-民生氣價穩定.md",
+          "status": "追蹤中",
+          "target_date": "2023-04-30",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7f1b9978-d8cf-4c40-1567-0e04c7ce96e1",
+          "title": "汰換老舊消防車計畫",
+          "file": "社會福利/2023-汰換老舊消防車.md",
+          "status": "追蹤中",
+          "target_date": "2022-06-30",
+          "target_value": "97輛",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "244824e0-0c19-b78c-3687-a69dbf362d14",
+          "title": "解決漁業缺工問題",
+          "file": "社會福利/2023-漁業缺工解決.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "652b54b5-d5f3-9912-2daf-083709be0245",
+          "title": "穩定供應物資量能",
+          "file": "社會福利/2023-物資供應穩定.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "5至7個月",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9f74b0ca-1e3f-a47e-cef0-74a886b2c952",
+          "title": "建立114處社會福利服務中心",
+          "file": "社會福利/2023-社會福利服務中心.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "114處社會福利服務中心及1千餘名社工",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9722f8a7-0558-ea54-1f5f-b8da7023233a",
+          "title": "禁止比特犬飼養及繁殖",
+          "file": "社會福利/2023-禁止比特犬.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ae7b6535-39e9-e575-777f-93d2ff45b5fa",
+          "title": "移工專案引進計畫實施",
+          "file": "社會福利/2023-移工專案引進.md",
+          "status": "追蹤中",
+          "target_date": "2023-11-11",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f448ece8-a23a-887e-0c06-9958aa8aebd9",
+          "title": "推動肥料補助措施",
+          "file": "社會福利/2023-肥料補助20元.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "20元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "11875177-cb9a-c66f-b1bc-70308e1614c9",
+          "title": "化學肥料原料漲幅補助",
+          "file": "社會福利/2023-肥料補助215元.md",
+          "status": "追蹤中",
+          "target_date": "2022-01-10",
+          "target_value": "20至215元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1c7a7c73-fc85-8119-da83-c5a0ca3ea139",
+          "title": "提高薪資透明化措施",
+          "file": "社會福利/2023-薪資透明化推動.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9c182c84-d364-9c2d-8e82-40b6f299c122",
+          "title": "推動農業保險計畫",
+          "file": "社會福利/2023-農業保險.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "338890f2-bca7-d0a3-7a5d-e915a6b841f2",
+          "title": "農業天然災害救助額度調整",
+          "file": "社會福利/2023-農業災害救助.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4edd041c-69e4-fb8f-1501-aa277bad3959",
+          "title": "提供返臺學生協助",
+          "file": "社會福利/2023-返臺學生協助.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-03",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "95edd5a9-dc64-b88d-05ec-0c067bdaf518",
+          "title": "漸進降低比特犬飼養數量",
+          "file": "社會福利/2023-降低比特犬數量.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "96d1e5dd-3192-61f5-12c1-b5779c8fe0f1",
+          "title": "青年安心成家購屋貸款基準利率調整",
+          "file": "社會福利/2023-青年貸款利率.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "0.97%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3a53ed97-b616-e2fd-7ea2-6dfc95e82e21",
+          "title": "無自來水地區供水改善計畫",
+          "file": "社會福利/2024-無自來水改善計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "57.76億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d35de92c-f6bf-0fb3-5c4e-23eb4280a236",
+          "title": "社會住宅興建20萬戶目標",
+          "file": "社會福利/2024-社會住宅20萬戶.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "200000戶",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "249ac803-ed09-be5a-f160-aad662b4042e",
+          "title": "社會住宅直接興建8萬戶目標",
+          "file": "社會福利/2024-社會住宅8萬戶.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "80000戶",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "16f045c2-1ca7-e917-c9e0-7ac7bd1092b3",
+          "title": "社會住宅包租代管戶比例達60%",
+          "file": "社會福利/2025-包租代管60%.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "60%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9fa61efa-9ad8-916c-3c1e-6e3d913b8c20",
+          "title": "推動原住民族語言及文化專案人力",
+          "file": "社會福利/2025-原住民族語言專案.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "10人",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c5512b30-1870-fc7f-c5c0-6071f0501acd",
+          "title": "達成零重大工安事件和零死亡目標",
+          "file": "社會福利/2025-工安零死亡.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "0",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f80c826e-1a8d-d0d4-31aa-5b7aae2af0dc",
+          "title": "推動原住民族語言發展中長程計畫",
+          "file": "社會福利/2025-族語發展計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c083841f-88ed-2267-639c-5cbe95be57ac",
+          "title": "提升消防人力服務比例",
+          "file": "社會福利/2025-消防人力服務比例提升.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "3000人",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "90fc7540-6194-8fc0-ff5b-0059e1d4202d",
+          "title": "建置社區式長照資源",
+          "file": "社會福利/2025-社區長照資源建置.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "78cd2105-7630-068f-bc6b-26cac37b8dd4",
+          "title": "社會住宅弱勢照顧保障比率提升",
+          "file": "社會福利/2025-社會住宅40%.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "40%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4fe4d060-1e90-d397-e07b-5b740475577b",
+          "title": "提升社會弱勢戶承租比例至46.2%",
+          "file": "社會福利/2025-社會住宅46.2%.md",
+          "status": "追蹤中",
+          "target_date": "2022-02-10",
+          "target_value": "46.2%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c26be5e1-989b-38e8-b223-f91eb73657b8",
+          "title": "興建社會住宅達成4萬戶目標",
+          "file": "社會福利/2025-社會住宅4萬戶.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": "40000戶",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "93c65662-93f2-b876-e450-ba416aaa127f",
+          "title": "租金補助最高7200元",
+          "file": "社會福利/2025-租金補助7200元.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "7200元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ce1d0c90-9d94-e0fc-5ef7-f041014f5fea",
+          "title": "設立老人生活活動中心",
+          "file": "社會福利/2025-老人活動中心336所.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "336所",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b6f45917-78e2-27df-4e70-c33648b7d30e",
+          "title": "促進老人長期照顧機構轉型",
+          "file": "社會福利/2025-老人照顧機構轉型.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6e0403cc-1a93-3947-2170-d1d4cbf84dd7",
+          "title": "運動選手生涯輔導制度",
+          "file": "社會福利/2025-運動選手輔導.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "223faa93-2d2d-90dc-3df9-0a3decdc76a5",
+          "title": "調查303大停電農漁業損失情況",
+          "file": "社會福利/303-調查農漁業損失.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-11",
+          "target_value": "975萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d761442f-6d9b-0680-40a1-a9b2e8f78347",
+          "title": "提供303大停電農漁業損失補償方案",
+          "file": "社會福利/303-農漁業損失補償.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-11",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ee8c9462-71c8-ed52-b62e-4d273e23244c",
+          "title": "健保及國民年金不受影響",
+          "file": "社會福利/台灣-健保國民年金-不受影響.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a463dcf9-6422-e389-ccd9-0ff753c86f26",
+          "title": "即時辦理選舉人登記方案",
+          "file": "社會福利/台灣-選舉人登記-即時辦理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "52a668b2-cb50-4af4-b260-922aa9952596",
+          "title": "每四年依CPI調整年金",
+          "file": "社會福利/每四年-年金調整.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "36e759cc-90f8-3dcb-a4dc-1fb87fdf6958",
+          "title": "提升養豬產業競爭力計畫",
+          "file": "社會福利/豬農-產業提升.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "經濟發展",
+      "count": 47,
+      "commitments": [
+        {
+          "id": "7107b4ee-60a7-fbe9-15d3-bd5e6ad85045",
+          "title": "111年度台中市整體獲配財源",
+          "file": "經濟發展/111-台中市獲配494億.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "494億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "fec5f8f8-3c9f-3453-d46d-f4abd1d90b4b",
+          "title": "尋找尿素替代進口來源",
+          "file": "經濟發展/2021-尿素替代進口.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "69aa7b0b-bc7d-e315-83f5-c2f1ca6b5f8f",
+          "title": "振興五倍券領用人數",
+          "file": "經濟發展/2021-振興五倍券2303萬人.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-15",
+          "target_value": "2303萬人",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6d130fe2-aa9e-6355-3144-6eb445b0d5af",
+          "title": "稅率申報協助措施",
+          "file": "經濟發展/2021-稅率申報協助.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "433fa8e5-715d-3d4f-3903-b1002fef9943",
+          "title": "加強車用尿素出口管理",
+          "file": "經濟發展/2021-車用尿素管理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bc4ef5a2-0e37-d510-f81e-ca2ceb44f747",
+          "title": "3K產業外勞比例檢討",
+          "file": "經濟發展/2022-3K外勞比例.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "40%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c3c4b286-3986-06f5-8474-01d4959a1e76",
+          "title": "強化不動產業信貸規範",
+          "file": "經濟發展/2022-不動產業信貸.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-06",
+          "target_value": "30%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5079c727-c897-63d4-3731-cd4c15763632",
+          "title": "強化不動產貸款業務管理",
+          "file": "經濟發展/2022-不動產貸款管理.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "04c2bb9c-b590-e6d6-ece9-21e8872ad869",
+          "title": "實施實價登錄2.0新制",
+          "file": "經濟發展/2022-實價登錄2.0.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5fa02582-a092-a0e3-2bbe-171c89519daf",
+          "title": "優先供應國內市場尿素",
+          "file": "經濟發展/2022-尿素供應優先.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-31",
+          "target_value": "至少供貨到明年1月底，最長到3月底",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "928d8712-452b-d1d5-0848-86eb59af745d",
+          "title": "推動房地合一2.0以抑制短期炒作",
+          "file": "經濟發展/2022-房地合一2.0.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b1d7a9e3-e84e-d279-680c-28c9f338d69f",
+          "title": "設置檢舉不法行為專線",
+          "file": "經濟發展/2022-檢舉專線.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "705b7ef9-b194-a6ac-abd9-dec85fdd2242",
+          "title": "檢舉獎金額度調升",
+          "file": "經濟發展/2022-檢舉獎金提升.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "1億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b221b134-f711-0558-a776-eea252352363",
+          "title": "稽查不合理漲價行為",
+          "file": "經濟發展/2022-物價稽查.md",
+          "status": "追蹤中",
+          "target_date": "2022-02-23",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1d68a64c-1c09-6ede-8cff-3a6ca6d125c4",
+          "title": "產業創新條例修正草案稅式報告",
+          "file": "經濟發展/2022-產業創新條例報告.md",
+          "status": "追蹤中",
+          "target_date": "2022-11-26",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "49f584a1-0845-0645-a375-fd496a92d76b",
+          "title": "穩定電油氣價格及物資價格",
+          "file": "經濟發展/2022-穩定物價措施.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "57d06217-f827-af19-30d6-524b9b0ac878",
+          "title": "調降高價住宅貸款成數",
+          "file": "經濟發展/2022-高價住宅貸款.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d010507c-3b94-d5b2-0e01-f03adc26cc28",
+          "title": "推動T2025方案財源確保",
+          "file": "經濟發展/2023-T2025方案財源.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "460c8e0a-a944-2ef3-c451-4c87695eca97",
+          "title": "三法修正以接受國際標準",
+          "file": "經濟發展/2023-三法修正.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "fe9ce6a5-36a0-f453-ea70-8555d1f2592a",
+          "title": "推動企業加薪與投資",
+          "file": "經濟發展/2023-企業加薪計畫.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "4%以上加薪",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5f08f647-e873-c832-de1b-eeaa8852b305",
+          "title": "信用合作社營業稅檢討",
+          "file": "經濟發展/2023-信用合作社營業稅.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "20億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7c74d072-2db7-1e21-5d04-8c34cd8001eb",
+          "title": "推動北橫地區觀光發展",
+          "file": "經濟發展/2023-北橫觀光發展.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "8117.5萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8a515f31-e4cd-84cf-c8cd-e31540207d4c",
+          "title": "調度原料蛋供應",
+          "file": "經濟發展/2023-原料蛋調度.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "189901b2-c571-f4c9-ae22-4346015f2034",
+          "title": "台泥集團投資鋰電池工廠",
+          "file": "經濟發展/2023-台泥投資鋰電池.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": "1.8GWh",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d7eae011-1908-bda8-e0d9-2625773e2e34",
+          "title": "循環經濟推動方案",
+          "file": "經濟發展/2023-循環經濟推動辦公室.md",
+          "status": "追蹤中",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1008e056-f0d2-c96f-4361-9dce170bad3f",
+          "title": "調整所得稅扣除額及稅制優化",
+          "file": "經濟發展/2023-所得稅優化方案.md",
+          "status": "追蹤中",
+          "target_date": "2018-01-01",
+          "target_value": "總扣除額由9萬元提高至12萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a4d5c6b4-f215-2562-9eaf-3b04a28144f6",
+          "title": "推動臺灣加入CPTPP",
+          "file": "經濟發展/2023-推動CPTPP.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6361fbed-42ab-0254-c5f8-748ca8ad818e",
+          "title": "穩定油價措施",
+          "file": "經濟發展/2023-油價穩定.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c2f1b0ab-60c0-78a8-c7bb-45ee5269e326",
+          "title": "持續深化與美國雙邊合作",
+          "file": "經濟發展/2023-深化美國合作.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7a124047-70c2-9415-5d3d-959d201d79d8",
+          "title": "實施物價穩定措施",
+          "file": "經濟發展/2023-物價穩定措施.md",
+          "status": "追蹤中",
+          "target_date": "2023-04-30",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "82aa80d9-3030-ccd7-625d-f5a21ebc41b1",
+          "title": "深化雙邊經貿會議",
+          "file": "經濟發展/2023-雙邊經貿.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c4fa6731-f7f8-7a74-a882-a97a19d14e48",
+          "title": "推動雞蛋產量增產",
+          "file": "經濟發展/2023-雞蛋產量增產.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "25元、3元/台斤",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "738a3974-e5e6-f73e-be88-9e6f155be776",
+          "title": "離島建設基金撥補計劃",
+          "file": "經濟發展/2023-離島建設基金.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cc7d16a1-420d-3f37-5751-a2644fc7e24f",
+          "title": "民營化基金於113年1月退場",
+          "file": "經濟發展/2024-民營化基金退場.md",
+          "status": "追蹤中",
+          "target_date": "2024-01-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "108598b7-71ca-19dc-1978-e304d65efedf",
+          "title": "觀光發展基金舉借上限",
+          "file": "經濟發展/2024-觀光發展基金舉借.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "151.24億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "363d0e09-f929-e81f-fa6b-884b868f5dbb",
+          "title": "加強台糖雲林馬光農場有機轉型",
+          "file": "經濟發展/2024-雲林有機轉型.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "160公頃",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "34240e9e-8c98-a429-1688-f446e3c6b55d",
+          "title": "調整稅款分配機制",
+          "file": "經濟發展/2025-中央統籌分配稅款.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "5607c883-b247-ce9f-291f-e8727f83d1bf",
+          "title": "放寬信用合作社增設分支機構條件",
+          "file": "經濟發展/2025-信用合作社分支.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "4%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bbc5e2d6-c63b-e2c7-47d4-7c95ba5f2675",
+          "title": "台船公司自115年起每年回饋10%盈餘",
+          "file": "經濟發展/2025-台船回饋10%.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "10%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f0456926-153e-1c21-e554-d987aa03f36f",
+          "title": "設立數位發展部",
+          "file": "經濟發展/2025-數位發展部.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f6919d51-6e2e-3852-132d-00ec09c9370e",
+          "title": "穩定國內物價小組運作及監控",
+          "file": "經濟發展/2025-物價穩定措施.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bc9e228b-dba3-ceea-ce90-5a972af16b54",
+          "title": "調整直轄市分配指標權重",
+          "file": "經濟發展/2025-直轄市分配權重調整.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6f5d6024-f3e6-ae5b-961f-86053dfc0be5",
+          "title": "確保未來5至7個月糧食供應",
+          "file": "經濟發展/2025-糧食供應穩定.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "5-7個月",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3bccb997-7581-cf00-ea21-ffa78841bc66",
+          "title": "改善觀光旅遊設施",
+          "file": "經濟發展/2025-觀光旅遊設施改善.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f6dd0316-2c08-6a10-0770-5b13671cf877",
+          "title": "修法以提升地方財政自主",
+          "file": "經濟發展/2025-財政收支劃分法修法.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7a279503-242b-c18c-a0b1-f713963a61ab",
+          "title": "油氣電價穩定機制實施",
+          "file": "經濟發展/2025-電價穩定機制.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4463614f-3859-b8b0-da71-e1aaeccb3c22",
+          "title": "地價稅率不受戶籍影響",
+          "file": "經濟發展/台灣-地價稅率-不受戶籍影響.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "2‰",
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "能源政策",
+      "count": 21,
+      "commitments": [
+        {
+          "id": "591197bd-af13-9407-fafb-303268115865",
+          "title": "再生能源發展相關補助",
+          "file": "能源政策/2018-再生能源發展補助.md",
+          "status": "追蹤中",
+          "target_date": "2018-03-08",
+          "target_value": "150-200萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9b6070ff-a237-18bb-6b73-9d62dabe348b",
+          "title": "再生能源獎勵辦法推動",
+          "file": "能源政策/2019-再生能源獎勵辦法.md",
+          "status": "追蹤中",
+          "target_date": "2019-05-01",
+          "target_value": "150-200萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a4909336-8876-b291-b414-b32b5221d2cb",
+          "title": "新增再生能源裝置容量",
+          "file": "能源政策/2022-再生能源226万瓩.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "225.4萬瓩",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4b609414-ba6d-ad19-c7e1-3c1dc7e61930",
+          "title": "2022年太陽光電達成11.25GW目標",
+          "file": "能源政策/2022-太陽光電11.25GW目標.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": "11.25GW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "8ed2a8b2-286a-0522-504b-d6c1bd2535d8",
+          "title": "追上2022年太陽光電8.75設置目標",
+          "file": "能源政策/2022-太陽光電8.75目標.md",
+          "status": "追蹤中",
+          "target_date": "2022-06-30",
+          "target_value": "8.75GW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "caecba37-d55d-350e-5938-3797b5434347",
+          "title": "建立300萬戶低壓AMI系統",
+          "file": "能源政策/2024-低壓AMI300萬戶.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "300萬戶",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6caf75a4-ede2-11ed-e8c4-06fc16b1d42b",
+          "title": "每年節電率1%政策",
+          "file": "能源政策/2024-每年節電率1%.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": "1%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2447cf5e-501e-9bea-7e93-97ae9132c72c",
+          "title": "中油短期減碳目標",
+          "file": "能源政策/2025-中油短期減碳.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "40.6%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b24e07bf-d30f-466f-28bf-9b36d0b456cc",
+          "title": "中鋼短期減碳目標",
+          "file": "能源政策/2025-中鋼短期減碳.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "7%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "91f0788a-d20b-1a50-893a-d9799fa77932",
+          "title": "再生能源發電設施計畫",
+          "file": "能源政策/2025-再生能源2廠.md",
+          "status": "追蹤中",
+          "target_date": "2027-12-31",
+          "target_value": "2廠",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c98415dc-f46e-9c60-b11f-1046ce29ea93",
+          "title": "台電短期減碳目標",
+          "file": "能源政策/2025-台電短期減碳.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "10%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d90a76c8-9bd7-d04b-11ef-86eceb174be7",
+          "title": "2025年太陽光電發電目標20GW",
+          "file": "能源政策/2025-太陽光電20GW.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "20GW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "baaa9f5d-6fda-d1c9-6870-f12d6875863e",
+          "title": "提升停電復電自動化比例到70%",
+          "file": "能源政策/2025-復電自動化70%.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "70%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2bd46766-e5ac-40af-2c03-cb94ed83d05b",
+          "title": "離岸風電設置容量達5.6GW",
+          "file": "能源政策/2025-離岸風電5.6GW.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "5.6GW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "73a5c6a5-9db4-b2a6-51a4-995476328a4f",
+          "title": "2025年離岸風電達成5.6GW目標",
+          "file": "能源政策/2025-離岸風電5.6GW目標.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "5.6GW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "98411cfe-15b3-d250-376a-1d2759d6da4d",
+          "title": "2025前建置1000MW電池儲能",
+          "file": "能源政策/2025-電池儲能1000MW.md",
+          "status": "追蹤中",
+          "target_date": "2025-12-31",
+          "target_value": "1000MW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "fbcda9c2-277c-789a-4ef4-9a083c6b852a",
+          "title": "中鋼中期減碳目標",
+          "file": "能源政策/2029-中鋼中期減碳.md",
+          "status": "追蹤中",
+          "target_date": "2029-12-31",
+          "target_value": "22%",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "322bb454-83fc-acb5-ed9f-f46fc6f57c8b",
+          "title": "中油長期碳中和目標",
+          "file": "能源政策/2039-中油碳中和.md",
+          "status": "追蹤中",
+          "target_date": "2039-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "61733d94-1442-0395-a901-a0d0acbae45f",
+          "title": "中鋼長期碳中和目標",
+          "file": "能源政策/2039-中鋼碳中和.md",
+          "status": "追蹤中",
+          "target_date": "2039-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d94c09c4-6110-ecd1-7c86-3a75899c5096",
+          "title": "台電長期減碳目標",
+          "file": "能源政策/2039-台電長期減碳.md",
+          "status": "追蹤中",
+          "target_date": "2039-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "92235574-91d7-f511-f105-91543c05b631",
+          "title": "氫能技術發展計畫",
+          "file": "能源政策/氫能-發展計畫.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "農業政策",
+      "count": 1,
+      "commitments": [
+        {
+          "id": "51ed2d90-6ba0-73cc-8b54-e0f011610068",
+          "title": "推動植物醫療師法立法",
+          "file": "農業政策/2023-植物醫療師法.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "醫療衛生",
+      "count": 22,
+      "commitments": [
+        {
+          "id": "2bb18c46-6790-6a38-79d4-8031eb20e0ce",
+          "title": "提升接種服務獎勵措施",
+          "file": "醫療衛生/2021-接種獎勵措施.md",
+          "status": "追蹤中",
+          "target_date": "2021-06-07",
+          "target_value": "各類獎勵依目標人次",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "03e44f10-28b1-2055-8ee9-ff1b413846e9",
+          "title": "擴增COVID-19疫苗接種醫療院所",
+          "file": "醫療衛生/2021-擴增疫苗接種.md",
+          "status": "追蹤中",
+          "target_date": "2021-10-31",
+          "target_value": "3000家",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "944c4825-e379-c87a-58ed-93f513fef25e",
+          "title": "成功大學附設醫院分院設立評估",
+          "file": "醫療衛生/2022-成功大學醫院分院.md",
+          "status": "追蹤中",
+          "target_date": "2021-12-01",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b13856bb-21ed-986f-6f8e-b4199d892bc8",
+          "title": "春節檢疫7+7方案",
+          "file": "醫療衛生/2022-春節檢疫方案-7+7.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6ec26f8f-318d-07a6-efea-4641f3c84f0f",
+          "title": "春節檢疫10+4方案",
+          "file": "醫療衛生/2022-春節檢疫方案.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7173fcce-9501-2947-7ee9-76ba2aa6b3a6",
+          "title": "新世代疫苗基礎劑接種政策研議",
+          "file": "醫療衛生/2022-疫苗接種政策.md",
+          "status": "追蹤中",
+          "target_date": "2022-03-24",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b4d3407a-9b63-e7c5-9e27-f8e7284b316a",
+          "title": "疫苗接種證明數位平臺建置",
+          "file": "醫療衛生/2022-疫苗證明平臺.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9289de60-e824-0914-305e-7f6b5596ce80",
+          "title": "鼓勵地方政府接種服務",
+          "file": "醫療衛生/2023-地方政府疫苗獎勵.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cfcf1965-1aeb-138f-4edb-4e4cac187fb9",
+          "title": "允許寄送自用新冠快篩試劑",
+          "file": "醫療衛生/2023-新冠快篩寄送.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "6個月用量",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "dba8b7ad-80f6-2c87-ad92-b89b9e230979",
+          "title": "新冠檢驗試劑依需求調整",
+          "file": "醫療衛生/2023-新冠試劑調整.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "64968747-ebb5-0e3d-84c0-9ddaec4bd2bc",
+          "title": "流感疫苗接種計畫持續檢視",
+          "file": "醫療衛生/2023-流感疫苗接種計畫.md",
+          "status": "追蹤中",
+          "target_date": "2022-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "390e9ac6-a7fb-49be-c4fe-cb1835dfb938",
+          "title": "提升COVID-19疫苗接種率",
+          "file": "醫療衛生/2023-疫苗接種提升.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-31",
+          "target_value": "200元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "05c1124c-7f4d-df07-6392-2e60dd9ca180",
+          "title": "精神衛生法修正草案",
+          "file": "醫療衛生/2023-精神衛生法修正.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "c42d1034-9ce0-ed6a-686f-c18cd3f0d24d",
+          "title": "提升長者COVID-19疫苗接種率",
+          "file": "醫療衛生/2023-長者疫苗接種.md",
+          "status": "追蹤中",
+          "target_date": "2023-03-31",
+          "target_value": "200元 / 500元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cf241967-9ca2-2d5f-e43f-c9689aa459c3",
+          "title": "國立陽明交大附醫二期擴建計畫",
+          "file": "醫療衛生/2023-陽明醫院擴建.md",
+          "status": "追蹤中",
+          "target_date": "2027-12-31",
+          "target_value": "30億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7c0e750f-1b1e-48ad-3948-d631eea73ef2",
+          "title": "推動全民健康保險醫療給付總額中長期改革計畫",
+          "file": "醫療衛生/2025-健保改革計畫.md",
+          "status": "追蹤中",
+          "target_date": "2024-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "ecce11fd-19c8-b29a-c777-1e0192028984",
+          "title": "擴大男性HPV疫苗接種對象",
+          "file": "醫療衛生/2025-男性HPV疫苗接種.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d69352ff-6360-6cc8-924e-8a8c9a3546a7",
+          "title": "每年投入100億元調整醫事人員待遇",
+          "file": "醫療衛生/2025-醫事人員待遇.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "100億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d3d2a5d5-e5b7-8cd0-4cd8-ee0dfc881a90",
+          "title": "修正醫療器材相關規範",
+          "file": "醫療衛生/2025-醫療器材規範修正.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d5d2e935-15e1-bf01-fa1f-be7139e50c0f",
+          "title": "保護長照服務使用者隱私",
+          "file": "醫療衛生/2025-長照隱私保護.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9913490e-efcb-5a39-aa8d-7fa7ef97d699",
+          "title": "建立台灣獼猴標準化實驗模式",
+          "file": "醫療衛生/台灣獼猴-標準化.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "79e54689-4f0e-fe47-b858-a5d195171b56",
+          "title": "成立靈長類實驗動物中心",
+          "file": "醫療衛生/靈長類實驗中心-預算期程.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    },
+    {
+      "name": "食品安全",
+      "count": 1,
+      "commitments": [
+        {
+          "id": "e6a5d630-f5b4-6427-2cd7-b142dee94985",
+          "title": "建立全國性食品稽查專案",
+          "file": "食品安全/2025-食品稽查專案.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        }
+      ]
+    }
+  ]
+}
