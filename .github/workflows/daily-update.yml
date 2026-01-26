@@ -143,8 +143,8 @@ jobs:
           else
             git commit -m "Add data for ${TODAY}" -m "- Fetched and embedded legislative data" -m "- Updated Qdrant" -m "- Updated monthly release" -m "Co-Authored-By: GitHub Actions <actions@github.com>"
 
-            # Push 到 main 分支
-            git push origin main
+            # Push 到當前分支
+            git push origin HEAD
 
             echo "✅ 資料已提交到 Git"
           fi
@@ -189,7 +189,7 @@ jobs:
             echo "ℹ️  沒有新的承諾變更"
           else
             git commit -m "Update commitments for ${TODAY}"
-            git push origin main
+            git push origin HEAD
             echo "✅ 承諾已提交到 Git"
           fi
 
