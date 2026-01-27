@@ -120,6 +120,14 @@ openai_create_embedding() {
         return 0
       fi
 
+      # 處理 rate limit (429) 和 server error (5xx)：重試
+      if [[ "$http_code" == "429" || "$http_code" =~ ^5[0-9]{2}$ ]]; then
+        echo "⚠️  [openai_create_embedding] HTTP=${http_code}，等待 ${retry_delay}s 後重試 $attempt/$max_retries..." >&2
+        sleep $retry_delay
+        retry_delay=$((retry_delay * 2))
+        continue
+      fi
+
       echo "❌ [openai_create_embedding] HTTP=${http_code}" >&2
       if jq -e . >/dev/null 2>&1 <<<"$resp"; then
         echo "$resp" | jq -C '.' >&2
@@ -133,6 +141,7 @@ openai_create_embedding() {
     if [[ $attempt -lt $max_retries ]]; then
       echo "⚠️  [openai_create_embedding] curl 失敗 (exit=$curl_exit)，重試 $attempt/$max_retries..." >&2
       sleep $retry_delay
+      retry_delay=$((retry_delay * 2))
     else
       echo "❌ [openai_create_embedding] curl 失敗 (exit=$curl_exit)，已重試 $max_retries 次" >&2
       return 1

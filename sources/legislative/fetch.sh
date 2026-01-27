@@ -234,33 +234,37 @@ process_single_chunk() {
   local max_retries=10
 
   while [[ $retry_count -lt $max_retries ]]; do
-    if embedding="$(openai_create_embedding "$EMBEDDING_MODEL" "$text" 2>&1)"; then
-      # 成功產生 embedding
-      break
-    else
-      local exit_code=$?
-      retry_count=$((retry_count + 1))
-
-      if [[ $retry_count -lt $max_retries ]]; then
-        echo "   ⚠️  Embedding 產生失敗（嘗試 ${retry_count}/${max_retries}）"
-        echo "   ⏳ 偵測到網路異常，等待 1 分鐘後重試..."
-
-        # 計算重試時間（跨平台相容）
-        if date -v+1M '+%H:%M:%S' >/dev/null 2>&1; then
-          # macOS
-          echo "   ⏰ 將於 $(date -v+1M '+%H:%M:%S') 重試"
-        elif date -d '+1 minute' '+%H:%M:%S' >/dev/null 2>&1; then
-          # Linux
-          echo "   ⏰ 將於 $(date -d '+1 minute' '+%H:%M:%S') 重試"
-        fi
-
-        sleep 60  # 等待 1 分鐘
-        echo "   🔄 重新嘗試產生 embedding..."
+    if embedding="$(openai_create_embedding "$EMBEDDING_MODEL" "$text")"; then
+      # 驗證 embedding 是否為有效 JSON array
+      if printf '%s' "$embedding" | jq -e 'type == "array"' >/dev/null 2>&1; then
+        break
       else
-        echo "   ❌ Embedding 產生失敗（已重試 ${max_retries} 次）"
-        ERROR_COUNT=$((ERROR_COUNT + 1))
-        return 1
+        echo "   ⚠️  Embedding 回傳格式異常，重試中..." >&2
+        embedding=""
       fi
+    fi
+
+    retry_count=$((retry_count + 1))
+
+    if [[ $retry_count -lt $max_retries ]]; then
+      echo "   ⚠️  Embedding 產生失敗（嘗試 ${retry_count}/${max_retries}）"
+      echo "   ⏳ 偵測到異常，等待 1 分鐘後重試..."
+
+      # 計算重試時間（跨平台相容）
+      if date -v+1M '+%H:%M:%S' >/dev/null 2>&1; then
+        # macOS
+        echo "   ⏰ 將於 $(date -v+1M '+%H:%M:%S') 重試"
+      elif date -d '+1 minute' '+%H:%M:%S' >/dev/null 2>&1; then
+        # Linux
+        echo "   ⏰ 將於 $(date -d '+1 minute' '+%H:%M:%S') 重試"
+      fi
+
+      sleep 60  # 等待 1 分鐘
+      echo "   🔄 重新嘗試產生 embedding..."
+    else
+      echo "   ❌ Embedding 產生失敗（已重試 ${max_retries} 次）"
+      ERROR_COUNT=$((ERROR_COUNT + 1))
+      return 1
     fi
   done
 
@@ -360,8 +364,11 @@ ${chunk_content}"
     echo "   🆕 處理 Chunk ${chunk_index}/${total_chunks} (${start_pos}-${end_pos} 字)"
     echo "      Base ID: [$base_id]"
     echo "      Chunk ID: [$chunk_point_id]"
-    process_single_chunk "$chunk_point_id" "$chunk_text" "$payload_base" \
-      "true" "$chunk_index" "$total_chunks" "$base_id"
+    if ! process_single_chunk "$chunk_point_id" "$chunk_text" "$payload_base" \
+      "true" "$chunk_index" "$total_chunks" "$base_id"; then
+      echo "   ❌ Chunk ${chunk_index} 處理失敗，跳過此文件剩餘 chunks" >&2
+      return 1
+    fi
 
     # 移動到下一個 chunk（扣除重疊區域）
     start_pos=$((start_pos + effective_chunk_size - overlap))
@@ -496,7 +503,11 @@ for (( term=START_TERM; term>=8; term-- )); do
       )"
 
       # 呼叫分塊處理函數
-      process_document "$POINT_ID" "$SUBJECT" "$CONTENT" "$PAYLOAD_BASE"
+      if ! process_document "$POINT_ID" "$SUBJECT" "$CONTENT" "$PAYLOAD_BASE"; then
+        echo "   ❌ 文件 [$POINT_ID] 處理失敗，跳過繼續下一筆" >&2
+        ERROR_COUNT=$((ERROR_COUNT + 1))
+        continue
+      fi
 
       # 將 ID 加入已處理檔案
       echo "$POINT_ID" >> "$PROCESSED_IDS_FILE"
