@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-01-27T14:13:23Z",
+  "generated_at": "2026-01-27T23:42:37Z",
   "total_count": 1587,
   "status_summary": {
-    "追蹤中": 609,
-    "已達成": 405,
-    "已延宕": 573,
+    "追蹤中": 597,
+    "已達成": 431,
+    "已延宕": 559,
     "無更新": 0
   },
   "categories": [
@@ -25,10 +25,10 @@
           "id": "7544951e-a7cd-fda9-d16a-be1b61b2e282",
           "title": "路燈復位作業完成",
           "file": "交通建設/110-路燈復位.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2021-11-11",
           "target_value": "5支",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "87114fc6-f4e9-415d-fedd-132bf6f68e47",
@@ -64,7 +64,7 @@
           "status": "已延宕",
           "target_date": "2020-12-24",
           "target_value": "3萬3110班",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8f5084c4-8867-35df-b70c-77a95b63e920",
@@ -82,7 +82,7 @@
           "status": "已達成",
           "target_date": "2021-01-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "cfa9d8a4-03d9-029a-7d2d-aa92a2752289",
@@ -91,7 +91,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "113fe713-53c4-a7a9-b749-d8d9d5d71d16",
@@ -118,7 +118,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "eaa3b11a-d51b-3fa3-54eb-c40f294388f6",
@@ -127,7 +127,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "43d0bd6b-8808-a2f5-24cc-bb9413fef6d3",
@@ -145,7 +145,7 @@
           "status": "已達成",
           "target_date": "2021-02-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "14b96ff4-57e3-0948-5349-4f26c113636f",
@@ -154,7 +154,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "100%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "675d6428-799d-7e4a-b65a-17dcba4bf9e9",
@@ -172,7 +172,7 @@
           "status": "已達成",
           "target_date": "2021-11-11",
           "target_value": "5支",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ebfc9078-8460-9599-54ed-6f9e1600b792",
@@ -280,7 +280,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f6d3d349-1711-c989-2f98-ecb954746bb6",
@@ -289,7 +289,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ab8f491c-ba8e-744c-6096-437af3523d51",
@@ -298,7 +298,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "25a3dba5-113e-d63d-aefc-f20e2daadc48",
@@ -325,7 +325,7 @@
           "status": "已延宕",
           "target_date": "2022-04-30",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f7423e8d-8e5d-ee04-5eb9-fabb9d7307b7",
@@ -334,7 +334,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "96.32%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "fd3e4291-adb6-97ec-28cd-e213e6d1666e",
@@ -349,10 +349,10 @@
           "id": "86867804-7fca-d4ec-918f-3c54c315f125",
           "title": "增設桃園八德交流道",
           "file": "交通建設/2022-桃園八德交流道.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "16ade9ba-42e2-bd64-6e1b-9749b5738fd5",
@@ -424,7 +424,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "aca319e5-612f-1113-f59e-d5cd2701cc70",
@@ -433,7 +433,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "4面",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6ff76316-f1d2-bf65-65f5-d8d6af164cb4",
@@ -454,21 +454,21 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "d3aaa2e7-3cbb-56c7-932a-d95fc8c26e9b",
-          "title": "三鶯大橋第1期及第2期工程進度",
-          "file": "交通建設/2023-三鶯大橋工程.md",
-          "status": "已延宕",
-          "target_date": "2023-10-19",
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "8419341f-9761-7bf2-e906-7cb871d45710",
           "title": "三峽河長福橋改建工程預算及工期",
           "file": "交通建設/2023-三峽河長福橋改建.md",
           "status": "已延宕",
           "target_date": "2024-03-31",
           "target_value": "7億5200萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d3aaa2e7-3cbb-56c7-932a-d95fc8c26e9b",
+          "title": "三鶯大橋第1期及第2期工程進度",
+          "file": "交通建設/2023-三鶯大橋工程.md",
+          "status": "已延宕",
+          "target_date": "2023-10-19",
+          "target_value": null,
           "last_updated": "2026-01-27"
         },
         {
@@ -586,7 +586,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "1d3f46e5-46fd-5b89-c642-50b2222c701f",
@@ -613,7 +613,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "bac5ea47-9ad2-ba42-1def-300e8b7666a0",
@@ -640,7 +640,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "19b8a8ae-8cc3-7fbe-1bb3-a950fd3dd621",
@@ -649,7 +649,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "54班次",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8802ea52-4078-7ee8-723a-caa77feaa61c",
@@ -676,25 +676,7 @@
           "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": "19.7%",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "24791853-27f5-1836-bfd3-989b00b06e73",
-          "title": "枋山站提供廁所服務",
-          "file": "交通建設/2023-枋山站廁所.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "ded0904e-cd36-391e-9212-5a41816639b2",
-          "title": "枋山站廁所設置",
-          "file": "交通建設/2023-枋山站廁所設置.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "3fa017be-bee1-dc8d-dc24-cfcb0611dc95",
@@ -721,7 +703,7 @@
           "status": "已延宕",
           "target_date": "2023-01-25",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f990ef70-0e1c-0b94-e118-68cd3f876b82",
@@ -740,6 +722,24 @@
           "target_date": null,
           "target_value": "4.18億元",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "24791853-27f5-1836-bfd3-989b00b06e73",
+          "title": "枋山站提供廁所服務",
+          "file": "交通建設/2023-枋山站廁所.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "ded0904e-cd36-391e-9212-5a41816639b2",
+          "title": "枋山站廁所設置",
+          "file": "交通建設/2023-枋山站廁所設置.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "67dd089c-a271-775a-e540-bf1396770722",
@@ -775,15 +775,6 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "622c066f-4d52-ab70-4f3f-ce23f336a9c7",
-          "title": "捷運萬大線第二期工程",
-          "file": "交通建設/2023-萬大線二期.md",
-          "status": "已達成",
-          "target_date": "2029-12-31",
-          "target_value": "555.3億元",
           "last_updated": "2026-01-27"
         },
         {
@@ -895,13 +886,31 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "b05b0381-a441-1031-fbfb-ae85825ba791",
+          "title": "苑裡鎮縣道拓寬工程補助",
+          "file": "交通建設/2023-苑裡鎮拓寬.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "622c066f-4d52-ab70-4f3f-ce23f336a9c7",
+          "title": "捷運萬大線第二期工程",
+          "file": "交通建設/2023-萬大線二期.md",
+          "status": "已達成",
+          "target_date": "2029-12-31",
+          "target_value": "555.3億元",
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "fbd5f5f7-2264-b0ab-b502-8fd7f11c7c79",
           "title": "設置落石告警系統於台9丁線",
           "file": "交通建設/2023-落石告警系統.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "79c74cc4-dd0b-a4aa-a91c-dc54abaa2b4b",
@@ -919,15 +928,6 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": "2/3",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "b05b0381-a441-1031-fbfb-ae85825ba791",
-          "title": "苑裡鎮縣道拓寬工程補助",
-          "file": "交通建設/2023-苑裡鎮拓寬.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
           "last_updated": "2026-01-26"
         },
         {
@@ -955,7 +955,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "每月2次",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ac7ae760-c1a2-3798-30dc-6eed024c051e",
@@ -1081,7 +1081,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ea0a22d3-2df3-9d87-38b6-d9860ae449c9",
@@ -1109,15 +1109,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "cd7a59cb-4316-74f3-ed1c-c27f956be5d5",
-          "title": "苗栗縣交通建設納編",
-          "file": "交通建設/2025-苗栗交通納編.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
         },
         {
           "id": "22caaedb-c4a0-3136-8ee8-85cbd9476b49",
@@ -1285,10 +1276,10 @@
           "id": "8e6a4da7-0ef0-1f6a-1036-b273a447814e",
           "title": "機車駕訓補助計畫",
           "file": "交通建設/2025-機車駕訓補助.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": "1300元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "47400d82-2dcd-e631-da3e-4854df5ef843",
@@ -1325,6 +1316,15 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cd7a59cb-4316-74f3-ed1c-c27f956be5d5",
+          "title": "苗栗縣交通建設納編",
+          "file": "交通建設/2025-苗栗交通納編.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
         },
         {
           "id": "ad984a8b-c275-0375-07a2-b77a4d11c354",
@@ -1396,7 +1396,7 @@
           "status": "已達成",
           "target_date": "2026-01-07",
           "target_value": "最高5萬元（汽車），最高4000元（機車）",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "7bce15cd-f066-660d-09e8-ba7287812091",
@@ -1486,7 +1486,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "23b3e3c8-1aa0-24fa-fe3f-012952d3e5c6",
@@ -1585,7 +1585,7 @@
           "status": "已延宕",
           "target_date": "2021-12-20",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         }
       ]
     },
@@ -1609,7 +1609,7 @@
           "status": "已達成",
           "target_date": "109-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "57e2adc8-4dc8-ffd7-c07c-fa9b0c8e3e4a",
@@ -1645,7 +1645,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "5a1030cd-eb26-7a74-f46a-c8ce9696edd3",
@@ -1654,7 +1654,7 @@
           "status": "已延宕",
           "target_date": "2022-04-02",
           "target_value": "6人",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6834ff35-fad8-a0fb-b9a6-663d19490ac4",
@@ -1663,7 +1663,7 @@
           "status": "已延宕",
           "target_date": "2022-03-10",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "07e9b681-b98f-dd10-cce4-9ed209d79b30",
@@ -1672,7 +1672,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "2d0c0050-10f6-b91e-8e5e-b1e593954afa",
@@ -1729,13 +1729,22 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "aca7f1b9-7a6e-23ed-2c12-b2236a781842",
+          "title": "檸檬車法修正規範",
+          "file": "其他/2021-檸檬車法修正.md",
+          "status": "已達成",
+          "target_date": "2021-07-01",
+          "target_value": "180日或1萬2千公里",
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "81a1ddef-f287-183c-3bd4-72e15a55ca46",
           "title": "成立專案辦公室應對氣候變遷",
           "file": "其他/2021-氣候變遷專案辦公室.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2021-09-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "26b76090-3b46-d062-5296-27c7d4997dc8",
@@ -1756,12 +1765,12 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "aca7f1b9-7a6e-23ed-2c12-b2236a781842",
-          "title": "檸檬車法修正規範",
-          "file": "其他/2021-檸檬車法修正.md",
-          "status": "已達成",
-          "target_date": "2021-07-01",
-          "target_value": "180日或1萬2千公里",
+          "id": "6d7eaf90-bc2d-daf9-99c9-99a886f2ea13",
+          "title": "查察賄選防制暴力小組成立",
+          "file": "其他/2021-賄選防制小組.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
           "last_updated": "2026-01-27"
         },
         {
@@ -1772,15 +1781,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-26"
-        },
-        {
-          "id": "6d7eaf90-bc2d-daf9-99c9-99a886f2ea13",
-          "title": "查察賄選防制暴力小組成立",
-          "file": "其他/2021-賄選防制小組.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
         },
         {
           "id": "d38a8220-62be-ca5a-3782-3832d1670373",
@@ -1807,7 +1807,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "24000立方公尺",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "7ea893db-4f02-7641-3e50-31ba0fc5f5d6",
@@ -1861,7 +1861,7 @@
           "status": "已達成",
           "target_date": "2022-02-21",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "bc546399-a199-dca6-ad08-c64f400ebbd6",
@@ -1870,7 +1870,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "70000件",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6121479f-1597-0862-e067-ef615cc42413",
@@ -1879,7 +1879,7 @@
           "status": "已達成",
           "target_date": "2022-03-07",
           "target_value": "10天",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8e22dced-ac58-ded0-286e-b9fab2001f35",
@@ -1915,7 +1915,7 @@
           "status": "已達成",
           "target_date": "2025-12-31",
           "target_value": "155.46億元、11.3萬戶、95.5%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6f838557-8af7-baed-ea41-9c5753ffa8a5",
@@ -1942,7 +1942,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "75%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0b3a748d-3c1f-1e76-71e4-7eb034e8ec31",
@@ -1960,7 +1960,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "9aa0515a-9db3-b705-9ca0-0e7fb926af11",
@@ -2101,10 +2101,10 @@
           "id": "5d66be45-70c3-6a86-acdf-14d090778da5",
           "title": "檢討即時災情通報系統",
           "file": "其他/2023-即時災情通報檢討.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "82137f36-231d-31c0-662e-4651c536acdf",
@@ -2221,7 +2221,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0af03bd0-2f34-c952-9130-a1e1fc4f75cb",
@@ -2230,7 +2230,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ec91e67b-daab-f428-0b3a-eb40af2e91f8",
@@ -2284,7 +2284,7 @@
           "status": "已延宕",
           "target_date": "2023-11-09",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c0cfb485-df35-e0a8-aa79-3c1de4a6c61c",
@@ -2350,13 +2350,22 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "de610c0a-84f2-a482-b12d-0b80f362c599",
+          "title": "阻擋境外詐騙電話761萬通",
+          "file": "其他/2023-詐騙電話阻擋.md",
+          "status": "已延宕",
+          "target_date": "2023-09-30",
+          "target_value": "761萬通",
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "c467e525-e2ba-6788-8165-75df690a0441",
           "title": "調整日本食品輸入管制措施",
           "file": "其他/2023-調整日本食品管制.md",
           "status": "已延宕",
           "target_date": "2023-02-21",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "b2fb3ea2-da9e-75c1-a752-7688e22e229c",
@@ -2464,7 +2473,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6cdf602b-93e3-7904-b853-363a85e70760",
@@ -2482,16 +2491,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "de610c0a-84f2-a482-b12d-0b80f362c599",
-          "title": "阻擋境外詐騙電話761萬通",
-          "file": "其他/2023-詐騙電話阻擋.md",
-          "status": "已延宕",
-          "target_date": "2023-09-30",
-          "target_value": "761萬通",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "39b0adca-4c34-1ddb-2b50-bd40bfba654e",
@@ -2578,10 +2578,10 @@
           "id": "a6e34a56-0793-ccc3-c3f8-e2e7ed247d74",
           "title": "建立靈長類專業人員培訓機制",
           "file": "其他/2024-靈長類培訓.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2024-12-31",
           "target_value": "7名學員",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "da9c3825-71bb-5e8d-fc19-cf9d951bf9f9",
@@ -2590,7 +2590,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": "20億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8ab3ac35-6cd4-2e40-d131-dd1b58d65fdb",
@@ -2698,7 +2698,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f75467f8-f026-e26b-0edb-36d82c19f26c",
@@ -2725,7 +2725,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "25隻",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8b2ff307-892c-aa15-276d-18e7920c6d41",
@@ -2737,13 +2737,22 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "89cfb6d5-8c03-09f8-eceb-3155461fc4f4",
+          "title": "維護農地與糧食安全",
+          "file": "其他/2025-糧食安全.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "b507455d-0119-7758-188d-4896b0c8bd6b",
           "title": "修法以促進縣市合併升格",
           "file": "其他/2025-縣市合併升格.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "df86fb10-274b-0432-e54b-0e7e3ecbe29f",
@@ -2762,15 +2771,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-26"
-        },
-        {
-          "id": "89cfb6d5-8c03-09f8-eceb-3155461fc4f4",
-          "title": "維護農地與糧食安全",
-          "file": "其他/2025-糧食安全.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
         },
         {
           "id": "2604f334-dd04-2521-e41b-615e6de8f15b",
@@ -2866,7 +2866,7 @@
           "status": "已達成",
           "target_date": "2021-07-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "7995b3cf-87fb-95a8-90fd-2c9ab19fa5e9",
@@ -2908,7 +2908,7 @@
           "status": "已延宕",
           "target_date": "2018-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         }
       ]
     },
@@ -2941,7 +2941,7 @@
           "status": "已達成",
           "target_date": "2019-07-26",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "41a50423-53d6-8c40-7f21-bfeb18f99a52",
@@ -2950,7 +2950,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "bcc90c19-eb25-3e85-1dd4-e107a4d78e70",
@@ -2977,7 +2977,7 @@
           "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "170338d5-62f0-62dc-75bf-faf42a646e28",
@@ -2992,10 +2992,10 @@
           "id": "06cddc69-c566-0b96-889e-30d02770094d",
           "title": "強化高科技產業保護措施",
           "file": "國防外交/2023-加強科技防範.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c07362f8-93a9-94ef-ae1b-f87eaca81b28",
@@ -3005,15 +3005,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-26"
-        },
-        {
-          "id": "20f6489a-de30-c75d-e5ab-d97548bf1b55",
-          "title": "鞏固邦誼，維繫邦交關係",
-          "file": "國防外交/2023-鞏固邦誼.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
         },
         {
           "id": "0001090f-a5e8-b01b-a3dd-05d3f7866971",
@@ -3040,7 +3031,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a0c71d07-4853-4c31-260d-95f3ff3577ea",
@@ -3049,7 +3040,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c5ca33c0-4657-99e2-4561-452c984342bb",
@@ -3079,6 +3070,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "20f6489a-de30-c75d-e5ab-d97548bf1b55",
+          "title": "鞏固邦誼，維繫邦交關係",
+          "file": "國防外交/2023-鞏固邦誼.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "dae70379-28a9-d0f5-5373-2a6e09da4fbf",
           "title": "飛虎隊成立80週年慶祝活動",
           "file": "國防外交/2023-飛虎隊80週年慶祝.md",
@@ -3103,7 +3103,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0db7a453-d887-3fd8-4932-7cf264aaa4c3",
@@ -3148,7 +3148,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ea0265e3-9aa6-cc0e-a98d-519af36a4b99",
@@ -3238,7 +3238,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "63809b77-1f2a-7a6e-fa76-dc1103214a2b",
@@ -3247,7 +3247,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e2f7d9d5-ab0b-0537-549d-d5e56279185c",
@@ -3259,22 +3259,22 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "d7e65705-b3b3-f376-5974-0a730d523127",
-          "title": "國道戰備跑道增寬工程",
-          "file": "國防外交/2025-戰備跑道增寬.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "9165c2c5-1510-8bc7-1c79-130c178030be",
           "title": "戰備跑道啟用及防空部署",
           "file": "國防外交/2025-戰備跑道啟用.md",
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "d7e65705-b3b3-f376-5974-0a730d523127",
+          "title": "國道戰備跑道增寬工程",
+          "file": "國防外交/2025-戰備跑道增寬.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8175f18b-42a2-2dd0-b535-8965e8142a2c",
@@ -3301,7 +3301,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "571e5e1b-7a4c-85b2-aab6-a2ccf48b8373",
@@ -3340,6 +3340,24 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "f4c262d3-b3ec-1a82-9e23-758524012768",
+          "title": "強化跨部會聯繫合作",
+          "file": "國防外交/2025-跨部會合作.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "2bd9f654-f264-061c-a630-85440f963e61",
+          "title": "深化全民國防理念的跨部會合作",
+          "file": "國防外交/2025-跨部會國防合作.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "4e13a102-ad63-335a-fad2-88040b687b7b",
           "title": "推動踏實外交相關作法",
           "file": "國防外交/2025-踏實外交.md",
@@ -3367,24 +3385,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "f4c262d3-b3ec-1a82-9e23-758524012768",
-          "title": "強化跨部會聯繫合作",
-          "file": "國防外交/2025-跨部會合作.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "2bd9f654-f264-061c-a630-85440f963e61",
-          "title": "深化全民國防理念的跨部會合作",
-          "file": "國防外交/2025-跨部會國防合作.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "d2204c3e-09f7-bf3c-241e-29d1f96becc1",
           "title": "防空演習宣導與驗證",
           "file": "國防外交/2025-防空演習宣導.md",
@@ -3406,10 +3406,10 @@
           "id": "f35ba04c-2e2d-b6a2-4d1d-9b89480c398b",
           "title": "美方來臺交流與我方赴美觀摩",
           "file": "國防外交/2026-台美軍事交流.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d1ac8d43-a2ca-1dd3-0766-ade22fa1f650",
@@ -3427,7 +3427,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4c006d6e-8a01-962f-98df-b98a291e430f",
@@ -3436,7 +3436,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "2711d5e3-29b2-e107-4cd9-e642a3f54bf4",
@@ -3445,7 +3445,7 @@
           "status": "追蹤中",
           "target_date": "YYYY-05-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ec97a892-c0e5-daea-51ae-f371fc20a71a",
@@ -3460,6 +3460,15 @@
           "id": "80537e10-8620-7462-7109-cd43b20f5fc8",
           "title": "恢復徵集常備兵現役",
           "file": "國防外交/徵集兵-政策研擬.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0d78eb7d-7b0b-e027-1696-c2f7314f1bdb",
+          "title": "持續捍衛國家主權及國際參與",
+          "file": "國防外交/捍衛國家主權.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
@@ -3490,16 +3499,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "0d78eb7d-7b0b-e027-1696-c2f7314f1bdb",
-          "title": "持續捍衛國家主權及國際參與",
-          "file": "國防外交/捍衛國家主權.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c7e42172-0370-a731-39e8-a6cdfd1a8fb4",
@@ -3508,7 +3508,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "66ed83a5-9ad5-f171-ce31-25a430e6f08d",
@@ -3517,7 +3517,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         }
       ]
     },
@@ -3577,7 +3577,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "35%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c00bb393-c0b0-38ff-c79e-73dd8c611c8f",
@@ -3613,7 +3613,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "3000班",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "fda99fcc-b6e2-d6f0-7356-1161b5c26655",
@@ -3622,16 +3622,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "15場",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "6b2de096-0ca5-083f-281c-d6f2e103f762",
-          "title": "成立橄欖枝中心",
-          "file": "教育/2020-橄欖枝中心成立.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "efe8ac3b-50d4-bae6-ccc2-d9e8404370b9",
@@ -3661,6 +3652,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "6b2de096-0ca5-083f-281c-d6f2e103f762",
+          "title": "成立橄欖枝中心",
+          "file": "教育/2020-橄欖枝中心成立.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "d519596b-0fe2-ecfd-c08f-5f308a43ef7e",
           "title": "推動原住民族研究整合型計畫",
           "file": "教育/2021-原住民族研究整合型計畫.md",
@@ -3676,7 +3676,7 @@
           "status": "已延宕",
           "target_date": "2020-12-07",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a75ae8d0-a5d4-a4aa-3159-d5f953947faf",
@@ -3694,7 +3694,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "3億444萬5500元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c1451229-0ebb-78af-b9c4-a6b38bc4368e",
@@ -3721,7 +3721,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "504aa8bb-78ff-d5ca-ec76-1911a37be86e",
@@ -3745,10 +3745,10 @@
           "id": "173d8880-124c-99e6-ac8d-c7ff45d60d6c",
           "title": "發展身心障礙學生線上學習資源",
           "file": "教育/2021-身心障礙線上學習.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "86a3418d-ec0e-919a-0aab-b12765b25e79",
@@ -3784,7 +3784,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "3000班",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "7b5d0cf1-6c38-7759-22f2-806e59c0f9c3",
@@ -3838,7 +3838,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "4992人次",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "78ec4865-623a-7a9c-dc87-391d9a8de3aa",
@@ -3898,10 +3898,10 @@
           "id": "e88b67aa-1cde-1e41-cde7-5dcef8a0b03b",
           "title": "外籍教師聘用政策",
           "file": "教育/2023-外籍教師政策.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "8dd32e3e-83bb-a64d-1f07-3e30da3c46b1",
@@ -3994,24 +3994,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "09534e2e-a9b4-6f7f-be76-23f371e79da9",
-          "title": "學生視力保健工作持續推動",
-          "file": "教育/2023-視力保健.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "視力保健列為國小必選議題",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "40c8479c-f8b1-7602-5871-8693f273778b",
-          "title": "視力衛教與相關指引",
-          "file": "教育/2023-視力衛教.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "每年定期1-2次檢查視力",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "4074843e-7877-bab5-6eca-517a208680cd",
           "title": "綜合學習表現至少占50%",
           "file": "教育/2023-綜合學習表現50%.md",
@@ -4028,6 +4010,24 @@
           "target_date": null,
           "target_value": "落實近距離用眼30分鐘休息10分鐘之用眼習慣",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "09534e2e-a9b4-6f7f-be76-23f371e79da9",
+          "title": "學生視力保健工作持續推動",
+          "file": "教育/2023-視力保健.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "視力保健列為國小必選議題",
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "40c8479c-f8b1-7602-5871-8693f273778b",
+          "title": "視力衛教與相關指引",
+          "file": "教育/2023-視力衛教.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "每年定期1-2次檢查視力",
+          "last_updated": "2026-01-27"
         },
         {
           "id": "7b735230-d163-a270-1d28-eb0a33902133",
@@ -4054,7 +4054,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4219c4cc-74f1-1003-c1f7-98d5c0970afc",
@@ -4081,7 +4081,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0f7220bc-1e15-630b-efa9-494848759a41",
@@ -4117,7 +4117,7 @@
           "status": "已達成",
           "target_date": "2024-12-31",
           "target_value": "300名，每月4萬元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e88277ef-cf6c-0da0-6160-e3a3233c047f",
@@ -4207,7 +4207,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "b18bf2ab-781f-fc45-fad7-0511f6c29b87",
@@ -4333,7 +4333,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "fd0ed2be-a805-8234-d857-4a0ae4d7cb76",
@@ -4351,7 +4351,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4cd209f8-f94d-cbba-b396-adffa042b46b",
@@ -4361,24 +4361,6 @@
           "target_date": null,
           "target_value": "30分鐘",
           "last_updated": "2026-01-26"
-        },
-        {
-          "id": "d5deb8d1-3496-cbc0-09b4-8acdfee89309",
-          "title": "視力保健列為國小必選議題",
-          "file": "教育/2025-視力保健.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "747c59ab-723a-d884-bdb7-706123241ff2",
-          "title": "視力衛教與相關指引課程內容",
-          "file": "教育/2025-視力保健指引.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
         },
         {
           "id": "a07cb02b-0bb6-520c-05a9-dc9fe6cc6a95",
@@ -4402,6 +4384,24 @@
           "id": "df20ef79-0de3-3f67-eea7-e43b3baeb21e",
           "title": "控制學生螢幕使用時間",
           "file": "教育/2025-螢幕使用控制.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d5deb8d1-3496-cbc0-09b4-8acdfee89309",
+          "title": "視力保健列為國小必選議題",
+          "file": "教育/2025-視力保健.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "747c59ab-723a-d884-bdb7-706123241ff2",
+          "title": "視力衛教與相關指引課程內容",
+          "file": "教育/2025-視力保健指引.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
@@ -4489,15 +4489,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "9925ce3c-ba55-4920-e8dd-e5d5c3fe0df6",
-          "title": "制定補習班防疫及上課措施",
-          "file": "教育/疫情防疫-補習班.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "3ec1bae5-c7e7-937e-39f5-df2b860db604",
           "title": "天天戶外活動120計畫",
           "file": "教育/戶外活動-120分鐘.md",
@@ -4525,9 +4516,9 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "efbfd844-7b7c-86e4-736a-d39b82e11a16",
-          "title": "視力保健列為國小必選議題",
-          "file": "教育/視力保健議題.md",
+          "id": "9925ce3c-ba55-4920-e8dd-e5d5c3fe0df6",
+          "title": "制定補習班防疫及上課措施",
+          "file": "教育/疫情防疫-補習班.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
@@ -4550,6 +4541,15 @@
           "target_date": null,
           "target_value": "50%",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "efbfd844-7b7c-86e4-736a-d39b82e11a16",
+          "title": "視力保健列為國小必選議題",
+          "file": "教育/視力保健議題.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "a2043ef3-fc67-4219-779d-537830df4b15",
@@ -4600,7 +4600,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         }
       ]
     },
@@ -4612,10 +4612,10 @@
           "id": "d625a4ab-d33e-dbaa-9a67-2014f55b9438",
           "title": "推動重要無形文化資產授證",
           "file": "文化政策/2021-無形文化資產授證.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ee84b879-626d-e8e4-ef96-1a79dc6456ab",
@@ -4696,7 +4696,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "62a11327-7613-74a7-b1cb-bc7a41010178",
@@ -4939,6 +4939,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "850a873b-02c5-1e2e-c07f-3cf795a9e501",
+          "title": "瘦身美容契約諮詢及宣導",
+          "file": "消費者保護/2023-瘦身美容契約宣導.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "a4ad1e54-01ba-a738-92b7-589748da95d6",
           "title": "短期補習班契約查核合格率",
           "file": "消費者保護/2023-短期補習班查核99.99%.md",
@@ -4963,15 +4972,6 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": "5家",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "850a873b-02c5-1e2e-c07f-3cf795a9e501",
-          "title": "瘦身美容契約諮詢及宣導",
-          "file": "消費者保護/2023-瘦身美容契約宣導.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
           "last_updated": "2026-01-27"
         }
       ]
@@ -5014,7 +5014,7 @@
           "status": "追蹤中",
           "target_date": "2028-12-31",
           "target_value": "15萬公噸",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "352903e3-ce87-ec50-ab77-ae9c6c17feb5",
@@ -5050,7 +5050,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "15萬9897公噸",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ac123294-3ef9-0ee0-a8a3-1c054d426ce0",
@@ -5071,21 +5071,21 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "e3dc3ebd-7bcb-e457-c4b4-316747b0321b",
-          "title": "防疫消毒大隊成立",
-          "file": "環境保護/2021-防疫消毒.md",
-          "status": "已延宕",
-          "target_date": "2020-03-25",
-          "target_value": "8380處",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "87b38235-9048-f236-6a89-ff6cbcff8b9a",
           "title": "提升鋰電池回收補貼費率",
           "file": "環境保護/2021-鋰電池回收補貼提升.md",
           "status": "已達成",
           "target_date": "2021-07-01",
           "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e3dc3ebd-7bcb-e457-c4b4-316747b0321b",
+          "title": "防疫消毒大隊成立",
+          "file": "環境保護/2021-防疫消毒.md",
+          "status": "已延宕",
+          "target_date": "2020-03-25",
+          "target_value": "8380處",
           "last_updated": "2026-01-27"
         },
         {
@@ -5140,7 +5140,7 @@
           "status": "已達成",
           "target_date": "2021-06-30",
           "target_value": "60萬公噸",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d90cc83c-451e-b3a9-02e3-8734cee89311",
@@ -5149,6 +5149,15 @@
           "status": "已延宕",
           "target_date": "2021-06-30",
           "target_value": "13萬公噸",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "544b761d-73dc-abc5-6c7a-c0e61eef6059",
+          "title": "推動循環杯借用服務",
+          "file": "環境保護/2022-循環杯推動.md",
+          "status": "已延宕",
+          "target_date": "2022-12-31",
+          "target_value": null,
           "last_updated": "2026-01-27"
         },
         {
@@ -5188,15 +5197,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "544b761d-73dc-abc5-6c7a-c0e61eef6059",
-          "title": "推動循環杯借用服務",
-          "file": "環境保護/2022-循環杯推動.md",
-          "status": "已延宕",
-          "target_date": "2022-12-31",
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "52625eac-1d8b-12c3-d5c8-f44a6fef692d",
           "title": "推動磚石粒料至臺北港填築",
           "file": "環境保護/2022-磚石填築推動.md",
@@ -5212,7 +5212,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "減量453.7公噸",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "af305e8c-532e-28b3-a3ed-4037a8d00162",
@@ -5248,7 +5248,7 @@
           "status": "追蹤中",
           "target_date": "2050-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0fe8b015-4037-0ad9-15ae-55e1662b53cf",
@@ -5257,15 +5257,6 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "20億元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "3441dfdd-a811-15af-8839-9f5067eb2ee9",
-          "title": "提升焚化廠處理效率",
-          "file": "環境保護/2023-焚化廠效率提升.md",
-          "status": "追蹤中",
-          "target_date": "2028-12-31",
-          "target_value": "11廠及12廠",
           "last_updated": "2026-01-27"
         },
         {
@@ -5294,6 +5285,15 @@
           "target_date": null,
           "target_value": "每公頃4.5萬元",
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b88420ff-e361-ee43-5801-9f9f36e595e8",
+          "title": "廚餘多元化去化計畫",
+          "file": "環境保護/2023-廚餘去化150噸.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": "150噸",
+          "last_updated": "2026-01-26"
         },
         {
           "id": "0e50c8ea-2fb6-c51b-97de-7d77a1f9c637",
@@ -5386,6 +5386,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "3441dfdd-a811-15af-8839-9f5067eb2ee9",
+          "title": "提升焚化廠處理效率",
+          "file": "環境保護/2023-焚化廠效率提升.md",
+          "status": "追蹤中",
+          "target_date": "2028-12-31",
+          "target_value": "11廠及12廠",
+          "last_updated": "2026-01-28"
+        },
+        {
           "id": "e8a219bc-b467-6b91-98af-a4d36ab414dd",
           "title": "特定行業溫室氣體排放量盤查",
           "file": "環境保護/2023-特定行業排查.md",
@@ -5446,7 +5455,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c7b193ba-8655-b0c0-3b40-d5546b3af5e2",
@@ -5485,15 +5494,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "b88420ff-e361-ee43-5801-9f9f36e595e8",
-          "title": "廚餘多元化去化計畫",
-          "file": "環境保護/2023-廚餘去化150噸.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": "150噸",
-          "last_updated": "2026-01-26"
-        },
-        {
           "id": "b21ce4f0-6957-afe5-5ce0-a309783c699f",
           "title": "化學雲每日更新救災資訊",
           "file": "環境保護/2024-化學雲更新.md",
@@ -5509,6 +5509,15 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "1a8030f0-9f4b-0f97-4c5e-4e7c4c7775ba",
+          "title": "持續推動廚餘生質能源化",
+          "file": "環境保護/2024-廚餘生質能源.md",
+          "status": "已延宕",
+          "target_date": "2024-12-31",
+          "target_value": "150噸/日",
           "last_updated": "2026-01-27"
         },
         {
@@ -5551,15 +5560,6 @@
           "id": "b2d81e57-16a7-9954-0573-db80f775c047",
           "title": "外埔綠能生態園區啟用",
           "file": "環境保護/2024-生質能源.md",
-          "status": "已延宕",
-          "target_date": "2024-12-31",
-          "target_value": "150噸/日",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "1a8030f0-9f4b-0f97-4c5e-4e7c4c7775ba",
-          "title": "持續推動廚餘生質能源化",
-          "file": "環境保護/2024-廚餘生質能源.md",
           "status": "已延宕",
           "target_date": "2024-12-31",
           "target_value": "150噸/日",
@@ -5611,15 +5611,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "6a472435-7dca-d5c8-a725-43f4cc459725",
-          "title": "推動藻礁保護方案",
-          "file": "環境保護/2025-藻礁保護.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
           "id": "cf87cb98-579b-c97e-da58-4034c53f3a61",
           "title": "2025年增設電動車充電樁比率",
           "file": "環境保護/2025-充電樁比率.md",
@@ -5638,24 +5629,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "77f43cfc-de02-70f4-3c82-1c72791a5410",
-          "title": "焚化廠提升與整備",
-          "file": "環境保護/2025-焚化廠升級9廠.md",
-          "status": "追蹤中",
-          "target_date": "2027-12-31",
-          "target_value": "9廠",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "40511e1b-c283-bd2d-edfd-3344e3ccd684",
-          "title": "焚化廠升級整備計畫",
-          "file": "環境保護/2025-焚化廠升級整備9廠.md",
-          "status": "追蹤中",
-          "target_date": "2027-12-31",
-          "target_value": "9廠",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "8d2863cc-3c07-14a4-1e22-85c55c8ae2d6",
           "title": "嬰幼兒食品重金屬限量0.04ppm",
           "file": "環境保護/2025-嬰幼兒食品鎘0.04ppm.md",
@@ -5665,13 +5638,31 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "b435707d-b34a-bf49-cf7d-a4e6fa432345",
+          "title": "設置廚餘生質能源處理設施",
+          "file": "環境保護/2025-廚餘生質能源.md",
+          "status": "已延宕",
+          "target_date": "2024-12-31",
+          "target_value": "150噸/日",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "401e13ce-a4f0-c946-bdd7-cd70cea51ee9",
+          "title": "廚餘處理設施設置計畫",
+          "file": "環境保護/2025-廚餘處理設施.md",
+          "status": "已延宕",
+          "target_date": "2024-12-31",
+          "target_value": "150噸/日",
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "76c85cd5-0252-9c36-c231-fa105aa6bdc7",
           "title": "擴增北、中、南事業廢棄物綜合處理中心量能",
           "file": "環境保護/2025-擴增焚化6.5萬公噸.md",
           "status": "已達成",
           "target_date": "2025-12-31",
           "target_value": "6.5萬公噸",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f2165e46-4b8c-2a6e-8c2c-64c3cded8ab0",
@@ -5746,6 +5737,24 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "77f43cfc-de02-70f4-3c82-1c72791a5410",
+          "title": "焚化廠提升與整備",
+          "file": "環境保護/2025-焚化廠升級9廠.md",
+          "status": "追蹤中",
+          "target_date": "2027-12-31",
+          "target_value": "9廠",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "40511e1b-c283-bd2d-edfd-3344e3ccd684",
+          "title": "焚化廠升級整備計畫",
+          "file": "環境保護/2025-焚化廠升級整備9廠.md",
+          "status": "追蹤中",
+          "target_date": "2027-12-31",
+          "target_value": "9廠",
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "83488cd9-2f3a-f871-75cc-4b54896581d1",
           "title": "環社檢核程序",
           "file": "環境保護/2025-環社檢核.md",
@@ -5755,15 +5764,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "30f6bf24-208f-dae3-936a-9a845a878740",
-          "title": "藻礁生態環境監測計畫",
-          "file": "環境保護/2025-藻礁生態環境監測.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "6a04e71b-a7f5-c9d3-f068-553b4a20b31e",
           "title": "白米鎘容許量降至0.2ppm",
           "file": "環境保護/2025-白米鎘0.2ppm.md",
@@ -5771,6 +5771,24 @@
           "target_date": null,
           "target_value": "0.2ppm",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "f427947a-b8ff-5e97-a9ed-e3166edca22a",
+          "title": "碳費徵收因應措施目標",
+          "file": "環境保護/2025-碳費因應目標.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "40.6%,49.5%",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "181c9474-46ce-fb8f-0666-7aedaa38309d",
+          "title": "減碳法修正及碳費徵收",
+          "file": "環境保護/2025-碳費專款專用.md",
+          "status": "已達成",
+          "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "535fe89d-a50e-6719-c9db-f6dee7dec311",
@@ -5800,20 +5818,20 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "f427947a-b8ff-5e97-a9ed-e3166edca22a",
-          "title": "碳費徵收因應措施目標",
-          "file": "環境保護/2025-碳費因應目標.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "40.6%,49.5%",
+          "id": "6a472435-7dca-d5c8-a725-43f4cc459725",
+          "title": "推動藻礁保護方案",
+          "file": "環境保護/2025-藻礁保護.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
           "last_updated": "2026-01-26"
         },
         {
-          "id": "181c9474-46ce-fb8f-0666-7aedaa38309d",
-          "title": "減碳法修正及碳費徵收",
-          "file": "環境保護/2025-碳費專款專用.md",
+          "id": "30f6bf24-208f-dae3-936a-9a845a878740",
+          "title": "藻礁生態環境監測計畫",
+          "file": "環境保護/2025-藻礁生態環境監測.md",
           "status": "已達成",
-          "target_date": "2025-12-31",
+          "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
         },
@@ -5827,15 +5845,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "75c6bc2c-8b62-1796-0780-584290c16d27",
-          "title": "短期碳減排目標設定",
-          "file": "環境保護/2025-電力碳排減10%.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "10%",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "730ff8e0-1ccd-405c-db3d-44aaf2afe14a",
           "title": "二次鋰電池回收能力1600公噸",
           "file": "環境保護/2025-鋰電池處理能力1600公噸.md",
@@ -5845,21 +5854,12 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "b435707d-b34a-bf49-cf7d-a4e6fa432345",
-          "title": "設置廚餘生質能源處理設施",
-          "file": "環境保護/2025-廚餘生質能源.md",
+          "id": "75c6bc2c-8b62-1796-0780-584290c16d27",
+          "title": "短期碳減排目標設定",
+          "file": "環境保護/2025-電力碳排減10%.md",
           "status": "已延宕",
-          "target_date": "2024-12-31",
-          "target_value": "150噸/日",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "401e13ce-a4f0-c946-bdd7-cd70cea51ee9",
-          "title": "廚餘處理設施設置計畫",
-          "file": "環境保護/2025-廚餘處理設施.md",
-          "status": "已延宕",
-          "target_date": "2024-12-31",
-          "target_value": "150噸/日",
+          "target_date": "2025-12-31",
+          "target_value": "10%",
           "last_updated": "2026-01-27"
         },
         {
@@ -5965,10 +5965,10 @@
           "id": "eb6748de-98ae-c8b1-5496-98bfb6806094",
           "title": "減少免洗餐具使用",
           "file": "環境保護/免洗餐具減少.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2020-11-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "b477e9cb-f26f-8f02-caec-6cf0376e1402",
@@ -5995,24 +5995,6 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "55.1公里",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "e8bc6038-53f6-4587-9522-e7db1dee32e3",
-          "title": "碳定價制度實施",
-          "file": "環境保護/碳定價-碳費開始.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "年排放2.5萬噸以上",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "03c57cb7-9999-ba35-e143-99fa2337d53d",
-          "title": "健全碳定價制度",
-          "file": "環境保護/碳定價制度.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
           "last_updated": "2026-01-26"
         },
         {
@@ -6049,7 +6031,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "1558萬噸",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "36430407-ec25-e663-11a9-dec505aadd4f",
@@ -6070,30 +6052,21 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "e84d5ae1-2ea3-2227-6252-cdc97e589bc6",
-          "title": "快速辦理藻礁受損對策環評",
-          "file": "環境保護/藻礁環評-2022.md",
-          "status": "已延宕",
-          "target_date": "2022-08-28",
-          "target_value": null,
-          "last_updated": "2026-01-26"
+          "id": "e8bc6038-53f6-4587-9522-e7db1dee32e3",
+          "title": "碳定價制度實施",
+          "file": "環境保護/碳定價-碳費開始.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "年排放2.5萬噸以上",
+          "last_updated": "2026-01-28"
         },
         {
-          "id": "6e4ae3d5-879b-03c5-412b-2fcc6c265f6d",
-          "title": "大用水戶節水輔導",
-          "file": "環境保護/節水輔導-500案.md",
-          "status": "已延宕",
-          "target_date": "2020-12-31",
-          "target_value": "500案",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "0c075431-3da4-d7f8-ec04-459ff3801e1d",
-          "title": "針對耗水費徵收進行諮詢",
-          "file": "環境保護/耗水費-諮詢座談.md",
+          "id": "03c57cb7-9999-ba35-e143-99fa2337d53d",
+          "title": "健全碳定價制度",
+          "file": "環境保護/碳定價制度.md",
           "status": "追蹤中",
           "target_date": null,
-          "target_value": "60場",
+          "target_value": null,
           "last_updated": "2026-01-26"
         },
         {
@@ -6151,6 +6124,33 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "6e4ae3d5-879b-03c5-412b-2fcc6c265f6d",
+          "title": "大用水戶節水輔導",
+          "file": "環境保護/節水輔導-500案.md",
+          "status": "已延宕",
+          "target_date": "2020-12-31",
+          "target_value": "500案",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "0c075431-3da4-d7f8-ec04-459ff3801e1d",
+          "title": "針對耗水費徵收進行諮詢",
+          "file": "環境保護/耗水費-諮詢座談.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "60場",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "e84d5ae1-2ea3-2227-6252-cdc97e589bc6",
+          "title": "快速辦理藻礁受損對策環評",
+          "file": "環境保護/藻礁環評-2022.md",
+          "status": "已延宕",
+          "target_date": "2022-08-28",
+          "target_value": null,
+          "last_updated": "2026-01-28"
+        },
+        {
           "id": "928c00c9-5ef7-cf77-57df-5a17a9b6c46f",
           "title": "違規活動列管不再提供場地",
           "file": "環境保護/違規活動列管.md",
@@ -6181,7 +6181,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "aa687108-d8b5-9506-8d3d-872ca67d016d",
@@ -6196,10 +6196,10 @@
           "id": "c83b1fd2-0778-d8fd-e9ec-4f425fd7199b",
           "title": "允許臨登工廠業者續聘移工",
           "file": "社會福利/109-臨登工廠續聘移工.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "109-04-29",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "99a4b8db-bad2-ec4a-1a85-91f4a2beda12",
@@ -6223,10 +6223,10 @@
           "id": "a9e77eeb-ff5f-f10b-191d-91498e1806f8",
           "title": "成立資源布建專案小組",
           "file": "社會福利/110-成立專案小組.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "110-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "290cb2dd-f790-46bf-fa97-464955e7ffec",
@@ -6244,7 +6244,7 @@
           "status": "已延宕",
           "target_date": "113-12-31",
           "target_value": "963人",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "341bbe50-f61b-31e8-6224-4df656e24500",
@@ -6280,7 +6280,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c3c3a8a7-20a2-1d46-71cd-174a3d7122f0",
@@ -6316,7 +6316,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "95b6644f-a8b8-92b6-cb50-da069cb67c4c",
@@ -6379,7 +6379,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c7a81053-c467-c7a2-347e-87d6c8566d0b",
@@ -6388,7 +6388,7 @@
           "status": "已延宕",
           "target_date": "2022-01-01",
           "target_value": "25250元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "46b41d11-862c-f533-d347-df818806ebfc",
@@ -6397,7 +6397,7 @@
           "status": "已達成",
           "target_date": "2022-03-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0d9cad4d-1e19-dd3f-fa80-a3b21cda0856",
@@ -6424,7 +6424,7 @@
           "status": "已延宕",
           "target_date": "111-03-23",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "13114a02-d07f-773d-909b-a85ca74bc4fd",
@@ -6433,7 +6433,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "34e9c140-21fb-4f20-af8c-50455b8b29a4",
@@ -6511,10 +6511,10 @@
           "id": "ff66203c-0348-7772-521f-e27494780df4",
           "title": "原住民族保留地禁伐補償措施",
           "file": "社會福利/2020-原住民保留地禁伐補償.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "6.3萬公頃",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "80c37336-37e4-974e-d1f4-fb6053875cd7",
@@ -6523,7 +6523,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "1470公頃",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "dcb616f1-13ea-5dd8-629c-61efcdf09984",
@@ -6604,7 +6604,7 @@
           "status": "已達成",
           "target_date": "2020-04-29",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "719b26d4-f99e-9799-af9e-0e547ee9c471",
@@ -6622,7 +6622,7 @@
           "status": "已達成",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "006a5410-a89b-5e06-9f5a-10065eec505e",
@@ -6631,7 +6631,7 @@
           "status": "已達成",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "7599674a-3ace-3f92-41b6-78625a15bc70",
@@ -6685,42 +6685,6 @@
           "status": "已延宕",
           "target_date": "2021-09-16",
           "target_value": "25名罹難者家屬和解、32名受傷旅客和解",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "4e57c9bf-c194-99bd-689e-97b04f69fe8e",
-          "title": "疫情紓困政策金額及受益人數",
-          "file": "社會福利/2021-紓困4.0-1730億.md",
-          "status": "已達成",
-          "target_date": "2021-12-15",
-          "target_value": "1730億元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "a1d5ecd3-6e1e-48f8-7331-33f7f39d00a4",
-          "title": "紓困4.0政策發放與協助",
-          "file": "社會福利/2021-紓困政策.md",
-          "status": "已達成",
-          "target_date": "2021-12-15",
-          "target_value": "1730億元、974萬人、1.55兆元、1048萬個",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "36de77d4-440a-a7dd-aad5-ab277cf82557",
-          "title": "紓困政策現金發放總額",
-          "file": "社會福利/2021-紓困現金1730億元.md",
-          "status": "已達成",
-          "target_date": "2021-12-15",
-          "target_value": "1730億元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "44e2a6d4-3a50-9a5d-7792-15b466616a2c",
-          "title": "發放紓困金及融資貸款",
-          "file": "社會福利/2021-紓困金-1730億.md",
-          "status": "已達成",
-          "target_date": "2021-12-15",
-          "target_value": "1730億元",
           "last_updated": "2026-01-27"
         },
         {
@@ -6847,6 +6811,42 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "7200元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "4e57c9bf-c194-99bd-689e-97b04f69fe8e",
+          "title": "疫情紓困政策金額及受益人數",
+          "file": "社會福利/2021-紓困4.0-1730億.md",
+          "status": "已達成",
+          "target_date": "2021-12-15",
+          "target_value": "1730億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a1d5ecd3-6e1e-48f8-7331-33f7f39d00a4",
+          "title": "紓困4.0政策發放與協助",
+          "file": "社會福利/2021-紓困政策.md",
+          "status": "已達成",
+          "target_date": "2021-12-15",
+          "target_value": "1730億元、974萬人、1.55兆元、1048萬個",
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "36de77d4-440a-a7dd-aad5-ab277cf82557",
+          "title": "紓困政策現金發放總額",
+          "file": "社會福利/2021-紓困現金1730億元.md",
+          "status": "已達成",
+          "target_date": "2021-12-15",
+          "target_value": "1730億元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "44e2a6d4-3a50-9a5d-7792-15b466616a2c",
+          "title": "發放紓困金及融資貸款",
+          "file": "社會福利/2021-紓困金-1730億.md",
+          "status": "已達成",
+          "target_date": "2021-12-15",
+          "target_value": "1730億元",
           "last_updated": "2026-01-27"
         },
         {
@@ -7027,7 +7027,7 @@
           "status": "已達成",
           "target_date": "2022-02-08",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "50fbd8e6-b722-8995-a720-c375930e3be0",
@@ -7036,7 +7036,7 @@
           "status": "已達成",
           "target_date": "2022-01-01",
           "target_value": "25250元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c4d12e65-acfa-2467-1630-604092148024",
@@ -7057,22 +7057,13 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "aed48aaf-2645-b9c5-014f-c946aeb62d81",
-          "title": "現金發放及租金補助",
-          "file": "社會福利/2022-紓困1730億元.md",
-          "status": "已延宕",
-          "target_date": "2021-12-15",
-          "target_value": "1730億元",
-          "last_updated": "2026-01-26"
-        },
-        {
           "id": "26ef8d4e-4293-ac29-8845-729c7fdcd6a8",
           "title": "提高基本工資至25250元及時薪168元",
           "file": "社會福利/2022-基本工資提升.md",
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "25250元, 168元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ff09d8a1-7fd3-12b0-d8c2-397d5f7b5179",
@@ -7153,7 +7144,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "27場",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "3a4b840a-49b0-b08c-e27b-5046de1ba1be",
@@ -7300,6 +7291,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "aed48aaf-2645-b9c5-014f-c946aeb62d81",
+          "title": "現金發放及租金補助",
+          "file": "社會福利/2022-紓困1730億元.md",
+          "status": "已延宕",
+          "target_date": "2021-12-15",
+          "target_value": "1730億元",
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "72023053-7b7a-b3ca-a83d-205621c95167",
           "title": "提升觀護人專業訓練",
           "file": "社會福利/2022-觀護人訓練.md",
@@ -7330,10 +7330,10 @@
           "id": "0feacc48-3f77-174f-4d75-f857887dcfe1",
           "title": "新增農業天然災害救助品項",
           "file": "社會福利/2022-農業救助品項.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "9d909f38-e40f-4b39-28cd-4bee88872d05",
@@ -7378,7 +7378,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "1d0f02e4-0d39-cbcb-6e99-36a73b31c185",
@@ -7456,10 +7456,10 @@
           "id": "a81ef46d-ba1c-d0d5-bb77-8694a986e0ff",
           "title": "修訂勞務採購契約範本保障權益",
           "file": "社會福利/2023-勞務契約修訂.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2022-02-08",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f31731b6-9030-3acc-6c9d-6d3634f3b004",
@@ -7495,7 +7495,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "19億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "5fd02c11-aa9c-0a7b-e4b9-3245b1da31e7",
@@ -7504,24 +7504,6 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "6e7f357c-c4aa-7a02-a859-c54881d09380",
-          "title": "加強菸品販售稽查及宣導機制",
-          "file": "社會福利/2023-菸品販售稽查.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": "30萬次稽查",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "19345101-d5b5-8baa-7e18-f34a994dc947",
-          "title": "修法提高使用菸品年齡至20歲",
-          "file": "社會福利/2023-菸品年齡修法.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": "20歲",
           "last_updated": "2026-01-27"
         },
         {
@@ -7618,10 +7600,10 @@
           "id": "4dc40d9c-c338-eb47-45c3-26090839b8d0",
           "title": "就學貸款利息補貼計劃",
           "file": "社會福利/2023-就學貸款補貼.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": "2.28億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "9e05894e-8a65-d6f9-80f5-c590434889b4",
@@ -7675,16 +7657,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "7f1b9978-d8cf-4c40-1567-0e04c7ce96e1",
-          "title": "汰換老舊消防車計畫",
-          "file": "社會福利/2023-汰換老舊消防車.md",
-          "status": "已延宕",
-          "target_date": "2022-06-30",
-          "target_value": "97輛",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "3422d35b-8e07-f832-3994-32854f135f4d",
@@ -7720,7 +7693,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "160000+批",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "b65a2379-ddf2-9d07-4467-cdf204c2315e",
@@ -7759,15 +7732,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "244824e0-0c19-b78c-3687-a69dbf362d14",
-          "title": "解決漁業缺工問題",
-          "file": "社會福利/2023-漁業缺工解決.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "8b193f4a-f68d-c2cf-b075-4a475e7b2700",
           "title": "榮民遺款解繳國庫",
           "file": "社會福利/2023-榮民遺款解繳.md",
@@ -7801,15 +7765,6 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "947a4618-2f05-1ea0-06dd-35c49e48347f",
-          "title": "汐止運動園區規劃與開發",
-          "file": "社會福利/2023-汐止運動園區規劃.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": "4公頃",
           "last_updated": "2026-01-27"
         },
         {
@@ -7867,11 +7822,29 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "b0ab5747-8927-2609-a7fd-57d7a8ba6a31",
-          "title": "肺炎特別條例施行期間延長",
-          "file": "社會福利/2023-肺炎特別條例延長.md",
+          "id": "947a4618-2f05-1ea0-06dd-35c49e48347f",
+          "title": "汐止運動園區規劃與開發",
+          "file": "社會福利/2023-汐止運動園區規劃.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "4公頃",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7f1b9978-d8cf-4c40-1567-0e04c7ce96e1",
+          "title": "汰換老舊消防車計畫",
+          "file": "社會福利/2023-汰換老舊消防車.md",
           "status": "已延宕",
-          "target_date": "2023-06-30",
+          "target_date": "2022-06-30",
+          "target_value": "97輛",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "244824e0-0c19-b78c-3687-a69dbf362d14",
+          "title": "解決漁業缺工問題",
+          "file": "社會福利/2023-漁業缺工解決.md",
+          "status": "追蹤中",
+          "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
         },
@@ -8026,7 +7999,7 @@
           "status": "已延宕",
           "target_date": "2022-01-10",
           "target_value": "20至215元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c3561f77-e3e7-5f2e-f0fb-7251f5cda736",
@@ -8036,6 +8009,15 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "b0ab5747-8927-2609-a7fd-57d7a8ba6a31",
+          "title": "肺炎特別條例施行期間延長",
+          "file": "社會福利/2023-肺炎特別條例延長.md",
+          "status": "已延宕",
+          "target_date": "2023-06-30",
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "a7d15578-94d9-edba-4110-236ab5a44e3e",
@@ -8053,7 +8035,25 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "19345101-d5b5-8baa-7e18-f34a994dc947",
+          "title": "修法提高使用菸品年齡至20歲",
+          "file": "社會福利/2023-菸品年齡修法.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": "20歲",
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6e7f357c-c4aa-7a02-a859-c54881d09380",
+          "title": "加強菸品販售稽查及宣導機制",
+          "file": "社會福利/2023-菸品販售稽查.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": "30萬次稽查",
+          "last_updated": "2026-01-26"
         },
         {
           "id": "1c7a7c73-fc85-8119-da83-c5a0ca3ea139",
@@ -8116,7 +8116,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4edd041c-69e4-fb8f-1501-aa277bad3959",
@@ -8161,7 +8161,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "715866f5-6dd2-e728-f928-4ec5cc95140e",
@@ -8269,7 +8269,7 @@
           "status": "已延宕",
           "target_date": "2024-12-31",
           "target_value": "53處",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6b32755c-d01c-a742-eb57-89a69314c3d6",
@@ -8297,6 +8297,15 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "27dec67d-dfb8-aab7-3876-7a6280b57523",
+          "title": "強化瘦身美容服務的消費者保護",
+          "file": "社會福利/2024-瘦身美容保護.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d35de92c-f6bf-0fb3-5c4e-23eb4280a236",
@@ -8332,15 +8341,6 @@
           "status": "已延宕",
           "target_date": "2024-08-31",
           "target_value": "5000元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "27dec67d-dfb8-aab7-3876-7a6280b57523",
-          "title": "強化瘦身美容服務的消費者保護",
-          "file": "社會福利/2024-瘦身美容保護.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
           "last_updated": "2026-01-27"
         },
         {
@@ -8431,7 +8431,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "7efafafb-4c3a-dd7e-ac5d-ce2b5fe414a8",
@@ -8461,15 +8461,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "01c337eb-34d4-7bbe-88d5-16e70a802158",
-          "title": "提升兒虐案件法定刑與罰鍰",
-          "file": "社會福利/2025-兒虐法定刑提高.md",
-          "status": "已達成",
-          "target_date": "2019-05-29",
-          "target_value": "60萬元",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "742e9361-4f31-28af-1455-d64f61733cfa",
           "title": "6歲以下兒童死亡原因檢視機制建立",
           "file": "社會福利/2025-兒童死亡原因檢視.md",
@@ -8488,30 +8479,21 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "01c337eb-34d4-7bbe-88d5-16e70a802158",
+          "title": "提升兒虐案件法定刑與罰鍰",
+          "file": "社會福利/2025-兒虐法定刑提高.md",
+          "status": "已達成",
+          "target_date": "2019-05-29",
+          "target_value": "60萬元",
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "d56311d6-5d2a-14a0-6616-82c9f0f1f072",
           "title": "提高兒虐罰鍰金額至60萬元",
           "file": "社會福利/2025-兒虐罰鍰提高.md",
           "status": "已達成",
           "target_date": "2019-04-30",
           "target_value": "60萬元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "e0df5b63-fda3-efa5-9ce3-217930c095de",
-          "title": "推動最低工資法制化",
-          "file": "社會福利/2025-最低工資法.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "d55e4810-35bb-d78b-f739-96d7186531c3",
-          "title": "百萬創客擂台競賽",
-          "file": "社會福利/2025-創客擂台競賽.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "3屆、505團隊",
           "last_updated": "2026-01-27"
         },
         {
@@ -8522,6 +8504,15 @@
           "target_date": null,
           "target_value": "6處、57萬人次",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "d55e4810-35bb-d78b-f739-96d7186531c3",
+          "title": "百萬創客擂台競賽",
+          "file": "社會福利/2025-創客擂台競賽.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "3屆、505團隊",
+          "last_updated": "2026-01-27"
         },
         {
           "id": "8e0231a8-36bc-1678-b406-f2f87631049d",
@@ -8638,7 +8629,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0286b2cc-1001-2af7-dfc1-ab12e361c3a1",
@@ -8710,7 +8701,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "71處",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "88f4b12c-3682-0369-033d-82f09b51131c",
@@ -8758,15 +8749,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "dd3dc797-402b-1693-8217-3ff807e9c731",
-          "title": "汰換老舊消防車輛計畫",
-          "file": "社會福利/2025-汰換老舊消防車200輛.md",
-          "status": "已延宕",
-          "target_date": "2022-06-30",
-          "target_value": "97輛",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "f80c826e-1a8d-d0d4-31aa-5b7aae2af0dc",
           "title": "推動原住民族語言發展中長程計畫",
           "file": "社會福利/2025-族語發展計畫.md",
@@ -8781,6 +8763,15 @@
           "file": "社會福利/2025-智慧農業.md",
           "status": "已達成",
           "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e0df5b63-fda3-efa5-9ce3-217930c095de",
+          "title": "推動最低工資法制化",
+          "file": "社會福利/2025-最低工資法.md",
+          "status": "追蹤中",
+          "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
         },
@@ -8800,6 +8791,15 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "dd3dc797-402b-1693-8217-3ff807e9c731",
+          "title": "汰換老舊消防車輛計畫",
+          "file": "社會福利/2025-汰換老舊消防車200輛.md",
+          "status": "已延宕",
+          "target_date": "2022-06-30",
+          "target_value": "97輛",
           "last_updated": "2026-01-27"
         },
         {
@@ -8836,6 +8836,15 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "be527960-a12f-b128-de2a-536c459ee634",
+          "title": "增強漁船檢查頻率",
+          "file": "社會福利/2025-漁船檢查頻率.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "每4年1次",
           "last_updated": "2026-01-26"
         },
         {
@@ -8878,19 +8887,19 @@
           "id": "78cd2105-7630-068f-bc6b-26cac37b8dd4",
           "title": "社會住宅弱勢照顧保障比率提升",
           "file": "社會福利/2025-社會住宅40%.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": "40%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4fe4d060-1e90-d397-e07b-5b740475577b",
           "title": "提升社會弱勢戶承租比例至46.2%",
           "file": "社會福利/2025-社會住宅46.2%.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2022-02-10",
           "target_value": "46.2%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "c26be5e1-989b-38e8-b223-f91eb73657b8",
@@ -8899,7 +8908,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": "40000戶",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d64c0da7-d90f-a0c5-cb76-1a89ac291e81",
@@ -8908,7 +8917,7 @@
           "status": "已延宕",
           "target_date": "2024-12-31",
           "target_value": "80000戶",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "628d2ab4-881a-144a-81a4-845e08695c4f",
@@ -9037,13 +9046,13 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "be527960-a12f-b128-de2a-536c459ee634",
-          "title": "增強漁船檢查頻率",
-          "file": "社會福利/2025-漁船檢查頻率.md",
-          "status": "追蹤中",
+          "id": "96b131c8-46bd-08be-e396-4e16cf53e1e5",
+          "title": "強化社群媒體菸酒廣告管制",
+          "file": "社會福利/2025-菸酒廣告管制.md",
+          "status": "已達成",
           "target_date": null,
-          "target_value": "每4年1次",
-          "last_updated": "2026-01-26"
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "6a40748f-8884-a3ea-d109-b44d1d649687",
@@ -9118,15 +9127,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "96b131c8-46bd-08be-e396-4e16cf53e1e5",
-          "title": "強化社群媒體菸酒廣告管制",
-          "file": "社會福利/2025-菸酒廣告管制.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "d61a533c-4d02-02c9-85a4-7da2a2912247",
           "title": "酒癮治療班設立",
           "file": "社會福利/2025-酒癮治療班.md",
@@ -9151,7 +9151,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "2d5bad5d-4af7-0a50-d029-ea50b6284c8a",
@@ -9178,7 +9178,7 @@
           "status": "已達成",
           "target_date": "2022-03-11",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "223faa93-2d2d-90dc-3df9-0a3decdc76a5",
@@ -9187,7 +9187,7 @@
           "status": "已達成",
           "target_date": "2022-03-11",
           "target_value": "975萬元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d761442f-6d9b-0680-40a1-a9b2e8f78347",
@@ -9196,7 +9196,7 @@
           "status": "已延宕",
           "target_date": "2022-03-11",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "016fb41f-a0dd-ca85-c551-264dfcb5f0a8",
@@ -9205,7 +9205,7 @@
           "status": "已延宕",
           "target_date": "2022-03-11",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "008de77e-310e-9349-2619-243201620d2e",
@@ -9307,6 +9307,15 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "1972906b-cc9d-5ab5-51c3-ccaf07732293",
+          "title": "確保漁業安全措施",
+          "file": "社會福利/漁船安全措施.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "3f816e6a-e98b-7a92-0aef-a6a7ce803f11",
           "title": "澎湖地區水管汰換工程",
           "file": "社會福利/澎湖水管汰換.md",
@@ -9359,15 +9368,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "1972906b-cc9d-5ab5-51c3-ccaf07732293",
-          "title": "確保漁業安全措施",
-          "file": "社會福利/漁船安全措施.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
         },
         {
           "id": "36e759cc-90f8-3dcb-a4dc-1fb87fdf6958",
@@ -9454,7 +9454,7 @@
           "status": "追蹤中",
           "target_date": "2026-12-31",
           "target_value": "10%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "3a7911a5-3145-fc83-0ada-4ee795547f43",
@@ -9511,13 +9511,13 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "dad0cdb7-120d-8f31-3e98-70cab40aa808",
-          "title": "納入稽徵業務考核",
-          "file": "經濟發展/2021-稽徵業務考核.md",
+          "id": "fec5f8f8-3c9f-3453-d46d-f4abd1d90b4b",
+          "title": "尋找尿素替代進口來源",
+          "file": "經濟發展/2021-尿素替代進口.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ae829ce6-52fc-93de-7857-4cfc41f83b73",
@@ -9643,7 +9643,7 @@
           "status": "已達成",
           "target_date": "2022-02-28",
           "target_value": "1.8萬家",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "28ba47fe-1da7-9078-5698-2faf576b6746",
@@ -9661,7 +9661,7 @@
           "status": "已延宕",
           "target_date": "2021-11-26",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "cda551e8-811b-913d-31b7-a5bca38edfd6",
@@ -9682,13 +9682,13 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "fec5f8f8-3c9f-3453-d46d-f4abd1d90b4b",
-          "title": "尋找尿素替代進口來源",
-          "file": "經濟發展/2021-尿素替代進口.md",
+          "id": "dad0cdb7-120d-8f31-3e98-70cab40aa808",
+          "title": "納入稽徵業務考核",
+          "file": "經濟發展/2021-稽徵業務考核.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-26"
         },
         {
           "id": "5dac31ac-58ef-acef-203c-a3e722d58f49",
@@ -9850,7 +9850,16 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "5fa02582-a092-a0e3-2bbe-171c89519daf",
+          "title": "優先供應國內市場尿素",
+          "file": "經濟發展/2022-尿素供應優先.md",
+          "status": "已延宕",
+          "target_date": "2022-03-31",
+          "target_value": "至少供貨到明年1月底，最長到3月底",
+          "last_updated": "2026-01-28"
         },
         {
           "id": "12502e36-bd53-7f77-39f1-62ce3a9d403a",
@@ -9898,15 +9907,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "3bca38eb-8f75-0ab7-ad05-1c9ecdab21c5",
-          "title": "漁業資源放流及復育計畫",
-          "file": "經濟發展/2022-漁業復育計畫.md",
-          "status": "已延宕",
-          "target_date": "2024-12-31",
-          "target_value": "6005萬5000元",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "b1d7a9e3-e84e-d279-680c-28c9f338d69f",
           "title": "設置檢舉不法行為專線",
           "file": "經濟發展/2022-檢舉專線.md",
@@ -9941,6 +9941,15 @@
           "target_date": null,
           "target_value": "1億元",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "3bca38eb-8f75-0ab7-ad05-1c9ecdab21c5",
+          "title": "漁業資源放流及復育計畫",
+          "file": "經濟發展/2022-漁業復育計畫.md",
+          "status": "已延宕",
+          "target_date": "2024-12-31",
+          "target_value": "6005萬5000元",
+          "last_updated": "2026-01-27"
         },
         {
           "id": "bcef30ea-aa3a-1ed1-a05a-aed1103f7ba9",
@@ -9982,10 +9991,10 @@
           "id": "5f1f82cf-1b3b-b1f2-04a6-24a78ab53be7",
           "title": "穩定國內民生物價及防範不合理漲價",
           "file": "經濟發展/2022-物價穩定措施.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2022-02-23",
           "target_value": "30家餐飲業者、57家供應商",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "1d68a64c-1c09-6ede-8cff-3a6ca6d125c4",
@@ -10021,7 +10030,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "49f584a1-0845-0645-a375-fd496a92d76b",
@@ -10030,16 +10039,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "5fa02582-a092-a0e3-2bbe-171c89519daf",
-          "title": "優先供應國內市場尿素",
-          "file": "經濟發展/2022-尿素供應優先.md",
-          "status": "已延宕",
-          "target_date": "2022-03-31",
-          "target_value": "至少供貨到明年1月底，最長到3月底",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a57dae4d-c710-1cfd-c492-de7b9318f423",
@@ -10120,7 +10120,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "5.4%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "cf4229c2-585c-2fc2-26c5-211a376dc184",
@@ -10210,7 +10210,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "20億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "99b57ac5-9732-2374-c957-fcaa1f79e8c7",
@@ -10312,6 +10312,24 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "d7eae011-1908-bda8-e0d9-2625773e2e34",
+          "title": "循環經濟推動方案",
+          "file": "經濟發展/2023-循環經濟推動辦公室.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "d981e952-94f1-8bb8-eec3-5f3d83f9251c",
+          "title": "建立循環經濟推動方案",
+          "file": "經濟發展/2023-循環經濟方案.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "3d73b7af-6170-531b-6170-51b41cd80e21",
           "title": "定期提供執行成效報告",
           "file": "經濟發展/2023-成效報告.md",
@@ -10345,7 +10363,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": "1兆元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a4d5c6b4-f215-2562-9eaf-3b04a28144f6",
@@ -10447,21 +10465,21 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "0ae854d4-d6dd-c01f-f1f0-631c9a16ae7c",
-          "title": "強力稽查物價以遏止漲價",
-          "file": "經濟發展/2023-物價稽查強化.md",
-          "status": "已達成",
-          "target_date": "2023-02-23",
-          "target_value": "88家稽查目標",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "37a1d4d6-2dea-506a-c474-e79711d41ea8",
           "title": "提升物價監控措施",
           "file": "經濟發展/2023-物價監控.md",
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0ae854d4-d6dd-c01f-f1f0-631c9a16ae7c",
+          "title": "強力稽查物價以遏止漲價",
+          "file": "經濟發展/2023-物價稽查強化.md",
+          "status": "已達成",
+          "target_date": "2023-02-23",
+          "target_value": "88家稽查目標",
           "last_updated": "2026-01-27"
         },
         {
@@ -10490,24 +10508,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "d7eae011-1908-bda8-e0d9-2625773e2e34",
-          "title": "循環經濟推動方案",
-          "file": "經濟發展/2023-循環經濟推動辦公室.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "d981e952-94f1-8bb8-eec3-5f3d83f9251c",
-          "title": "建立循環經濟推動方案",
-          "file": "經濟發展/2023-循環經濟方案.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": null,
-          "last_updated": "2026-01-26"
         },
         {
           "id": "ba02344a-69f9-e261-9724-cf4d77de59e3",
@@ -10546,12 +10546,12 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "d13cf3d1-fb34-9b44-5502-a4b9bd4fd9aa",
-          "title": "積極經貿會議推動加入CPTPP",
-          "file": "經濟發展/2023-經貿會議.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
+          "id": "f23913fa-fcf6-92f7-902b-05979122d9c9",
+          "title": "穩定國內糧食供應",
+          "file": "經濟發展/2023-糧食安全措施.md",
+          "status": "已達成",
+          "target_date": "2023-12-31",
+          "target_value": "50000公頃",
           "last_updated": "2026-01-27"
         },
         {
@@ -10562,6 +10562,15 @@
           "target_date": "2023-04-30",
           "target_value": "4.64%",
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "d13cf3d1-fb34-9b44-5502-a4b9bd4fd9aa",
+          "title": "積極經貿會議推動加入CPTPP",
+          "file": "經濟發展/2023-經貿會議.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "b86e7f67-3880-c3c1-8f56-edf7436ddca4",
@@ -10621,10 +10630,10 @@
           "id": "58c3c9f0-f6fc-99bc-5910-2ab83398cc3b",
           "title": "釋出坪林及石碇觀光旅遊遊程",
           "file": "經濟發展/2023-觀光旅遊遊程推廣.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d835e595-1047-6cb9-4f89-618f7fb1d3a4",
@@ -10634,6 +10643,15 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "f1fa1baa-8fe6-3337-1c63-a3747db672b7",
+          "title": "豬瘟撲滅及防範重要豬病防檢疫計畫",
+          "file": "經濟發展/2023-豬瘟防範計畫.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "165fd66a-7078-31a6-47c7-3f5e6a3fe85d",
@@ -10651,15 +10669,6 @@
           "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": "20%",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "f1fa1baa-8fe6-3337-1c63-a3747db672b7",
-          "title": "豬瘟撲滅及防範重要豬病防檢疫計畫",
-          "file": "經濟發展/2023-豬瘟防範計畫.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": null,
           "last_updated": "2026-01-27"
         },
         {
@@ -10693,10 +10702,10 @@
           "id": "5db318d1-6028-2bee-4c7b-50cf07cc8811",
           "title": "滾動式檢討酒吧業及餐館業定義",
           "file": "經濟發展/2023-酒吧業檢討.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4b1fbb28-3711-2ea8-f22f-380e817e37e5",
@@ -10769,15 +10778,6 @@
           "target_date": "2023-02-21",
           "target_value": null,
           "last_updated": "2026-01-26"
-        },
-        {
-          "id": "f23913fa-fcf6-92f7-902b-05979122d9c9",
-          "title": "穩定國內糧食供應",
-          "file": "經濟發展/2023-糧食安全措施.md",
-          "status": "已達成",
-          "target_date": "2023-12-31",
-          "target_value": "50000公頃",
-          "last_updated": "2026-01-27"
         },
         {
           "id": "17ccfc55-29c7-2833-3875-9328249afa13",
@@ -10903,7 +10903,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "dcca62c5-a680-e296-e5ac-74649f94bb5b",
@@ -11074,7 +11074,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "9000億元、4萬個就業機會",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a1808782-678c-f689-5701-b2dcd7897064",
@@ -11167,6 +11167,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "2a115198-7bdd-56a7-e5b1-3a08cf104583",
+          "title": "汰舊換新減徵貨物稅延長",
+          "file": "經濟發展/2025-汰舊換新減徵.md",
+          "status": "已延宕",
+          "target_date": "2026-01-07",
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "2a3ac60f-068c-7ee9-99b2-c17ef79a7371",
           "title": "完成各項法律修正以符合CPTPP標準",
           "file": "經濟發展/2025-法律修正-CPTPP.md",
@@ -11191,7 +11200,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "3be32254-f086-f685-fdca-9498c5efd90f",
@@ -11209,6 +11218,15 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "15000公頃",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6f5d6024-f3e6-ae5b-961f-86053dfc0be5",
+          "title": "確保未來5至7個月糧食供應",
+          "file": "經濟發展/2025-糧食供應穩定.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "5-7個月",
           "last_updated": "2026-01-27"
         },
         {
@@ -11248,15 +11266,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "2a115198-7bdd-56a7-e5b1-3a08cf104583",
-          "title": "汰舊換新減徵貨物稅延長",
-          "file": "經濟發展/2025-汰舊換新減徵.md",
-          "status": "已延宕",
-          "target_date": "2026-01-07",
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
           "id": "202e62dc-9faa-3814-d21c-d6cde18d2785",
           "title": "行動支付獎勵計畫",
           "file": "經濟發展/2025-行動支付獎勵.md",
@@ -11272,7 +11281,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "3bccb997-7581-cf00-ea21-ffa78841bc66",
@@ -11281,7 +11290,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "5292fbfc-3854-4001-d395-9e5f0d13de25",
@@ -11290,7 +11299,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "5d2cfde6-f6e3-10f5-1435-c2f6449b1fdc",
@@ -11299,7 +11308,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "2500場",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "f6dd0316-2c08-6a10-0770-5b13671cf877",
@@ -11308,7 +11317,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0857fc4e-8572-996d-3b30-61fee0003b48",
@@ -11383,15 +11392,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "6f5d6024-f3e6-ae5b-961f-86053dfc0be5",
-          "title": "確保未來5至7個月糧食供應",
-          "file": "經濟發展/2025-糧食供應穩定.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": "5-7個月",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "dccdccd6-75d6-ff37-c213-10b481d398c6",
           "title": "全面強化養豬產業競爭力",
           "file": "經濟發展/2025-養豬產業轉型.md",
@@ -11416,7 +11416,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4463614f-3859-b8b0-da71-e1aaeccb3c22",
@@ -11431,10 +11431,10 @@
           "id": "ff723a0b-2e7f-878a-d666-97c60ce22feb",
           "title": "促進臺商回臺投資",
           "file": "經濟發展/回臺投資-行動方案.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4d69f2fc-f472-24f2-f542-bfd252956415",
@@ -11446,9 +11446,36 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "057f021f-8854-e7bf-9d79-2853971c12b2",
+          "title": "確保國內尿素供應穩定",
+          "file": "經濟發展/尿素供應穩定.md",
+          "status": "已延宕",
+          "target_date": "2022-03-31",
+          "target_value": "至111年3月底",
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "311ef0ac-5df1-7046-bd96-b34212256ee8",
+          "title": "循環經濟產業化推動",
+          "file": "經濟發展/循環經濟產業化.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "688ce36f-8f40-cd30-c4d9-dea032feb49b",
           "title": "強化台灣豬肉識別性行銷",
           "file": "經濟發展/推廣-台灣豬證明標章.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "6167ecac-21d8-aa0c-2f2d-0f6f15dea364",
+          "title": "減碳措施整體投資738億元",
+          "file": "經濟發展/減碳-投資738億元.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
@@ -11464,15 +11491,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "6167ecac-21d8-aa0c-2f2d-0f6f15dea364",
-          "title": "減碳措施整體投資738億元",
-          "file": "經濟發展/減碳-投資738億元.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "b05158c0-1a69-7739-19d4-9e95e8e7a779",
           "title": "強化營業秘密保護措施",
           "file": "經濟發展/營業秘密保護強化.md",
@@ -11480,15 +11498,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "311ef0ac-5df1-7046-bd96-b34212256ee8",
-          "title": "循環經濟產業化推動",
-          "file": "經濟發展/循環經濟產業化.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
         },
         {
           "id": "f6ae527a-4408-3757-b662-85c07bc5a0d5",
@@ -11516,15 +11525,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "057f021f-8854-e7bf-9d79-2853971c12b2",
-          "title": "確保國內尿素供應穩定",
-          "file": "經濟發展/尿素供應穩定.md",
-          "status": "已延宕",
-          "target_date": "2022-03-31",
-          "target_value": "至111年3月底",
-          "last_updated": "2026-01-26"
         },
         {
           "id": "d5f88146-5ba0-a551-c867-2de2da8f0d54",
@@ -11758,6 +11758,15 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "f40cbfa4-d081-0c0e-dc89-1e8b88e54cd4",
+          "title": "增加巡檢人員與頻率",
+          "file": "能源政策/2023-巡檢增強.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "339dd867-a004-c972-4d39-bd5db854a0a2",
           "title": "強化人員訓練與風險意識",
           "file": "能源政策/2023-強化人員訓練.md",
@@ -11809,21 +11818,12 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "5183be8f-804c-fe6c-d0d0-718df0495993",
           "title": "設置風險管控專責單位",
           "file": "能源政策/2023-設置風險管控單位.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "f40cbfa4-d081-0c0e-dc89-1e8b88e54cd4",
-          "title": "增加巡檢人員與頻率",
-          "file": "能源政策/2023-巡檢增強.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
@@ -11884,6 +11884,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "42b37ac7-5bfa-9e97-6e31-8bc7a582bdcb",
+          "title": "增加儲備水量",
+          "file": "能源政策/2024-儲水量增加.md",
+          "status": "追蹤中",
+          "target_date": "2030-12-31",
+          "target_value": "10億噸",
+          "last_updated": "2026-01-27"
+        },
+        {
           "id": "1e0e19b0-c4fb-fc82-ecdd-c4ac8e6611da",
           "title": "協和電廠燃油機組除役規劃",
           "file": "能源政策/2024-協和電廠除役.md",
@@ -11899,15 +11908,6 @@
           "status": "已延宕",
           "target_date": "2024-12-31",
           "target_value": "1%",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "42b37ac7-5bfa-9e97-6e31-8bc7a582bdcb",
-          "title": "增加儲備水量",
-          "file": "能源政策/2024-儲水量增加.md",
-          "status": "追蹤中",
-          "target_date": "2030-12-31",
-          "target_value": "10億噸",
           "last_updated": "2026-01-27"
         },
         {
@@ -11936,6 +11936,42 @@
           "target_date": "2025-12-31",
           "target_value": "7%",
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a6d3392c-e87e-6c52-83ee-2f4c78bc607f",
+          "title": "2025年併網型儲能1000MW目標",
+          "file": "能源政策/2025-併網型儲能1000MW.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "1000MW",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "14190fe9-25d7-29f7-ebef-425c952c1184",
+          "title": "建立1000MW複合式電池儲能系統",
+          "file": "能源政策/2025-儲能1000MW.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "1000MW",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "a862e759-5c0d-37ed-27e4-c6f840eb2321",
+          "title": "儲能建置量目標",
+          "file": "能源政策/2025-儲能150萬瓩.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "150萬瓩",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "ed996510-f5b9-84ca-bc62-71949f082612",
+          "title": "儲能設施建置規劃",
+          "file": "能源政策/2025-儲能設施增設.md",
+          "status": "已延宕",
+          "target_date": "2024-12-31",
+          "target_value": "1000MW",
+          "last_updated": "2026-01-26"
         },
         {
           "id": "0ecf69a6-a58b-a2b5-f342-1de2f6a4e1c6",
@@ -12079,7 +12115,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "1546萬瓩至1696萬瓩",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e726f623-821c-55c6-6ca3-ce0d36d3e900",
@@ -12107,6 +12143,33 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-26"
+        },
+        {
+          "id": "b5642c41-a3a3-5bb1-e988-2f0869260cc7",
+          "title": "氫能發展計畫",
+          "file": "能源政策/2025-氫能應用計畫.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "e2f305b3-8483-1ddb-0e76-1cd13c33e2f7",
+          "title": "鼓勵氫能源產品研發補助",
+          "file": "能源政策/2025-氫能源補助.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "89b9a46d-1839-cbd7-289a-9fabe9ee074b",
+          "title": "推動氫能產業發展",
+          "file": "能源政策/2025-氫能發展.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "605f90ae-5cc8-45f6-fe68-24a469cb2db1",
@@ -12145,75 +12208,12 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "a6d3392c-e87e-6c52-83ee-2f4c78bc607f",
-          "title": "2025年併網型儲能1000MW目標",
-          "file": "能源政策/2025-併網型儲能1000MW.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "1000MW",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "14190fe9-25d7-29f7-ebef-425c952c1184",
-          "title": "建立1000MW複合式電池儲能系統",
-          "file": "能源政策/2025-儲能1000MW.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "1000MW",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "a862e759-5c0d-37ed-27e4-c6f840eb2321",
-          "title": "儲能建置量目標",
-          "file": "能源政策/2025-儲能150萬瓩.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "150萬瓩",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "b5642c41-a3a3-5bb1-e988-2f0869260cc7",
-          "title": "氫能發展計畫",
-          "file": "能源政策/2025-氫能應用計畫.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "96913bad-b39a-be30-ec8c-2c724c1546b9",
           "title": "能源密集度改善目標",
           "file": "能源政策/2025-能源密集度改善.md",
           "status": "已延宕",
           "target_date": "2020-12-31",
           "target_value": "2.65%",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "e2f305b3-8483-1ddb-0e76-1cd13c33e2f7",
-          "title": "鼓勵氫能源產品研發補助",
-          "file": "能源政策/2025-氫能源補助.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "89b9a46d-1839-cbd7-289a-9fabe9ee074b",
-          "title": "推動氫能產業發展",
-          "file": "能源政策/2025-氫能發展.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "ed996510-f5b9-84ca-bc62-71949f082612",
-          "title": "儲能設施建置規劃",
-          "file": "能源政策/2025-儲能設施增設.md",
-          "status": "已延宕",
-          "target_date": "2024-12-31",
-          "target_value": "1000MW",
           "last_updated": "2026-01-26"
         },
         {
@@ -12289,6 +12289,15 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "f3071622-dc07-56c8-8b69-cc4ce83d96ef",
+          "title": "提升電網智能化及電力系統穩定度",
+          "file": "能源政策/2025-電網智能提升.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "70%",
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "80d8d1e3-b789-4c59-1e5f-adb2252b7853",
           "title": "建立電網韌性建設計畫",
           "file": "能源政策/2025-電網韌性建設計畫.md",
@@ -12304,7 +12313,7 @@
           "status": "追蹤中",
           "target_date": "2033-12-31",
           "target_value": "9GW",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6b7aad98-c420-7ed7-3ded-b4d22361afdb",
@@ -12314,15 +12323,6 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "f3071622-dc07-56c8-8b69-cc4ce83d96ef",
-          "title": "提升電網智能化及電力系統穩定度",
-          "file": "能源政策/2025-電網智能提升.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "70%",
-          "last_updated": "2026-01-26"
         },
         {
           "id": "86b29e46-146c-92e3-578f-3cce07b86330",
@@ -12409,10 +12409,10 @@
           "id": "74563d76-16c4-c860-cc95-9151f56e29cf",
           "title": "提供小型用戶節能輔導措施",
           "file": "能源政策/小型用戶節能輔導.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "5e8460c2-2b80-b900-bf0c-3542494cc1b2",
@@ -12439,24 +12439,6 @@
           "status": "已延宕",
           "target_date": "2024-12-31",
           "target_value": "1%",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "979af875-95d5-24d2-61d0-a2d598cb9f34",
-          "title": "提升能源效率與使用綠電",
-          "file": "能源政策/減碳-三方向推動.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "16aa201a-5030-c2cb-d2dc-f696ed2979ed",
-          "title": "推動生質能廠建立",
-          "file": "能源政策/生質能廠建立.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": "3座",
           "last_updated": "2026-01-26"
         },
         {
@@ -12494,6 +12476,24 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "979af875-95d5-24d2-61d0-a2d598cb9f34",
+          "title": "提升能源效率與使用綠電",
+          "file": "能源政策/減碳-三方向推動.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "16aa201a-5030-c2cb-d2dc-f696ed2979ed",
+          "title": "推動生質能廠建立",
+          "file": "能源政策/生質能廠建立.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": "3座",
+          "last_updated": "2026-01-26"
         }
       ]
     },
@@ -12517,7 +12517,7 @@
           "status": "已延宕",
           "target_date": "2022-01-10",
           "target_value": "20至215元",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0927ac23-6451-9c6d-07b1-f54a7a5c241c",
@@ -12550,10 +12550,10 @@
           "id": "e7fc6b9d-4898-83c1-3ed2-b99e63332641",
           "title": "小果番茄納入補助計畫",
           "file": "農業/2023-小果番茄補助.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "d0f79a6a-6e46-85f6-1d2e-99fd819f366e",
@@ -12574,15 +12574,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "3c00c445-35f0-a4ac-15fc-73130176e5fc",
-          "title": "提升雞蛋產量以解決缺蛋問題",
-          "file": "農業/2023-雞蛋增產.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "每隻最高補助25元，獎勵雞蛋生產3元/台斤",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "fa2a6c9a-aab8-6407-7add-71e8f4145dc6",
           "title": "穩定糧食供應與價格",
           "file": "農業/2023-糧食安全.md",
@@ -12590,6 +12581,15 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3c00c445-35f0-a4ac-15fc-73130176e5fc",
+          "title": "提升雞蛋產量以解決缺蛋問題",
+          "file": "農業/2023-雞蛋增產.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "每隻最高補助25元，獎勵雞蛋生產3元/台斤",
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e8b84aab-946f-d1dd-fa5c-2f567b523842",
@@ -12617,15 +12617,6 @@
           "target_date": null,
           "target_value": "4.5萬元/公頃",
           "last_updated": "2026-01-27"
-        },
-        {
-          "id": "24331c9c-1433-d31d-a875-b28b0513902a",
-          "title": "擴大國內飼料玉米生產",
-          "file": "農業/2025-飼料玉米6%.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "5萬公頃，6%",
-          "last_updated": "2026-01-26"
         },
         {
           "id": "e2ce789a-9553-1997-cafe-5fa53af1d65a",
@@ -12709,6 +12700,15 @@
           "last_updated": "2026-01-26"
         },
         {
+          "id": "24331c9c-1433-d31d-a875-b28b0513902a",
+          "title": "擴大國內飼料玉米生產",
+          "file": "農業/2025-飼料玉米6%.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "5萬公頃，6%",
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "ea8d2f00-0e8c-88a2-c2d7-4bf0c8ec3fe6",
           "title": "產品區域冷鏈體系發展",
           "file": "農業/產品冷鏈體系.md",
@@ -12724,7 +12724,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "0b8cbe0d-0823-2303-a9dc-f49fb54306b8",
@@ -12826,7 +12826,7 @@
           "status": "已達成",
           "target_date": "2020-11-20",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "ed6def54-f2c6-2907-3480-033e601d8c0a",
@@ -12880,16 +12880,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "30000",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "8ec43631-e952-668a-4c60-3c503e2bbd94",
-          "title": "持續監測 COVID-19 疫苗不良反應",
-          "file": "醫療衛生/2021-疫苗不良反應監測.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4de6a7aa-b693-985c-2267-5003cc514d0a",
@@ -12898,7 +12889,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e8f7c7de-4ef4-2560-5b85-b7bec86652ad",
@@ -12970,34 +12961,7 @@
           "status": "已延宕",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "4aba460d-c4a2-9917-7f0e-8e25bc422413",
-          "title": "採購1000萬劑阿斯特捷利康疫苗",
-          "file": "醫療衛生/2021-疫苗採購1000萬劑.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": "1000萬劑",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "b8888043-1488-28a8-0360-cfc2f135e311",
-          "title": "採購476萬劑COVID-19疫苗",
-          "file": "醫療衛生/2021-疫苗採購476萬劑.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "476萬劑",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "494dc95b-32dd-fc77-d00f-6bb55c4ecff7",
-          "title": "推動COVID-19疫苗接種",
-          "file": "醫療衛生/2021-疫苗接種推動.md",
-          "status": "已達成",
-          "target_date": "2021-03-22",
-          "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "2bb18c46-6790-6a38-79d4-8031eb20e0ce",
@@ -13024,15 +12988,6 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "100元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "0b7c6964-02a5-b28c-769f-f15fcd0f98ec",
-          "title": "擴增COVID-19疫苗接種醫療院所",
-          "file": "醫療衛生/2021-疫苗接種醫療院所3000.md",
-          "status": "已達成",
-          "target_date": "2021-10-31",
-          "target_value": "3000家",
           "last_updated": "2026-01-27"
         },
         {
@@ -13135,12 +13090,48 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "48598d76-3f10-728f-7b60-34496bb3a03f",
-          "title": "移工入境需檢附檢驗報告",
-          "file": "醫療衛生/2021-移工疫情防範.md",
-          "status": "已達成",
-          "target_date": "2021-12-01",
+          "id": "8ec43631-e952-668a-4c60-3c503e2bbd94",
+          "title": "持續監測 COVID-19 疫苗不良反應",
+          "file": "醫療衛生/2021-疫苗不良反應監測.md",
+          "status": "追蹤中",
+          "target_date": null,
           "target_value": null,
+          "last_updated": "2026-01-28"
+        },
+        {
+          "id": "4aba460d-c4a2-9917-7f0e-8e25bc422413",
+          "title": "採購1000萬劑阿斯特捷利康疫苗",
+          "file": "醫療衛生/2021-疫苗採購1000萬劑.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": "1000萬劑",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b8888043-1488-28a8-0360-cfc2f135e311",
+          "title": "採購476萬劑COVID-19疫苗",
+          "file": "醫療衛生/2021-疫苗採購476萬劑.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "476萬劑",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "494dc95b-32dd-fc77-d00f-6bb55c4ecff7",
+          "title": "推動COVID-19疫苗接種",
+          "file": "醫療衛生/2021-疫苗接種推動.md",
+          "status": "已達成",
+          "target_date": "2021-03-22",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "0b7c6964-02a5-b28c-769f-f15fcd0f98ec",
+          "title": "擴增COVID-19疫苗接種醫療院所",
+          "file": "醫療衛生/2021-疫苗接種醫療院所3000.md",
+          "status": "已達成",
+          "target_date": "2021-10-31",
+          "target_value": "3000家",
           "last_updated": "2026-01-27"
         },
         {
@@ -13149,6 +13140,15 @@
           "file": "醫療衛生/2021-疫苗通報系統啟用.md",
           "status": "已達成",
           "target_date": "2021-04-06",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "48598d76-3f10-728f-7b60-34496bb3a03f",
+          "title": "移工入境需檢附檢驗報告",
+          "file": "醫療衛生/2021-移工疫情防範.md",
+          "status": "已達成",
+          "target_date": "2021-12-01",
           "target_value": null,
           "last_updated": "2026-01-27"
         },
@@ -13196,6 +13196,15 @@
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
+        },
+        {
+          "id": "bbb257d5-c30c-ae10-928d-5a74babd6188",
+          "title": "核准家用唾液快篩試劑",
+          "file": "醫療衛生/2022-唾液快篩試劑.md",
+          "status": "已延宕",
+          "target_date": "2022-05-04",
+          "target_value": "1件",
+          "last_updated": "2026-01-26"
         },
         {
           "id": "22a294fb-bb63-1e51-ebf9-f45314e6797b",
@@ -13276,7 +13285,7 @@
           "status": "已延宕",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a56e80ac-adfe-576e-a288-a294e15e9bfc",
@@ -13294,34 +13303,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "b74c3450-aa46-6044-dce6-4e5bb7aa4cf9",
-          "title": "疫苗採購持續監控",
-          "file": "醫療衛生/2022-疫苗採購.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "9a309b07-5311-9dba-e0f7-fde543f78c8b",
-          "title": "COVID-19疫苗採購目標",
-          "file": "醫療衛生/2022-疫苗採購3000萬劑.md",
-          "status": "已延宕",
-          "target_date": "2022-12-31",
-          "target_value": "3000萬劑",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "7173fcce-9501-2947-7ee9-76ba2aa6b3a6",
-          "title": "新世代疫苗基礎劑接種政策研議",
-          "file": "醫療衛生/2022-疫苗接種政策.md",
-          "status": "已延宕",
-          "target_date": "2022-03-24",
-          "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "957a12e0-695e-145b-e710-1bfb1edc677e",
@@ -13339,15 +13321,6 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "1.5元",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "a620d4c3-d031-d103-dd63-5023e0e8f795",
-          "title": "COVID-19疫苗施打計畫",
-          "file": "醫療衛生/2022-疫苗施打計畫.md",
-          "status": "已延宕",
-          "target_date": "2022-03-22",
-          "target_value": null,
           "last_updated": "2026-01-27"
         },
         {
@@ -13378,13 +13351,58 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "bbb257d5-c30c-ae10-928d-5a74babd6188",
-          "title": "核准家用唾液快篩試劑",
-          "file": "醫療衛生/2022-唾液快篩試劑.md",
+          "id": "b74c3450-aa46-6044-dce6-4e5bb7aa4cf9",
+          "title": "疫苗採購持續監控",
+          "file": "醫療衛生/2022-疫苗採購.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "9a309b07-5311-9dba-e0f7-fde543f78c8b",
+          "title": "COVID-19疫苗採購目標",
+          "file": "醫療衛生/2022-疫苗採購3000萬劑.md",
           "status": "已延宕",
-          "target_date": "2022-05-04",
-          "target_value": "1件",
-          "last_updated": "2026-01-26"
+          "target_date": "2022-12-31",
+          "target_value": "3000萬劑",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "7173fcce-9501-2947-7ee9-76ba2aa6b3a6",
+          "title": "新世代疫苗基礎劑接種政策研議",
+          "file": "醫療衛生/2022-疫苗接種政策.md",
+          "status": "已延宕",
+          "target_date": "2022-03-24",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a620d4c3-d031-d103-dd63-5023e0e8f795",
+          "title": "COVID-19疫苗施打計畫",
+          "file": "醫療衛生/2022-疫苗施打計畫.md",
+          "status": "已延宕",
+          "target_date": "2022-03-22",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "b4d3407a-9b63-e7c5-9e27-f8e7284b316a",
+          "title": "疫苗接種證明數位平臺建置",
+          "file": "醫療衛生/2022-疫苗證明平臺.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "3f9a3ba8-2924-40cd-7fd1-028fff4fd044",
+          "title": "疫苗接種證明系統建置",
+          "file": "醫療衛生/2022-疫苗證明系統.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
         },
         {
           "id": "8564aa5a-4b50-66a1-290f-b41f7754cc16",
@@ -13412,24 +13430,6 @@
           "target_date": "2022-12-31",
           "target_value": "5000元",
           "last_updated": "2026-01-26"
-        },
-        {
-          "id": "b4d3407a-9b63-e7c5-9e27-f8e7284b316a",
-          "title": "疫苗接種證明數位平臺建置",
-          "file": "醫療衛生/2022-疫苗證明平臺.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "3f9a3ba8-2924-40cd-7fd1-028fff4fd044",
-          "title": "疫苗接種證明系統建置",
-          "file": "醫療衛生/2022-疫苗證明系統.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
         },
         {
           "id": "15cc7e09-74b7-d19d-def6-3fa49cd0f2dc",
@@ -13495,15 +13495,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "84fcc011-0ce8-0727-a7fb-3c98a1026f7d",
-          "title": "COVID-19疫苗受害保障承諾",
-          "file": "醫療衛生/2023-疫苗受害保障.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "b7bbc953-c26d-d044-455b-d0a1f88e036f",
           "title": "持續查核進口及市售口罩品質",
           "file": "醫療衛生/2023-口罩品質查核.md",
@@ -13517,6 +13508,15 @@
           "title": "建立口罩國家標準及管理系統",
           "file": "醫療衛生/2023-口罩國家標準.md",
           "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "f8924cc7-0eff-f359-b648-b840220cd909",
+          "title": "儘速引進並普及唾液快篩",
+          "file": "醫療衛生/2023-唾液快篩推廣.md",
+          "status": "追蹤中",
           "target_date": null,
           "target_value": null,
           "last_updated": "2026-01-27"
@@ -13564,7 +13564,7 @@
           "status": "已達成",
           "target_date": "2023-04-26",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "4b63894a-4aea-2099-b0bf-eec23f37418c",
@@ -13603,15 +13603,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "60126db3-e50d-1966-fc88-4de13d76b7d9",
-          "title": "增進疫情資訊進入民政系統",
-          "file": "醫療衛生/2023-疫情資訊整合.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "40dbc1a3-3de1-bf1c-45de-967a542e1386",
           "title": "採購及儲備抗病毒藥物",
           "file": "醫療衛生/2023-抗病毒藥物採購.md",
@@ -13621,56 +13612,11 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "29a52767-f043-9a84-1250-28a1b3bc3a51",
-          "title": "400萬劑Pfizer-BioNTech疫苗採購",
-          "file": "醫療衛生/2023-疫苗採購.md",
-          "status": "已達成",
-          "target_date": null,
-          "target_value": "400萬劑",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "cd5b1fcb-298d-af32-5cca-a1c5bc09700d",
-          "title": "疫苗採購3500萬劑",
-          "file": "醫療衛生/2023-疫苗採購3500萬劑.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": "35000000劑",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "173846c9-c83f-29bc-e981-fe4bda0fafd1",
-          "title": "COVID-19疫苗接種推廣措施",
-          "file": "醫療衛生/2023-疫苗接種推廣.md",
-          "status": "已延宕",
-          "target_date": "2023-03-31",
-          "target_value": "200元、500元",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "390e9ac6-a7fb-49be-c4fe-cb1835dfb938",
-          "title": "提升COVID-19疫苗接種率",
-          "file": "醫療衛生/2023-疫苗接種提升.md",
-          "status": "已延宕",
-          "target_date": "2023-03-31",
-          "target_value": "200元",
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "671828c6-bae3-60a9-976f-19e4cf813f8a",
           "title": "地方政府衛生局接種獎勵",
           "file": "醫療衛生/2023-接種獎勵.md",
           "status": "已達成",
           "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "53c6ac6f-6932-1114-a5bf-776a6cf678bc",
-          "title": "新冠疫苗接種證明系統上線",
-          "file": "醫療衛生/2023-疫苗接種證明系統.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
           "target_value": null,
           "last_updated": "2026-01-27"
         },
@@ -13693,24 +13639,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "a278fa93-0e57-e7c2-9d04-0fdfdbd46121",
-          "title": "增開COVID-19疫苗救濟審議會議",
-          "file": "醫療衛生/2023-疫苗救濟增開會議.md",
-          "status": "已延宕",
-          "target_date": "2023-12-31",
-          "target_value": "2次/每月",
-          "last_updated": "2026-01-27"
-        },
-        {
-          "id": "62dc9937-0444-5abe-2137-358315dad2c0",
-          "title": "COVID-19疫苗接種受害救濟加速審議",
-          "file": "醫療衛生/2023-疫苗救濟流程優化.md",
-          "status": "已延宕",
-          "target_date": "2023-10-31",
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
           "id": "33568757-5c4e-e7c3-9402-5db064699024",
           "title": "數位健康證明平臺啟用",
           "file": "醫療衛生/2023-數位健康證明.md",
@@ -13726,7 +13654,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "6個月用量",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "39338028-d528-0359-0762-f4ef5176a9da",
@@ -13753,7 +13681,7 @@
           "status": "已達成",
           "target_date": "2023-01-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "6fbb0758-efd5-c62a-fb0d-24d1d119da85",
@@ -13810,9 +13738,99 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "f8924cc7-0eff-f359-b648-b840220cd909",
-          "title": "儘速引進並普及唾液快篩",
-          "file": "醫療衛生/2023-唾液快篩推廣.md",
+          "id": "60126db3-e50d-1966-fc88-4de13d76b7d9",
+          "title": "增進疫情資訊進入民政系統",
+          "file": "醫療衛生/2023-疫情資訊整合.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "84fcc011-0ce8-0727-a7fb-3c98a1026f7d",
+          "title": "COVID-19疫苗受害保障承諾",
+          "file": "醫療衛生/2023-疫苗受害保障.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "29a52767-f043-9a84-1250-28a1b3bc3a51",
+          "title": "400萬劑Pfizer-BioNTech疫苗採購",
+          "file": "醫療衛生/2023-疫苗採購.md",
+          "status": "已達成",
+          "target_date": null,
+          "target_value": "400萬劑",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "cd5b1fcb-298d-af32-5cca-a1c5bc09700d",
+          "title": "疫苗採購3500萬劑",
+          "file": "醫療衛生/2023-疫苗採購3500萬劑.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": "35000000劑",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "173846c9-c83f-29bc-e981-fe4bda0fafd1",
+          "title": "COVID-19疫苗接種推廣措施",
+          "file": "醫療衛生/2023-疫苗接種推廣.md",
+          "status": "已延宕",
+          "target_date": "2023-03-31",
+          "target_value": "200元、500元",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "390e9ac6-a7fb-49be-c4fe-cb1835dfb938",
+          "title": "提升COVID-19疫苗接種率",
+          "file": "醫療衛生/2023-疫苗接種提升.md",
+          "status": "已延宕",
+          "target_date": "2023-03-31",
+          "target_value": "200元",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "53c6ac6f-6932-1114-a5bf-776a6cf678bc",
+          "title": "新冠疫苗接種證明系統上線",
+          "file": "醫療衛生/2023-疫苗接種證明系統.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": null,
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "a278fa93-0e57-e7c2-9d04-0fdfdbd46121",
+          "title": "增開COVID-19疫苗救濟審議會議",
+          "file": "醫療衛生/2023-疫苗救濟增開會議.md",
+          "status": "已延宕",
+          "target_date": "2023-12-31",
+          "target_value": "2次/每月",
+          "last_updated": "2026-01-27"
+        },
+        {
+          "id": "62dc9937-0444-5abe-2137-358315dad2c0",
+          "title": "COVID-19疫苗接種受害救濟加速審議",
+          "file": "醫療衛生/2023-疫苗救濟流程優化.md",
+          "status": "已延宕",
+          "target_date": "2023-10-31",
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "f7275dfb-6477-8706-892e-388be2314753",
+          "title": "提升COVID-19疫苗覆蓋率",
+          "file": "醫療衛生/2023-疫苗覆蓋率提升.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "f7de58a1-05e5-568a-9993-d4ab724d085e",
+          "title": "建置數位新冠病毒健康證明系統",
+          "file": "醫療衛生/2023-疫苗護照系統.md",
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
@@ -13846,24 +13864,6 @@
           "last_updated": "2026-01-27"
         },
         {
-          "id": "f7275dfb-6477-8706-892e-388be2314753",
-          "title": "提升COVID-19疫苗覆蓋率",
-          "file": "醫療衛生/2023-疫苗覆蓋率提升.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "f7de58a1-05e5-568a-9993-d4ab724d085e",
-          "title": "建置數位新冠病毒健康證明系統",
-          "file": "醫療衛生/2023-疫苗護照系統.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-27"
-        },
-        {
           "id": "6446a8c7-10b7-d6fa-0898-6b4cbbd8710c",
           "title": "個人自用醫療器材數量限制",
           "file": "醫療衛生/2023-醫療器材數量限制.md",
@@ -13879,7 +13879,7 @@
           "status": "已延宕",
           "target_date": "2023-03-31",
           "target_value": "200元 / 500元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "89b321f3-61c5-6e29-a605-039f3b2a5676",
@@ -14017,24 +14017,6 @@
           "last_updated": "2026-01-26"
         },
         {
-          "id": "386e8577-088f-7dab-588a-3d3bd97e568a",
-          "title": "COVID-19 疫苗採購計畫",
-          "file": "醫療衛生/2025-疫苗採購4500萬劑.md",
-          "status": "已延宕",
-          "target_date": "2025-12-31",
-          "target_value": "4500萬劑",
-          "last_updated": "2026-01-26"
-        },
-        {
-          "id": "2adb58c7-f1b1-930c-6854-4939627aac62",
-          "title": "提供疫苗施打",
-          "file": "醫療衛生/2025-疫苗施打.md",
-          "status": "追蹤中",
-          "target_date": null,
-          "target_value": null,
-          "last_updated": "2026-01-26"
-        },
-        {
           "id": "be8fee09-7949-aec5-564f-c40b0420eba2",
           "title": "持續進行用藥監測",
           "file": "醫療衛生/2025-用藥監測.md",
@@ -14053,6 +14035,24 @@
           "last_updated": "2026-01-27"
         },
         {
+          "id": "386e8577-088f-7dab-588a-3d3bd97e568a",
+          "title": "COVID-19 疫苗採購計畫",
+          "file": "醫療衛生/2025-疫苗採購4500萬劑.md",
+          "status": "已延宕",
+          "target_date": "2025-12-31",
+          "target_value": "4500萬劑",
+          "last_updated": "2026-01-26"
+        },
+        {
+          "id": "2adb58c7-f1b1-930c-6854-4939627aac62",
+          "title": "提供疫苗施打",
+          "file": "醫療衛生/2025-疫苗施打.md",
+          "status": "追蹤中",
+          "target_date": null,
+          "target_value": null,
+          "last_updated": "2026-01-26"
+        },
+        {
           "id": "f7acbbc6-69ae-c932-770f-bcbcd5acf385",
           "title": "設置社區心理衛生中心",
           "file": "醫療衛生/2025-社區心理中心71處.md",
@@ -14068,7 +14068,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "163家",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "540707fe-23c8-007d-4b6f-6bbe27a0f688",
@@ -14239,7 +14239,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "25051ebe-bc06-5c63-de25-be203e6e4e5e",
@@ -14308,7 +14308,7 @@
           "status": "已達成",
           "target_date": "2021-01-01",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e27f3907-2aa3-354e-22ab-bac3d3324c51",
@@ -14371,7 +14371,7 @@
           "status": "已達成",
           "target_date": "2025-12-31",
           "target_value": "70000件",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "aa2c5da2-f9d7-7b57-5dcc-3d15c1cc2abd",
@@ -14380,7 +14380,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "e6a5d630-f5b4-6427-2cd7-b142dee94985",
@@ -14389,7 +14389,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "de0fbcdd-0a4b-949e-2e1a-992c84d22421",
@@ -14398,7 +14398,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "0.04mg/kg",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-28"
         },
         {
           "id": "a5730fd4-5000-c187-cfd8-c156552e72ec",
