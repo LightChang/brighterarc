@@ -42,7 +42,7 @@ EXTRACT_SYSTEM_PROMPT='你是一個專門分析台灣政府政策文件的助理
     {
       "title": "承諾標題（簡短描述，20字內）",
       "short_name": "檔名用（20字內，只能用中文、數字、連字號，例如：2025-再生能源20%）",
-      "category": "分類（能源政策、環境保護、經濟發展、社會福利、教育、交通建設、醫療衛生、國防外交、其他）",
+      "category": "分類（必須是以下之一：能源政策、環境保護、經濟發展、社會福利、教育、交通建設、醫療衛生、國防外交、農業、文化政策、食品安全、水資源管理、司法、其他）",
       "text": "承諾的原文摘錄（保持原文，最多200字）",
       "target_date": "目標日期（YYYY-MM-DD 格式，若只有年份則用 YYYY-12-31，若無則為 null）",
       "target_value": "目標數值（如「20%」、「5.6GW」等，若無則為 null）",
@@ -97,6 +97,8 @@ create_commitment_md() {
   local target_value="$7"
   local responsible_agency="$8"
   local source_info="$9"
+  local subject="${10:-}"
+  local content="${11:-}"
 
   # 確保分類目錄存在
   local category_dir="${COMMITMENTS_DIR}/${category}"
@@ -150,6 +152,12 @@ last_updated: "${today}"
 ## 承諾原文
 
 ${text}
+
+## 來源回覆
+
+**主旨**：${subject}
+
+${content}
 
 ## 追蹤紀錄
 
@@ -226,7 +234,8 @@ ${content}"
     # 建立 Markdown
     create_commitment_md \
       "$id" "$title" "$short_name" "$category" "$text" \
-      "$target_date" "$target_value" "$responsible_agency" "$source_info"
+      "$target_date" "$target_value" "$responsible_agency" "$source_info" \
+      "$subject" "$content"
 
     NEW_COUNT=$((NEW_COUNT + 1))
 
@@ -267,6 +276,22 @@ if [[ ! -f "$INPUT_FILE" ]]; then
   exit 1
 fi
 
+# 建立已處理 document_id 集合（從現有 .md 檔案掃描）
+PROCESSED_DOCIDS_FILE="/tmp/extract_processed_docids_$$.txt"
+: > "$PROCESSED_DOCIDS_FILE"
+while IFS= read -r md_file; do
+  sed -n '/^---$/,/^---$/p' "$md_file" | grep '^ *document_id:' | head -1 | sed 's/^[^:]*: *//; s/"//g' >> "$PROCESSED_DOCIDS_FILE"
+done < <(find "$COMMITMENTS_DIR" -name "*.md" -type f 2>/dev/null)
+sort -u "$PROCESSED_DOCIDS_FILE" -o "$PROCESSED_DOCIDS_FILE"
+echo "📋 已處理過的 document_id 數: $(wc -l < "$PROCESSED_DOCIDS_FILE" | tr -d ' ')"
+trap 'rm -f "$PROCESSED_DOCIDS_FILE"' EXIT
+
+# 檢查 document_id 是否已處理過
+document_already_processed() {
+  local doc_id="$1"
+  grep -qxF "$doc_id" "$PROCESSED_DOCIDS_FILE"
+}
+
 # 統計
 TOTAL_DOCS=0
 PROCESSED_DOCS=0
@@ -292,12 +317,19 @@ while IFS= read -r line; do
     continue
   fi
 
+  # 取得 baseId 並檢查是否已處理過
+  BASE_ID="$(printf '%s' "$line" | jq -r '.payload.baseId // .id')"
+  if document_already_processed "$BASE_ID"; then
+    echo "   ⏭️  document_id 已處理過: ${BASE_ID:0:8}... (${SUBJECT:0:40})"
+    continue
+  fi
+
   PROCESSED_DOCS=$((PROCESSED_DOCS + 1))
   echo "[${PROCESSED_DOCS}/${TOTAL_DOCS}] ${SUBJECT:0:50}..."
 
   # 準備來源資訊
   SOURCE_INFO="$(printf '%s' "$line" | jq -c '{
-    document_id: .id,
+    document_id: (.payload.baseId // .id),
     term: .payload.term,
     session_period: .payload.sessionPeriod,
     ey_number: .payload.eyNumber,
@@ -305,6 +337,9 @@ while IFS= read -r line; do
   }')"
 
   extract_from_document "$DOC_ID" "$SUBJECT" "$CONTENT" "$SOURCE_INFO"
+
+  # 標記此 document_id 為已處理
+  echo "$BASE_ID" >> "$PROCESSED_DOCIDS_FILE"
 
   sleep 0.5
 done < <(jq -c '.' "$INPUT_FILE")

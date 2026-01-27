@@ -72,6 +72,17 @@ VERIFY_SYSTEM_PROMPT='你是一個政策分析助理。請判斷這份新文件�
 # 函式
 ########################################
 
+# 跨平台 sed in-place（macOS BSD sed 需要 -i ''，GNU sed 不需要）
+sed_inplace() {
+  if sed --version >/dev/null 2>&1; then
+    # GNU sed
+    sed -i "$@"
+  else
+    # BSD sed (macOS)
+    sed -i '' "$@"
+  fi
+}
+
 # 取得所有承諾清單（id + title）
 get_commitment_list() {
   if [[ ! -f "$INDEX_FILE" ]]; then
@@ -100,7 +111,13 @@ $(printf '%s' "$commitment_list" | jq -r '.[] | "- [\(.id)] \(.title)"')"
     return 1
   fi
 
-  printf '%s' "$response" | jq -c '.related_ids // []'
+  local result
+  if ! result="$(printf '%s' "$response" | jq -c '.related_ids // []' 2>/dev/null)"; then
+    echo "      ⚠️  篩選回應格式錯誤，跳過" >&2
+    echo "[]"
+    return 0
+  fi
+  printf '%s' "$result"
 }
 
 # 精確驗證：確認關聯並取得詳細資訊
@@ -118,6 +135,13 @@ ${commitment_content}"
   if ! response="$(openai_chat_completion "gpt-4o-mini" "$VERIFY_SYSTEM_PROMPT" "$user_message" "json" 2>&1)"; then
     echo '{"is_related": false}'
     return 1
+  fi
+
+  # 驗證回應是有效 JSON
+  if ! printf '%s' "$response" | jq -e '.is_related' >/dev/null 2>&1; then
+    echo "      ⚠️  驗證回應格式錯誤，跳過" >&2
+    echo '{"is_related": false}'
+    return 0
   fi
 
   printf '%s' "$response"
@@ -173,12 +197,12 @@ EOF
   # 如果達成，更新 frontmatter 中的 status
   if [[ "$is_fulfilled" == "true" ]]; then
     # 更新 status 和 last_updated
-    sed -i "s/^status: .*/status: \"已達成\"/" "$file_path"
-    sed -i "s/^last_updated: .*/last_updated: \"${today}\"/" "$file_path"
+    sed_inplace "s/^status: .*/status: \"已達成\"/" "$file_path"
+    sed_inplace "s/^last_updated: .*/last_updated: \"${today}\"/" "$file_path"
     echo "      🎉 狀態變更為「已達成」"
   else
     # 只更新 last_updated
-    sed -i "s/^last_updated: .*/last_updated: \"${today}\"/" "$file_path"
+    sed_inplace "s/^last_updated: .*/last_updated: \"${today}\"/" "$file_path"
   fi
 }
 
@@ -200,9 +224,9 @@ check_date_status() {
     local status target_date last_updated
 
     # 讀取 frontmatter
-    status="$(grep "^status:" "$file" | sed 's/status: *"\?\([^"]*\)"\?/\1/')"
-    target_date="$(grep "^target_date:" "$file" | sed 's/target_date: *"\?\([^"]*\)"\?/\1/')"
-    last_updated="$(grep "^last_updated:" "$file" | sed 's/last_updated: *"\?\([^"]*\)"\?/\1/')"
+    status="$(grep "^status:" "$file" | head -1 | sed 's/^[^:]*: *//; s/"//g')"
+    target_date="$(grep "^target_date:" "$file" | head -1 | sed 's/^[^:]*: *//; s/"//g')"
+    last_updated="$(grep "^last_updated:" "$file" | head -1 | sed 's/^[^:]*: *//; s/"//g')"
 
     # 跳過已達成的
     if [[ "$status" == "已達成" ]]; then
@@ -227,8 +251,8 @@ check_date_status() {
     fi
 
     if [[ "$need_update" == "true" ]]; then
-      sed -i "s/^status: .*/status: \"${new_status}\"/" "$file"
-      sed -i "s/^last_updated: .*/last_updated: \"${today}\"/" "$file"
+      sed_inplace "s/^status: .*/status: \"${new_status}\"/" "$file"
+      sed_inplace "s/^last_updated: .*/last_updated: \"${today}\"/" "$file"
       echo "   📝 $(basename "$file"): 狀態變更為「${new_status}」"
 
       # 追加紀錄
@@ -251,12 +275,16 @@ require_cmd curl jq
 parse_args "$@"
 
 arg_required input INPUT_FILE "輸入 JSONL 檔案"
+arg_optional checkpoint CHECKPOINT_FILE ""
 
 echo "========================================="
 echo "承諾狀態更新"
 echo "========================================="
 echo "輸入檔案: ${INPUT_FILE}"
 echo "承諾目錄: ${COMMITMENTS_DIR}"
+if [[ -n "$CHECKPOINT_FILE" ]]; then
+  echo "斷點檔案: ${CHECKPOINT_FILE}"
+fi
 echo "========================================="
 echo ""
 
@@ -290,6 +318,14 @@ fi
 echo "📋 現有承諾數: ${COMMITMENT_COUNT}"
 echo ""
 
+# Checkpoint：載入已處理的 document ID
+SKIPPED_DOCS=0
+if [[ -n "$CHECKPOINT_FILE" && -f "$CHECKPOINT_FILE" ]]; then
+  CHECKPOINT_COUNT="$(wc -l < "$CHECKPOINT_FILE" | tr -d ' ')"
+  echo "📌 斷點續跑：已處理 ${CHECKPOINT_COUNT} 筆"
+  echo ""
+fi
+
 # 統計
 TOTAL_DOCS=0
 MATCHED_DOCS=0
@@ -311,6 +347,13 @@ while IFS= read -r line; do
     continue
   fi
 
+  # Checkpoint：跳過已處理的文件
+  BASE_ID="$(printf '%s' "$line" | jq -r '.payload.baseId // .id')"
+  if [[ -n "$CHECKPOINT_FILE" && -f "$CHECKPOINT_FILE" ]] && grep -qxF "$BASE_ID" "$CHECKPOINT_FILE"; then
+    SKIPPED_DOCS=$((SKIPPED_DOCS + 1))
+    continue
+  fi
+
   TOTAL_DOCS=$((TOTAL_DOCS + 1))
   echo "[${TOTAL_DOCS}] ${SUBJECT:0:50}..."
 
@@ -329,8 +372,8 @@ while IFS= read -r line; do
 ${CONTENT:0:4000}"
 
   # Step 1: 初步篩選
-  RELATED_IDS="$(screen_related_commitments "$DOC_CONTENT" "$COMMITMENT_LIST")"
-  RELATED_COUNT="$(printf '%s' "$RELATED_IDS" | jq 'length')"
+  RELATED_IDS="$(screen_related_commitments "$DOC_CONTENT" "$COMMITMENT_LIST")" || RELATED_IDS="[]"
+  RELATED_COUNT="$(printf '%s' "$RELATED_IDS" | jq 'length' 2>/dev/null)" || RELATED_COUNT=0
 
   if [[ "$RELATED_COUNT" -eq 0 ]]; then
     echo "   ℹ️  無相關承諾"
@@ -354,17 +397,17 @@ ${CONTENT:0:4000}"
     COMMITMENT_CONTENT="$(read_md_content "$FULL_PATH")"
 
     # 驗證
-    VERIFY_RESULT="$(verify_relationship "$DOC_CONTENT" "$COMMITMENT_CONTENT")"
-    IS_RELATED="$(printf '%s' "$VERIFY_RESULT" | jq -r '.is_related')"
+    VERIFY_RESULT="$(verify_relationship "$DOC_CONTENT" "$COMMITMENT_CONTENT")" || VERIFY_RESULT='{"is_related": false}'
+    IS_RELATED="$(printf '%s' "$VERIFY_RESULT" | jq -r '.is_related' 2>/dev/null)" || IS_RELATED="false"
 
     if [[ "$IS_RELATED" != "true" ]]; then
       echo "      ❌ ${id}: 驗證後不相關"
       continue
     fi
 
-    RELATION_TYPE="$(printf '%s' "$VERIFY_RESULT" | jq -r '.relation_type')"
-    SUMMARY="$(printf '%s' "$VERIFY_RESULT" | jq -r '.summary')"
-    IS_FULFILLED="$(printf '%s' "$VERIFY_RESULT" | jq -r '.is_fulfilled')"
+    RELATION_TYPE="$(printf '%s' "$VERIFY_RESULT" | jq -r '.relation_type // "相關資訊"' 2>/dev/null)" || RELATION_TYPE="相關資訊"
+    SUMMARY="$(printf '%s' "$VERIFY_RESULT" | jq -r '.summary // ""' 2>/dev/null)" || SUMMARY=""
+    IS_FULFILLED="$(printf '%s' "$VERIFY_RESULT" | jq -r '.is_fulfilled // false' 2>/dev/null)" || IS_FULFILLED="false"
 
     echo "      ✅ ${id}: ${RELATION_TYPE}"
 
@@ -374,6 +417,11 @@ ${CONTENT:0:4000}"
 
     sleep 0.3
   done
+
+  # Checkpoint：記錄已處理的文件
+  if [[ -n "$CHECKPOINT_FILE" ]]; then
+    echo "$BASE_ID" >> "$CHECKPOINT_FILE"
+  fi
 
   sleep 0.5
 done < <(jq -c '.' "$INPUT_FILE")
@@ -387,6 +435,9 @@ echo ""
 echo "========================================="
 echo "狀態更新完成"
 echo "========================================="
+if [[ "$SKIPPED_DOCS" -gt 0 ]]; then
+  echo "跳過（已處理）: ${SKIPPED_DOCS} 筆"
+fi
 echo "處理文件: ${TOTAL_DOCS} 筆"
 echo "有相關的: ${MATCHED_DOCS} 筆"
 echo "更新承諾: ${UPDATED_COMMITMENTS} 筆"

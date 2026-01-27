@@ -301,12 +301,12 @@ last_updated: "YYYY-MM-DD"
 2. **精確驗證**（verify_relationship）：讀取承諾 .md 內容，深度分析關聯類型
 
 ### 承諾分類
-能源政策、環境保護、經濟發展、社會福利、教育、交通建設、醫療衛生、國防外交、其他
+能源政策、環境保護、經濟發展、社會福利、教育、交通建設、醫療衛生、國防外交、農業、文化政策、食品安全、水資源管理、司法、其他
 
 ### 初始化歷史資料
 ```bash
 # 掃描所有現有 JSONL 檔案萃取承諾（需要 OPENAI_API_KEY）
-./sources/legislative/init_commitments.sh [--limit N]
+./sources/legislative/init_commitments.sh
 ```
 
 ## 驗證系統正常運作

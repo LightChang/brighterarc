@@ -30,8 +30,8 @@ parse_frontmatter() {
   local file="$1"
   local key="$2"
 
-  # 提取 frontmatter 區塊並找到指定 key
-  sed -n '/^---$/,/^---$/p' "$file" | grep "^${key}:" | head -1 | sed "s/^${key}: *\"\?\([^\"]*\)\"\?/\1/"
+  # 提取 frontmatter 區塊並找到指定 key，移除 key: 前綴和引號
+  sed -n '/^---$/,/^---$/p' "$file" | grep "^${key}:" | head -1 | sed 's/^[^:]*: *//; s/"//g'
 }
 
 ########################################
@@ -51,13 +51,13 @@ echo ""
 # 確保目錄存在
 mkdir -p "$COMMITMENTS_DIR"
 
-# 初始化統計
-declare -A CATEGORY_COUNTS
-declare -A STATUS_COUNTS
-TOTAL_COUNT=0
+# 使用臨時檔案來收集所有承諾資料（避免 bash 3.x 關聯陣列問題）
+TEMP_COMMITMENTS="/tmp/build_index_commitments_$$.json"
+echo "[]" > "$TEMP_COMMITMENTS"
 
 # 開始建立 JSON
 CATEGORIES_JSON="[]"
+TOTAL_COUNT=0
 
 # 掃描所有分類目錄
 for category_dir in "$COMMITMENTS_DIR"/*/; do
@@ -110,14 +110,16 @@ for category_dir in "$COMMITMENTS_DIR"/*/; do
     # 加入陣列
     COMMITMENTS_JSON="$(printf '%s' "$COMMITMENTS_JSON" | jq --argjson c "$commitment_json" '. + [$c]')"
 
+    # 收集到臨時檔案（用於後續統計）
+    jq --argjson c "$commitment_json" '. + [$c]' "$TEMP_COMMITMENTS" > "${TEMP_COMMITMENTS}.tmp"
+    mv "${TEMP_COMMITMENTS}.tmp" "$TEMP_COMMITMENTS"
+
     # 統計
     TOTAL_COUNT=$((TOTAL_COUNT + 1))
-    STATUS_COUNTS["$status"]=$((${STATUS_COUNTS["$status"]:-0} + 1))
   done
 
   # 計算該分類的承諾數
   category_count="$(printf '%s' "$COMMITMENTS_JSON" | jq 'length')"
-  CATEGORY_COUNTS["$category_name"]=$category_count
 
   # 建立分類 JSON
   category_json="$(jq -n \
@@ -135,19 +137,21 @@ for category_dir in "$COMMITMENTS_DIR"/*/; do
   CATEGORIES_JSON="$(printf '%s' "$CATEGORIES_JSON" | jq --argjson c "$category_json" '. + [$c]')"
 done
 
-# 建立狀態摘要
-STATUS_SUMMARY="$(jq -n \
-  --argjson tracking "${STATUS_COUNTS["追蹤中"]:-0}" \
-  --argjson fulfilled "${STATUS_COUNTS["已達成"]:-0}" \
-  --argjson delayed "${STATUS_COUNTS["已延宕"]:-0}" \
-  --argjson stale "${STATUS_COUNTS["無更新"]:-0}" \
-  '{
-    "追蹤中": $tracking,
-    "已達成": $fulfilled,
-    "已延宕": $delayed,
-    "無更新": $stale
-  }'
-)"
+# 使用 jq 從所有承諾資料中計算狀態統計
+STATUS_SUMMARY="$(jq '
+  group_by(.status) |
+  map({key: .[0].status, value: length}) |
+  from_entries |
+  {
+    "追蹤中": (.["追蹤中"] // 0),
+    "已達成": (.["已達成"] // 0),
+    "已延宕": (.["已延宕"] // 0),
+    "無更新": (.["無更新"] // 0)
+  }
+' "$TEMP_COMMITMENTS")"
+
+# 清理臨時檔案
+rm -f "$TEMP_COMMITMENTS"
 
 # 產生最終 JSON
 GENERATED_AT="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
@@ -176,10 +180,10 @@ echo "總承諾數: ${TOTAL_COUNT}"
 echo "分類數: $(printf '%s' "$CATEGORIES_JSON" | jq 'length')"
 echo ""
 echo "狀態統計："
-echo "  追蹤中: ${STATUS_COUNTS["追蹤中"]:-0}"
-echo "  已達成: ${STATUS_COUNTS["已達成"]:-0}"
-echo "  已延宕: ${STATUS_COUNTS["已延宕"]:-0}"
-echo "  無更新: ${STATUS_COUNTS["無更新"]:-0}"
+echo "  追蹤中: $(printf '%s' "$STATUS_SUMMARY" | jq '.["追蹤中"]')"
+echo "  已達成: $(printf '%s' "$STATUS_SUMMARY" | jq '.["已達成"]')"
+echo "  已延宕: $(printf '%s' "$STATUS_SUMMARY" | jq '.["已延宕"]')"
+echo "  無更新: $(printf '%s' "$STATUS_SUMMARY" | jq '.["無更新"]')"
 echo ""
 echo "輸出檔案: ${INDEX_FILE}"
 echo "========================================="
