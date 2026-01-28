@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-01-27T23:42:37Z",
+  "generated_at": "2026-01-28T19:26:21Z",
   "total_count": 1587,
   "status_summary": {
-    "追蹤中": 597,
-    "已達成": 431,
-    "已延宕": 559,
+    "追蹤中": 590,
+    "已達成": 449,
+    "已延宕": 548,
     "無更新": 0
   },
   "categories": [
@@ -19,7 +19,7 @@
           "status": "已延宕",
           "target_date": "2020-03-01",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "7544951e-a7cd-fda9-d16a-be1b61b2e282",
@@ -28,7 +28,7 @@
           "status": "已達成",
           "target_date": "2021-11-11",
           "target_value": "5支",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "87114fc6-f4e9-415d-fedd-132bf6f68e47",
@@ -37,7 +37,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "bf5c1c0f-f05d-edf6-f9c6-bad920072dea",
@@ -55,7 +55,7 @@
           "status": "已延宕",
           "target_date": "2020-12-02",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d57d5644-3103-47a4-021b-4ec2af13d944",
@@ -64,7 +64,7 @@
           "status": "已延宕",
           "target_date": "2020-12-24",
           "target_value": "3萬3110班",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "8f5084c4-8867-35df-b70c-77a95b63e920",
@@ -82,7 +82,7 @@
           "status": "已達成",
           "target_date": "2021-01-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cfa9d8a4-03d9-029a-7d2d-aa92a2752289",
@@ -91,7 +91,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "113fe713-53c4-a7a9-b749-d8d9d5d71d16",
@@ -118,7 +118,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "eaa3b11a-d51b-3fa3-54eb-c40f294388f6",
@@ -127,7 +127,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "43d0bd6b-8808-a2f5-24cc-bb9413fef6d3",
@@ -136,7 +136,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "220000輛",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d20f60c2-9017-7c22-f9db-6baa2945a5cb",
@@ -145,7 +145,7 @@
           "status": "已達成",
           "target_date": "2021-02-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "14b96ff4-57e3-0948-5349-4f26c113636f",
@@ -154,7 +154,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "100%",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "675d6428-799d-7e4a-b65a-17dcba4bf9e9",
@@ -172,7 +172,7 @@
           "status": "已達成",
           "target_date": "2021-11-11",
           "target_value": "5支",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ebfc9078-8460-9599-54ed-6f9e1600b792",
@@ -208,7 +208,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "fe2150b7-02de-6d75-dcdb-e9d490e1a85d",
@@ -217,7 +217,7 @@
           "status": "已延宕",
           "target_date": "2021-03-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e3961b25-4845-ab3e-702a-7cb751a63a3c",
@@ -226,7 +226,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": "年底前公布完整評鑑結果",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e70994dd-7ce8-0dfa-1bf9-e58856d94a47",
@@ -253,7 +253,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6421e6ce-c7d8-d8da-eb0d-3bb4cd4738cd",
@@ -289,7 +289,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ab8f491c-ba8e-744c-6096-437af3523d51",
@@ -298,7 +298,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "25a3dba5-113e-d63d-aefc-f20e2daadc48",
@@ -352,7 +352,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "16ade9ba-42e2-bd64-6e1b-9749b5738fd5",
@@ -388,7 +388,7 @@
           "status": "已延宕",
           "target_date": "2022-03-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "84d8cd36-fa0a-e982-911c-b4a2fbf0117d",
@@ -421,10 +421,10 @@
           "id": "4c0e17a1-ecf8-dfb4-dca6-65720c64235c",
           "title": "提升台61線交通安全水準計畫",
           "file": "交通建設/2023-61線交通安全.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "aca319e5-612f-1113-f59e-d5cd2701cc70",
@@ -433,7 +433,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "4面",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6ff76316-f1d2-bf65-65f5-d8d6af164cb4",
@@ -442,7 +442,7 @@
           "status": "已延宕",
           "target_date": "2023-03-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2cc181a3-f079-6711-0e93-f3ef7ed42336",
@@ -451,7 +451,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "8419341f-9761-7bf2-e906-7cb871d45710",
@@ -505,7 +505,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "212e28b1-015a-9b2e-fed8-ff93792f255b",
@@ -586,7 +586,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "1d3f46e5-46fd-5b89-c642-50b2222c701f",
@@ -613,7 +613,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "bac5ea47-9ad2-ba42-1def-300e8b7666a0",
@@ -649,7 +649,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "54班次",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "8802ea52-4078-7ee8-723a-caa77feaa61c",
@@ -703,7 +703,7 @@
           "status": "已延宕",
           "target_date": "2023-01-25",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f990ef70-0e1c-0b94-e118-68cd3f876b82",
@@ -766,7 +766,7 @@
           "status": "已延宕",
           "target_date": "2021-06-10",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4809ef41-738b-80eb-a98a-4d0111137c78",
@@ -934,10 +934,10 @@
           "id": "f6b9f3fa-47f2-2e51-fe90-0a88035ab4e6",
           "title": "遊覽車安全查驗計畫",
           "file": "交通建設/2023-遊覽車安全查驗.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2021-04-15",
           "target_value": "1189輛",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "9886414b-65a1-fe60-568c-2331beb4e3e0",
@@ -1072,7 +1072,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4afebaf8-8cf9-757c-8498-ac1f0ca015e0",
@@ -1081,7 +1081,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ea0a22d3-2df3-9d87-38b6-d9860ae449c9",
@@ -1090,7 +1090,7 @@
           "status": "已延宕",
           "target_date": "2023-01-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "5170cc20-cd02-6404-ec59-e5402741d459",
@@ -1459,7 +1459,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "857de4d3-263d-7c11-10c8-bc61ecbe8e9b",
@@ -1633,10 +1633,10 @@
           "id": "ac950fb5-9809-4ef1-1b12-163595440310",
           "title": "建立寵物白名單、黑名單",
           "file": "其他/111-寵物白名單黑名單.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2b252e83-4f74-b1cc-0508-c1ffb261ecb4",
@@ -1645,7 +1645,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "5a1030cd-eb26-7a74-f46a-c8ce9696edd3",
@@ -1654,16 +1654,16 @@
           "status": "已延宕",
           "target_date": "2022-04-02",
           "target_value": "6人",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6834ff35-fad8-a0fb-b9a6-663d19490ac4",
           "title": "針對非犬貓物種的管理計劃",
           "file": "其他/111-非犬貓物種管理計劃.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2022-03-10",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "07e9b681-b98f-dd10-cce4-9ed209d79b30",
@@ -1861,7 +1861,7 @@
           "status": "已達成",
           "target_date": "2022-02-21",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "bc546399-a199-dca6-ad08-c64f400ebbd6",
@@ -1870,7 +1870,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "70000件",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6121479f-1597-0862-e067-ef615cc42413",
@@ -1879,7 +1879,7 @@
           "status": "已達成",
           "target_date": "2022-03-07",
           "target_value": "10天",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "8e22dced-ac58-ded0-286e-b9fab2001f35",
@@ -1960,7 +1960,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "9aa0515a-9db3-b705-9ca0-0e7fb926af11",
@@ -2014,7 +2014,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "3300",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0293699a-db32-ec9a-f1b4-2f8c38c1d99c",
@@ -2077,7 +2077,7 @@
           "status": "已達成",
           "target_date": "2023-03-07",
           "target_value": "10天",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2b9bea53-3222-5835-33fd-14889e47cc89",
@@ -2095,7 +2095,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": "24000立方公尺",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "5d66be45-70c3-6a86-acdf-14d090778da5",
@@ -2221,7 +2221,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0af03bd0-2f34-c952-9130-a1e1fc4f75cb",
@@ -2230,7 +2230,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ec91e67b-daab-f428-0b3a-eb40af2e91f8",
@@ -2239,7 +2239,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cdf83653-183c-5d5f-b8eb-e33750aec5cc",
@@ -2281,10 +2281,10 @@
           "id": "30496263-c4d6-be12-6f5d-2981814b6098",
           "title": "清華海峽研究院新竹辦公室查處",
           "file": "其他/2023-清華海峽查處.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2023-11-09",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c0cfb485-df35-e0a8-aa79-3c1de4a6c61c",
@@ -2311,7 +2311,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a87e9336-26b6-905c-b7a8-459f1320a5fb",
@@ -2365,7 +2365,7 @@
           "status": "已延宕",
           "target_date": "2023-02-21",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "b2fb3ea2-da9e-75c1-a752-7688e22e229c",
@@ -2398,10 +2398,10 @@
           "id": "4fb75660-b138-00eb-0783-19ac9a43d248",
           "title": "違章工廠納管及查處進度追蹤",
           "file": "其他/2023-違章工廠查處.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2023-02-28",
           "target_value": "1.8萬家",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "40bceab3-561a-d983-86d3-64087bbc09a2",
@@ -2491,7 +2491,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "39b0adca-4c34-1ddb-2b50-bd40bfba654e",
@@ -2698,7 +2698,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f75467f8-f026-e26b-0edb-36d82c19f26c",
@@ -2752,7 +2752,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "df86fb10-274b-0432-e54b-0e7e3ecbe29f",
@@ -2830,7 +2830,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "30%及60%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f766d9a2-9f3e-0915-9913-137d17b0da3b",
@@ -2866,7 +2866,7 @@
           "status": "已達成",
           "target_date": "2021-07-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "7995b3cf-87fb-95a8-90fd-2c9ab19fa5e9",
@@ -2905,10 +2905,10 @@
           "id": "0cd19c42-6ccc-9b9c-9d00-0e6c4111fb0e",
           "title": "擴大檢察官歷練制度",
           "file": "司法體系/2020-檢察官輪調制度.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2018-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         }
       ]
     },
@@ -2941,7 +2941,7 @@
           "status": "已達成",
           "target_date": "2019-07-26",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "41a50423-53d6-8c40-7f21-bfeb18f99a52",
@@ -3031,7 +3031,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a0c71d07-4853-4c31-260d-95f3ff3577ea",
@@ -3040,7 +3040,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c5ca33c0-4657-99e2-4561-452c984342bb",
@@ -3103,7 +3103,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0db7a453-d887-3fd8-4932-7cf264aaa4c3",
@@ -3130,7 +3130,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "05c8b50e-9dc6-6c17-0084-8a49dab41885",
@@ -3148,7 +3148,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ea0265e3-9aa6-cc0e-a98d-519af36a4b99",
@@ -3157,7 +3157,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "10e8f5e7-639d-f420-647c-8c19800c574f",
@@ -3166,7 +3166,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6a8ba474-1d2a-f98d-7eed-db285f99ea62",
@@ -3202,7 +3202,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "33daa003-bfad-9970-f266-27e4344ee5e7",
@@ -3238,7 +3238,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "63809b77-1f2a-7a6e-fa76-dc1103214a2b",
@@ -3247,7 +3247,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e2f7d9d5-ab0b-0537-549d-d5e56279185c",
@@ -3265,7 +3265,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d7e65705-b3b3-f376-5974-0a730d523127",
@@ -3274,7 +3274,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "8175f18b-42a2-2dd0-b535-8965e8142a2c",
@@ -3364,7 +3364,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "205cc1d4-d4e2-2375-72dc-56562391c024",
@@ -3409,7 +3409,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d1ac8d43-a2ca-1dd3-0766-ade22fa1f650",
@@ -3427,7 +3427,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4c006d6e-8a01-962f-98df-b98a291e430f",
@@ -3436,7 +3436,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2711d5e3-29b2-e107-4cd9-e642a3f54bf4",
@@ -3508,7 +3508,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "66ed83a5-9ad5-f171-ce31-25a430e6f08d",
@@ -3517,7 +3517,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         }
       ]
     },
@@ -3577,7 +3577,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "35%",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c00bb393-c0b0-38ff-c79e-73dd8c611c8f",
@@ -3595,7 +3595,7 @@
           "status": "已延宕",
           "target_date": "2024-12-31",
           "target_value": "200億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e8119e73-0a84-dbca-f26e-78d27056bd37",
@@ -3613,7 +3613,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "3000班",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "fda99fcc-b6e2-d6f0-7356-1161b5c26655",
@@ -3694,7 +3694,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "3億444萬5500元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c1451229-0ebb-78af-b9c4-a6b38bc4368e",
@@ -3721,7 +3721,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "504aa8bb-78ff-d5ca-ec76-1911a37be86e",
@@ -3748,7 +3748,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "86a3418d-ec0e-919a-0aab-b12765b25e79",
@@ -3784,7 +3784,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "3000班",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "7b5d0cf1-6c38-7759-22f2-806e59c0f9c3",
@@ -3811,7 +3811,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "3000班",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "3bf2a804-dca9-bc90-59bd-28addbabdc7b",
@@ -3838,7 +3838,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "4992人次",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "78ec4865-623a-7a9c-dc87-391d9a8de3aa",
@@ -3946,7 +3946,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "3bf2e9cc-9742-5466-161e-922e654afc2c",
@@ -4081,7 +4081,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0f7220bc-1e15-630b-efa9-494848759a41",
@@ -4234,7 +4234,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a5f18f3d-a4c1-1c43-6707-251cfcebc9b5",
@@ -4297,7 +4297,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "27d6a0fb-79b9-a1ec-a309-498c5b1dacd5",
@@ -4333,7 +4333,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "fd0ed2be-a805-8234-d857-4a0ae4d7cb76",
@@ -4492,10 +4492,10 @@
           "id": "3ec1bae5-c7e7-937e-39f5-df2b860db604",
           "title": "天天戶外活動120計畫",
           "file": "教育/戶外活動-120分鐘.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": "120分鐘",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "5731353a-6559-b86b-6207-5f64376e892c",
@@ -4600,7 +4600,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         }
       ]
     },
@@ -4615,16 +4615,16 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ee84b879-626d-e8e4-ef96-1a79dc6456ab",
           "title": "再造歷史現場專案計畫",
           "file": "文化政策/2022-再造歷史現場.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f37f6516-809a-b960-7a19-14b2ecc81d28",
@@ -4651,16 +4651,16 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": "5億3671萬5000元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2a1fc89f-d065-c7de-bf3f-5e865f2c7b5b",
           "title": "擴大編劇人才養成",
           "file": "文化政策/2023-擴大編劇人才養成.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2017-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "52208762-3909-d425-9c6b-4d6362c3238d",
@@ -4810,7 +4810,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         }
       ]
     },
@@ -4942,19 +4942,19 @@
           "id": "850a873b-02c5-1e2e-c07f-3cf795a9e501",
           "title": "瘦身美容契約諮詢及宣導",
           "file": "消費者保護/2023-瘦身美容契約宣導.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a4ad1e54-01ba-a738-92b7-589748da95d6",
           "title": "短期補習班契約查核合格率",
           "file": "消費者保護/2023-短期補習班查核99.99%.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": "99.99%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "1af918e4-7fe5-905d-78af-331cf33fd2e8",
@@ -4963,16 +4963,16 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "8733e083-ab1b-2ac3-d17b-44f4b0442c30",
           "title": "網路教學服務每年抽查5家",
           "file": "消費者保護/2023-網路教學抽查5家.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": "5家",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         }
       ]
     },
@@ -5014,7 +5014,7 @@
           "status": "追蹤中",
           "target_date": "2028-12-31",
           "target_value": "15萬公噸",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "352903e3-ce87-ec50-ab77-ae9c6c17feb5",
@@ -5221,7 +5221,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "27場座談會",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cc2867b5-09be-780a-f58a-2333435abe98",
@@ -5248,7 +5248,7 @@
           "status": "追蹤中",
           "target_date": "2050-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0fe8b015-4037-0ad9-15ae-55e1662b53cf",
@@ -5257,7 +5257,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "20億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ccbe3a63-64f8-448c-25d8-9bdd6e987cb3",
@@ -5389,10 +5389,10 @@
           "id": "3441dfdd-a811-15af-8839-9f5067eb2ee9",
           "title": "提升焚化廠處理效率",
           "file": "環境保護/2023-焚化廠效率提升.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": "2028-12-31",
           "target_value": "11廠及12廠",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e8a219bc-b467-6b91-98af-a4d36ab414dd",
@@ -5743,7 +5743,7 @@
           "status": "追蹤中",
           "target_date": "2027-12-31",
           "target_value": "9廠",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "40511e1b-c283-bd2d-edfd-3344e3ccd684",
@@ -5905,7 +5905,7 @@
           "status": "追蹤中",
           "target_date": "2030-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cf914130-3415-e5ee-0c93-1a309a19f33c",
@@ -5950,7 +5950,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "82c6f09e-075d-2a70-8e7a-5bf1dc8b9c1d",
@@ -6199,7 +6199,7 @@
           "status": "已達成",
           "target_date": "109-04-29",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "99a4b8db-bad2-ec4a-1a85-91f4a2beda12",
@@ -6235,7 +6235,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "88ce9396-966e-201d-c9f3-0ead16641ba0",
@@ -6244,7 +6244,7 @@
           "status": "已延宕",
           "target_date": "113-12-31",
           "target_value": "963人",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "341bbe50-f61b-31e8-6224-4df656e24500",
@@ -6253,7 +6253,7 @@
           "status": "已延宕",
           "target_date": "2021-01-28",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d3aa0f08-ab5d-05c0-804c-977f47133660",
@@ -6280,7 +6280,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c3c3a8a7-20a2-1d46-71cd-174a3d7122f0",
@@ -6379,7 +6379,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c7a81053-c467-c7a2-347e-87d6c8566d0b",
@@ -6397,7 +6397,7 @@
           "status": "已達成",
           "target_date": "2022-03-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0d9cad4d-1e19-dd3f-fa80-a3b21cda0856",
@@ -6424,7 +6424,7 @@
           "status": "已延宕",
           "target_date": "111-03-23",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "13114a02-d07f-773d-909b-a85ca74bc4fd",
@@ -6433,7 +6433,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "34e9c140-21fb-4f20-af8c-50455b8b29a4",
@@ -6469,7 +6469,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "1288人",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "9d5980b0-d341-1efc-180a-9f8fa550c0a8",
@@ -6514,7 +6514,7 @@
           "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "6.3萬公頃",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "80c37336-37e4-974e-d1f4-fb6053875cd7",
@@ -6523,7 +6523,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "1470公頃",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "dcb616f1-13ea-5dd8-629c-61efcdf09984",
@@ -6577,7 +6577,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "6個月",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2fb0c920-95de-5a7b-020d-fa22a88311c2",
@@ -6604,7 +6604,7 @@
           "status": "已達成",
           "target_date": "2020-04-29",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "719b26d4-f99e-9799-af9e-0e547ee9c471",
@@ -6622,7 +6622,7 @@
           "status": "已達成",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "006a5410-a89b-5e06-9f5a-10065eec505e",
@@ -6631,7 +6631,7 @@
           "status": "已達成",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "7599674a-3ace-3f92-41b6-78625a15bc70",
@@ -6640,7 +6640,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "b83e7c69-f352-7836-07c5-19ab867140ed",
@@ -6658,7 +6658,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "21億",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e3de654c-5f2a-9ea1-1b5c-060a8ae3fac1",
@@ -6829,7 +6829,7 @@
           "status": "已達成",
           "target_date": "2021-12-15",
           "target_value": "1730億元、974萬人、1.55兆元、1048萬個",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "36de77d4-440a-a7dd-aad5-ab277cf82557",
@@ -6847,7 +6847,7 @@
           "status": "已達成",
           "target_date": "2021-12-15",
           "target_value": "1730億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f2a65ef3-8424-b358-1b58-c954fe73a1f1",
@@ -7000,7 +7000,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "058c6187-9a6d-e782-3ed0-ffddc8680aee",
@@ -7027,7 +7027,7 @@
           "status": "已達成",
           "target_date": "2022-02-08",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "50fbd8e6-b722-8995-a720-c375930e3be0",
@@ -7036,7 +7036,7 @@
           "status": "已達成",
           "target_date": "2022-01-01",
           "target_value": "25250元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c4d12e65-acfa-2467-1630-604092148024",
@@ -7045,7 +7045,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "640075ab-1a4f-8859-362b-aba6935e7f10",
@@ -7063,7 +7063,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "25250元, 168元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ff09d8a1-7fd3-12b0-d8c2-397d5f7b5179",
@@ -7207,7 +7207,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "ba120b52-a901-27f8-c281-e68eabf2ce84",
@@ -7405,7 +7405,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "9b169e6d-d329-70e5-c80e-0eddeff980b3",
@@ -7423,7 +7423,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "b08c1b17-5239-1a50-f8bf-eed63be593e9",
@@ -7459,7 +7459,7 @@
           "status": "已達成",
           "target_date": "2022-02-08",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f31731b6-9030-3acc-6c9d-6d3634f3b004",
@@ -7495,7 +7495,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "19億元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "5fd02c11-aa9c-0a7b-e4b9-3245b1da31e7",
@@ -7693,7 +7693,7 @@
           "status": "已達成",
           "target_date": "2020-12-31",
           "target_value": "160000+批",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "b65a2379-ddf2-9d07-4467-cdf204c2315e",
@@ -7846,7 +7846,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e5e6ea05-6f75-ca59-259e-9c847c4a7c5e",
@@ -7999,7 +7999,7 @@
           "status": "已延宕",
           "target_date": "2022-01-10",
           "target_value": "20至215元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c3561f77-e3e7-5f2e-f0fb-7251f5cda736",
@@ -8008,7 +8008,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "b0ab5747-8927-2609-a7fd-57d7a8ba6a31",
@@ -8116,7 +8116,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4edd041c-69e4-fb8f-1501-aa277bad3959",
@@ -8197,7 +8197,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "0.97%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "77daa357-dd69-03ea-0c55-a781ccef3d1c",
@@ -8476,7 +8476,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "01c337eb-34d4-7bbe-88d5-16e70a802158",
@@ -8584,7 +8584,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cda81e72-c588-b3d6-e02f-081f146d29ba",
@@ -8908,16 +8908,16 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": "40000戶",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d64c0da7-d90f-a0c5-cb76-1a89ac291e81",
           "title": "110至113年推動社會住宅8萬戶",
           "file": "社會福利/2025-社會住宅8萬戶.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2024-12-31",
           "target_value": "80000戶",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "628d2ab4-881a-144a-81a4-845e08695c4f",
@@ -8986,10 +8986,10 @@
           "id": "4688bd92-4db3-1f85-04d6-a201958c7ed5",
           "title": "網路教學服務契約抽查",
           "file": "社會福利/2025-網路教學抽查.md",
-          "status": "追蹤中",
+          "status": "已達成",
           "target_date": null,
           "target_value": "每年抽查5家",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "1f2015a7-098e-b52b-9adc-9ff8fc93170d",
@@ -9151,7 +9151,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2d5bad5d-4af7-0a50-d029-ea50b6284c8a",
@@ -9178,7 +9178,7 @@
           "status": "已達成",
           "target_date": "2022-03-11",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "223faa93-2d2d-90dc-3df9-0a3decdc76a5",
@@ -9187,7 +9187,7 @@
           "status": "已達成",
           "target_date": "2022-03-11",
           "target_value": "975萬元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d761442f-6d9b-0680-40a1-a9b2e8f78347",
@@ -9196,7 +9196,7 @@
           "status": "已延宕",
           "target_date": "2022-03-11",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "016fb41f-a0dd-ca85-c551-264dfcb5f0a8",
@@ -9205,7 +9205,7 @@
           "status": "已延宕",
           "target_date": "2022-03-11",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "008de77e-310e-9349-2619-243201620d2e",
@@ -9367,7 +9367,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "36e759cc-90f8-3dcb-a4dc-1fb87fdf6958",
@@ -9385,7 +9385,7 @@
           "status": "已延宕",
           "target_date": "2017-12-31",
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a71430a1-d13b-ac80-c3e2-655aef20e432",
@@ -9454,7 +9454,7 @@
           "status": "追蹤中",
           "target_date": "2026-12-31",
           "target_value": "10%",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "3a7911a5-3145-fc83-0ada-4ee795547f43",
@@ -9487,10 +9487,10 @@
           "id": "06fca9f3-3423-52ed-9bee-582bd497ad91",
           "title": "低碳旅遊行程案補助",
           "file": "經濟發展/2021-低碳旅遊補助.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2021-12-31",
           "target_value": "1000萬元",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "9cd1c3f7-6d4b-3158-6cef-9a9d32d6ec62",
@@ -9661,7 +9661,7 @@
           "status": "已延宕",
           "target_date": "2021-11-26",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cda551e8-811b-913d-31b7-a5bca38edfd6",
@@ -9856,10 +9856,10 @@
           "id": "5fa02582-a092-a0e3-2bbe-171c89519daf",
           "title": "優先供應國內市場尿素",
           "file": "經濟發展/2022-尿素供應優先.md",
-          "status": "已延宕",
+          "status": "已達成",
           "target_date": "2022-03-31",
           "target_value": "至少供貨到明年1月底，最長到3月底",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "12502e36-bd53-7f77-39f1-62ce3a9d403a",
@@ -10120,7 +10120,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "5.4%",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cf4229c2-585c-2fc2-26c5-211a376dc184",
@@ -10210,7 +10210,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "20億元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "99b57ac5-9732-2374-c957-fcaa1f79e8c7",
@@ -10363,7 +10363,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": "1兆元",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a4d5c6b4-f215-2562-9eaf-3b04a28144f6",
@@ -10372,7 +10372,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "61c84a3a-36a5-ff14-4be9-75c4c6ce69bd",
@@ -10435,7 +10435,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "db62b0af-b41e-f296-19f9-e3bbb6c3df09",
@@ -10480,7 +10480,7 @@
           "status": "已達成",
           "target_date": "2023-02-23",
           "target_value": "88家稽查目標",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "7a124047-70c2-9415-5d3d-959d201d79d8",
@@ -10597,7 +10597,7 @@
           "status": "已達成",
           "target_date": "2020-11-20",
           "target_value": "5年",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "29e758ef-1d4d-84e2-75a3-928e65d91913",
@@ -10651,7 +10651,7 @@
           "status": "已延宕",
           "target_date": "2023-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "165fd66a-7078-31a6-47c7-3f5e6a3fe85d",
@@ -10669,7 +10669,7 @@
           "status": "已達成",
           "target_date": "2023-12-31",
           "target_value": "20%",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cdfb7057-ace0-f6a7-a0b4-ffbe12a6e5a3",
@@ -10705,7 +10705,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4b1fbb28-3711-2ea8-f22f-380e817e37e5",
@@ -10912,7 +10912,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "2138億元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "229c6c7e-2760-234d-57e4-a7aa2bff26a0",
@@ -11200,7 +11200,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "3be32254-f086-f685-fdca-9498c5efd90f",
@@ -11344,7 +11344,7 @@
           "status": "已達成",
           "target_date": "2025-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "bac127c9-b188-66e3-6e97-c700c59c484f",
@@ -11416,7 +11416,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4463614f-3859-b8b0-da71-e1aaeccb3c22",
@@ -11434,7 +11434,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "4d69f2fc-f472-24f2-f542-bfd252956415",
@@ -11506,7 +11506,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "37a5b8f4-d247-6125-8f4c-71b059f7807e",
@@ -11692,7 +11692,7 @@
           "status": "已延宕",
           "target_date": "2022-12-31",
           "target_value": "1546萬瓩至1696萬瓩",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "022573dd-0226-1541-a578-95185ee145a8",
@@ -11944,7 +11944,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "1000MW",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "14190fe9-25d7-29f7-ebef-425c952c1184",
@@ -12196,7 +12196,7 @@
           "status": "已延宕",
           "target_date": "2025-12-31",
           "target_value": "3500小時",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "f13f4e90-a77b-0653-873f-049a0ec78dcb",
@@ -12475,7 +12475,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "979af875-95d5-24d2-61d0-a2d598cb9f34",
@@ -12544,7 +12544,7 @@
           "status": "已達成",
           "target_date": "2022-01-10",
           "target_value": "補助每包20至215元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e7fc6b9d-4898-83c1-3ed2-b99e63332641",
@@ -12589,7 +12589,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "每隻最高補助25元，獎勵雞蛋生產3元/台斤",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e8b84aab-946f-d1dd-fa5c-2f567b523842",
@@ -12733,7 +12733,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6af41830-e3a4-7950-850b-d6ee521296c1",
@@ -12916,7 +12916,7 @@
           "status": "已延宕",
           "target_date": "2021-11-30",
           "target_value": "1.3到1.4億",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "609cfaac-2e95-db4c-963b-ca59b33c3215",
@@ -12952,7 +12952,7 @@
           "status": "已達成",
           "target_date": "2021-08-16",
           "target_value": "3億444萬5500元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "0d7034a4-1587-a55d-36a2-4bbca488a422",
@@ -12961,7 +12961,7 @@
           "status": "已延宕",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "2bb18c46-6790-6a38-79d4-8031eb20e0ce",
@@ -13141,7 +13141,7 @@
           "status": "已達成",
           "target_date": "2021-04-06",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "48598d76-3f10-728f-7b60-34496bb3a03f",
@@ -13240,7 +13240,7 @@
           "status": "已延宕",
           "target_date": "2022-09-30",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e55b8dc6-091f-2f72-74ce-c0e0587089d3",
@@ -13285,7 +13285,7 @@
           "status": "已延宕",
           "target_date": "2021-12-01",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "a56e80ac-adfe-576e-a288-a294e15e9bfc",
@@ -13618,7 +13618,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "c2b0ddea-6924-7127-4a45-9df0f3d8269b",
@@ -13645,7 +13645,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "cfcf1965-1aeb-138f-4edb-4e4cac187fb9",
@@ -13654,7 +13654,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": "6個月用量",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "39338028-d528-0359-0762-f4ef5176a9da",
@@ -13681,7 +13681,7 @@
           "status": "已達成",
           "target_date": "2023-01-31",
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "6fbb0758-efd5-c62a-fb0d-24d1d119da85",
@@ -13780,7 +13780,7 @@
           "status": "已延宕",
           "target_date": "2023-03-31",
           "target_value": "200元、500元",
-          "last_updated": "2026-01-26"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "390e9ac6-a7fb-49be-c4fe-cb1835dfb938",
@@ -13942,7 +13942,7 @@
           "status": "已達成",
           "target_date": "2022-12-31",
           "target_value": "9000萬元",
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "d596c726-7fd9-8cfd-967d-dd9becf5ae1f",
@@ -13951,7 +13951,7 @@
           "status": "已延宕",
           "target_date": "2021-12-31",
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e0bcfa1e-26be-61ac-7270-d6e2e4eb131c",
@@ -14068,7 +14068,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": "163家",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "540707fe-23c8-007d-4b6f-6bbe27a0f688",
@@ -14266,7 +14266,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-27"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "79e54689-4f0e-fe47-b858-a5d195171b56",
@@ -14371,7 +14371,7 @@
           "status": "已達成",
           "target_date": "2025-12-31",
           "target_value": "70000件",
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "aa2c5da2-f9d7-7b57-5dcc-3d15c1cc2abd",
@@ -14380,7 +14380,7 @@
           "status": "已達成",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "e6a5d630-f5b4-6427-2cd7-b142dee94985",
@@ -14389,7 +14389,7 @@
           "status": "追蹤中",
           "target_date": null,
           "target_value": null,
-          "last_updated": "2026-01-28"
+          "last_updated": "2026-01-29"
         },
         {
           "id": "de0fbcdd-0a4b-949e-2e1a-992c84d22421",
