@@ -154,8 +154,10 @@ echo "📥 檢查現有 Release..."
 EXISTING_FILE=""
 RELEASE_EXISTS=""
 
+set +e
 gh_release_exists "$RELEASE_TAG"
 release_check_result=$?
+set -e
 
 if [[ $release_check_result -eq 2 ]]; then
   # 網路錯誤，無法確認狀態，終止腳本避免覆蓋資料
