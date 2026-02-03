@@ -110,6 +110,45 @@
       background: #f9f9f9;
       border-radius: 4px;
       margin-bottom: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .category-header:hover {
+      background: #f0f0f0;
+    }
+
+    .category-header .toggle-icon {
+      transition: transform 0.2s;
+    }
+
+    .category-header.expanded .toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .category-items {
+      display: none;
+    }
+
+    .category-items.expanded {
+      display: block;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .search-hint {
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 4px;
     }
 
     .commitment-item {
@@ -272,6 +311,11 @@
 
       <div class="filters">
         <div class="filter-group">
+          <label>搜尋標題</label>
+          <input type="text" id="searchBox" class="search-box" placeholder="輸入關鍵字搜尋...">
+          <div class="search-hint">空白 = OR，+ = AND（例：交通+安全）</div>
+        </div>
+        <div class="filter-group">
           <label>狀態篩選</label>
           <select id="statusFilter">
             <option value="">全部狀態</option>
@@ -343,40 +387,96 @@
       });
     }
 
+    // 搜尋邏輯：空白=OR，+=AND
+    function matchSearch(title, searchText) {
+      if (!searchText.trim()) return true;
+
+      const lowerTitle = title.toLowerCase();
+      // 先用空白分割成 OR 條件
+      const orTerms = searchText.toLowerCase().split(/\s+/).filter(t => t);
+
+      // 對每個 OR 條件，檢查是否匹配（AND 條件用 + 連接）
+      return orTerms.some(orTerm => {
+        const andTerms = orTerm.split('+').filter(t => t);
+        return andTerms.every(term => lowerTitle.includes(term));
+      });
+    }
+
     // 渲染列表
     function renderList() {
       const statusFilter = document.getElementById('statusFilter').value;
       const categoryFilter = document.getElementById('categoryFilter').value;
+      const searchText = document.getElementById('searchBox').value;
 
       let html = '';
 
-      indexData.categories.forEach(category => {
-        if (categoryFilter && category.name !== categoryFilter) return;
+      // 處理並排序分類
+      const processedCategories = indexData.categories
+        .map(category => {
+          // 篩選承諾
+          const filteredCommitments = category.commitments.filter(c =>
+            (!statusFilter || c.status === statusFilter) &&
+            matchSearch(c.title, searchText)
+          );
 
-        const filteredCommitments = category.commitments.filter(c =>
-          !statusFilter || c.status === statusFilter
+          // 按 last_updated 排序（新到舊）
+          filteredCommitments.sort((a, b) =>
+            (b.last_updated || '').localeCompare(a.last_updated || '')
+          );
+
+          // 找出該分類最新更新日期
+          const latestDate = filteredCommitments.length > 0
+            ? filteredCommitments[0].last_updated
+            : null;
+
+          return {
+            ...category,
+            filteredCommitments,
+            latestDate
+          };
+        })
+        .filter(cat =>
+          (!categoryFilter || cat.name === categoryFilter) &&
+          cat.filteredCommitments.length > 0
+        )
+        // 按分類最新日期排序（新到舊）
+        .sort((a, b) =>
+          (b.latestDate || '').localeCompare(a.latestDate || '')
         );
 
-        if (filteredCommitments.length === 0) return;
-
+      processedCategories.forEach(category => {
+        const categoryId = category.name.replace(/\s+/g, '-');
         html += `
           <div class="category-section">
-            <div class="category-header">${category.name} (${filteredCommitments.length})</div>
-            ${filteredCommitments.map(c => `
-              <div class="commitment-item" data-file="${c.file}" onclick="loadCommitment('${c.file}')">
-                <div class="commitment-title">${c.title}</div>
-                <div class="commitment-meta">
-                  <span class="status-badge ${c.status}">${c.status}</span>
-                  ${c.target_date ? `<span>📅 ${c.target_date}</span>` : ''}
+            <div class="category-header" onclick="toggleCategory('${categoryId}')">
+              <span>${category.name} (${category.latestDate || '-'})</span>
+              <span class="toggle-icon">▶</span>
+            </div>
+            <div class="category-items" id="cat-${categoryId}">
+              ${category.filteredCommitments.map(c => `
+                <div class="commitment-item" data-file="${c.file}" onclick="loadCommitment('${c.file}')">
+                  <div class="commitment-title">${c.title}</div>
+                  <div class="commitment-meta">
+                    <span class="status-badge ${c.status}">${c.status}</span>
+                    ${c.target_date ? `<span>📅 ${c.target_date}</span>` : ''}
+                  </div>
                 </div>
-              </div>
-            `).join('')}
+              `).join('')}
+            </div>
           </div>
         `;
       });
 
       document.getElementById('commitmentList').innerHTML = html ||
         '<div class="empty-state">沒有符合條件的承諾</div>';
+    }
+
+    // 切換分類展開/收合
+    function toggleCategory(categoryId) {
+      const header = document.querySelector(`#cat-${categoryId}`).previousElementSibling;
+      const items = document.getElementById(`cat-${categoryId}`);
+      header.classList.toggle('expanded');
+      items.classList.toggle('expanded');
     }
 
     // 載入承諾詳情
@@ -474,6 +574,7 @@
     // 事件監聽
     document.getElementById('statusFilter').addEventListener('change', renderList);
     document.getElementById('categoryFilter').addEventListener('change', renderList);
+    document.getElementById('searchBox').addEventListener('input', renderList);
 
     // 初始化
     loadIndex();
