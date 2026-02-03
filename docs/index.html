@@ -458,6 +458,7 @@
                   <div class="commitment-title">${c.title}</div>
                   <div class="commitment-meta">
                     <span class="status-badge ${c.status}">${c.status}</span>
+                    <span>🔄 ${c.last_updated || '-'}</span>
                     ${c.target_date ? `<span>📅 ${c.target_date}</span>` : ''}
                   </div>
                 </div>
