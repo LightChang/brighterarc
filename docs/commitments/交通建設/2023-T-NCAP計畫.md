@@ -2,7 +2,7 @@
 id: "2cc181a3-f079-6711-0e93-f3ef7ed42336"
 title: "完成臺灣新車安全評等計畫"
 category: "交通建設"
-status: "已延宕"
+status: "已達成"
 target_date: "2023-12-31"
 target_value: null
 responsible_agency: "交通部"
@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國110年12月24日院臺施字第1100099143號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc"
 created_at: "2026-01-26"
-last_updated: "2026-01-29"
+last_updated: "2026-02-05"
 ---
 
 ## 承諾原文
@@ -54,4 +54,11 @@ last_updated: "2026-01-29"
 **文件編號**：（行政院函　中華民國110年12月24日院臺施字第1100099143號）
 **來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc
 **內容摘要**：新建動態模擬檢測實驗室預計111年第4季建置完竣，並於當季開始試營運，符合承諾內容。
+**AI 判斷**：達成證據
+
+### 2026-02-05 [狀態變更]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國110年12月15日院臺施字第1100098444號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc
+**內容摘要**：新建動態模擬檢測實驗室預計111年第4季建置完畢並開始試營運，符合承諾內容。
 **AI 判斷**：達成證據
