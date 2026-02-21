@@ -21,9 +21,18 @@
   <meta property="og:locale" content="zh_TW">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="政策承諾追蹤 - BrighterArc">
   <meta name="twitter:description" content="追蹤台灣立法院 1,587 個政策承諾的執行進度">
+  <meta name="twitter:image" content="https://brighterarc.weiqi.kids/og-image.svg">
+
+  <!-- Open Graph Image -->
+  <meta property="og:image" content="https://brighterarc.weiqi.kids/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Performance -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -138,6 +147,64 @@
     .stat.fulfilled { background: #e8f5e9; color: #2e7d32; }
     .stat.delayed { background: #fff3e0; color: #ef6c00; }
     .stat.stale { background: #fafafa; color: #757575; }
+
+    /* 說明區塊 */
+    .about-section {
+      padding: 12px 20px;
+      background: #f9f9f9;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 0.8rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .about-section a {
+      color: #1565c0;
+      text-decoration: none;
+    }
+
+    .about-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* 分享按鈕 */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      background: #e3f2fd;
+      color: #1565c0;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .share-btn:hover {
+      background: #bbdefb;
+    }
+
+    .share-btn.copied {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .detail-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .detail-header h1 {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
 
     /* 篩選器 */
     .filters {
@@ -386,6 +453,11 @@
         </div>
       </div>
 
+      <div class="about-section">
+        本系統每日自動從立法院開放資料平台抓取資料，使用 AI 技術萃取政策承諾並追蹤執行進度。<br>
+        <a href="https://data.ly.gov.tw/" target="_blank" rel="noopener">📎 資料來源：立法院開放資料服務平台</a>
+      </div>
+
       <div class="filters">
         <div class="filter-group">
           <label>搜尋標題</label>
@@ -598,6 +670,23 @@
       return result;
     }
 
+    // 複製連結功能
+    async function copyShareLink(commitmentId) {
+      const url = `${window.location.origin}${window.location.pathname}#${commitmentId}`;
+      try {
+        await navigator.clipboard.writeText(url);
+        const btn = document.querySelector('.share-btn');
+        btn.innerHTML = '✅ 已複製';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = '🔗 複製連結';
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        alert('複製失敗，請手動複製網址');
+      }
+    }
+
     // 渲染詳情
     function renderDetail(meta, content) {
       const statusIcons = {
@@ -609,7 +698,10 @@
 
       document.getElementById('mainContent').innerHTML = `
         <div class="commitment-detail">
-          <h1>${statusIcons[meta.status] || ''} ${meta.title}</h1>
+          <div class="detail-header">
+            <h1>${statusIcons[meta.status] || ''} ${meta.title}</h1>
+            <button class="share-btn" onclick="copyShareLink('${meta.id}')">🔗 複製連結</button>
+          </div>
 
           <div class="detail-meta">
             <div class="meta-item">
