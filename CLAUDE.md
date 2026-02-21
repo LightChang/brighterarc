@@ -327,3 +327,46 @@ curl -s -H "api-key: ${QDRANT_API_KEY}" "${QDRANT_URL}/collections/legislative_r
 # 5. 檢查承諾索引
 jq '.total_count, .status_summary' docs/commitments/index.json
 ```
+
+## 前端優化工具
+
+### SEO/AEO 優化
+
+當需要優化 `docs/` 目錄的前端頁面 SEO 時，參考以下文件：
+
+| 文件 | 用途 |
+|------|------|
+| `/seo/CLAUDE.md` | SEO/AEO 完整規則庫（JSON-LD Schema、SGE 標記） |
+| `/seo/writer/CLAUDE.md` | Writer 執行流程 |
+| `/seo/review/CLAUDE.md` | Reviewer 檢查清單 |
+
+### 網站改版流程
+
+當需要對 `docs/` 前端進行改版時，參考 `/revamp/CLAUDE.md`：
+
+| 階段 | 目的 | 指南位置 |
+|------|------|---------|
+| 0-positioning | 品牌定位 | `/revamp/0-positioning/CLAUDE.md` |
+| 1-discovery | 現況盤點 | `/revamp/1-discovery/CLAUDE.md` |
+| 2-competitive | 競品分析 | `/revamp/2-competitive/CLAUDE.md` |
+| 3-analysis | 差距分析 | `/revamp/3-analysis/CLAUDE.md` |
+| 4-strategy | 改版策略 | `/revamp/4-strategy/CLAUDE.md` |
+| 5-content-spec | 內容規格 | `/revamp/5-content-spec/CLAUDE.md` |
+| final-review | 驗收檢查 | `/revamp/final-review/CLAUDE.md` |
+
+**健檢工具**：
+```bash
+# 網站健檢（本地 Lighthouse）
+./revamp/tools/site-audit.sh https://lightchang.github.io/brighterarc/
+
+# 競品分析
+./revamp/tools/competitive-audit.sh [url1] [url2] [url3]
+```
+
+### 任務完成品質關卡
+
+每次任務完成前，執行 `/prompt/任務完成品質關卡.md` 的檢查清單：
+
+1. **連結檢查** - 無 404 內部連結
+2. **SEO 檢查**（若修改 docs/）- Meta、Schema、SGE 標記完整
+3. **Git 狀態檢查** - 變更已 commit，message 清楚
