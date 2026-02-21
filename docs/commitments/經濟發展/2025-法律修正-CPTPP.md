@@ -2,7 +2,7 @@
 id: "2a3ac60f-068c-7ee9-99b2-c17ef79a7371"
 title: "完成各項法律修正以符合CPTPP標準"
 category: "經濟發展"
-status: "已延宕"
+status: "已達成"
 target_date: "2022-12-31"
 target_value: null
 responsible_agency: "經濟部"
@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國111年3月16日院臺專字第1110083220號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc"
 created_at: "2026-01-26"
-last_updated: "2026-01-26"
+last_updated: "2026-02-22"
 ---
 
 ## 承諾原文
@@ -34,3 +34,10 @@ last_updated: "2026-01-26"
 ### 2026-01-26 [狀態變更]
 **狀態**：追蹤中 → 已延宕
 **原因**：目標日期 2022-12-31 已過
+
+### 2026-02-22 [狀態變更]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國110年12月24日院臺施字第1100099143號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc
+**內容摘要**：文件中提及完成部分條文修正以展現國際規範的遵守，顯示承諾已達成。
+**AI 判斷**：達成證據
