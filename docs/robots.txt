@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lightchang.github.io/brighterarc/sitemap.xml
+Sitemap: https://brighterarc.weiqi.kids/sitemap.xml

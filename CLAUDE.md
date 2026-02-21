@@ -357,7 +357,7 @@ jq '.total_count, .status_summary' docs/commitments/index.json
 **健檢工具**：
 ```bash
 # 網站健檢（本地 Lighthouse）
-./revamp/tools/site-audit.sh https://lightchang.github.io/brighterarc/
+./revamp/tools/site-audit.sh https://brighterarc.weiqi.kids/
 
 # 競品分析
 ./revamp/tools/competitive-audit.sh [url1] [url2] [url3]
