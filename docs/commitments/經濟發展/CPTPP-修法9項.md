@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國110年10月25日院臺專字第1100095787號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/110/97/LCIDC01_1109701_00007.doc"
 created_at: "2026-02-22"
-last_updated: "2026-03-02"
+last_updated: "2026-03-03"
 ---
 
 ## 承諾原文
@@ -58,3 +58,10 @@ last_updated: "2026-03-02"
 **來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc
 **內容摘要**：文件顯示臺灣已完成9項CPTPP相關法律修正，並獲得成員國正面反應，顯示參與準備工作有成效。
 **AI 判斷**：達成證據
+
+### 2026-03-03 [進度更新]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國110年12月24日院臺專字第1100099578號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc
+**內容摘要**：新文件提到的教學數位化及健康措施與CPTPP承諾無直接關聯，主要集中於教育和視力保健。
+**AI 判斷**：相關資訊
