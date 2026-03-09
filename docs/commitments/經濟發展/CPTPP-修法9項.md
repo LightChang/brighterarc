@@ -2,7 +2,7 @@
 id: "71f35ea7-f263-5f2e-f056-32b6b14e9f49"
 title: "完成CPTPP相關修法"
 category: "經濟發展"
-status: "追蹤中"
+status: "已達成"
 target_date: null
 target_value: "9項"
 responsible_agency: null
@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國110年10月25日院臺專字第1100095787號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/110/97/LCIDC01_1109701_00007.doc"
 created_at: "2026-02-22"
-last_updated: "2026-03-03"
+last_updated: "2026-03-10"
 ---
 
 ## 承諾原文
@@ -65,3 +65,10 @@ last_updated: "2026-03-03"
 **來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc
 **內容摘要**：新文件提到的教學數位化及健康措施與CPTPP承諾無直接關聯，主要集中於教育和視力保健。
 **AI 判斷**：相關資訊
+
+### 2026-03-10 [狀態變更]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國111年3月16日院臺專字第1110083220號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc
+**內容摘要**：文件證明台灣已完成9項CPTPP相關修正，並持續與會員國交流，顯示參與準備工作已取得初步成效。
+**AI 判斷**：達成證據
