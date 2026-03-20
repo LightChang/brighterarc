@@ -2,7 +2,7 @@
 id: "a4d5c6b4-f215-2562-9eaf-3b04a28144f6"
 title: "推動臺灣加入CPTPP"
 category: "經濟發展"
-status: "追蹤中"
+status: "已達成"
 target_date: null
 target_value: null
 responsible_agency: null
@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國111年3月16日院臺專字第1110083220號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc"
 created_at: "2026-01-27"
-last_updated: "2026-03-19"
+last_updated: "2026-03-21"
 ---
 
 ## 承諾原文
@@ -87,3 +87,10 @@ last_updated: "2026-03-19"
 **來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc
 **內容摘要**：文件更新了台灣加入CPTPP的進展，指出已提交申請及相關措施的詳細說明。
 **AI 判斷**：進度更新
+
+### 2026-03-21 [狀態變更]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國111年3月16日院臺專字第1110083220號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc
+**內容摘要**：文件證實台灣已於民國110年9月22日遞交加入CPTPP的申請，符合承諾要求。
+**AI 判斷**：達成證據
