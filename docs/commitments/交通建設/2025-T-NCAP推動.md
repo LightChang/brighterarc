@@ -2,7 +2,7 @@
 id: "ea0a22d3-2df3-9d87-38b6-d9860ae449c9"
 title: "推動T-NCAP計畫"
 category: "交通建設"
-status: "已延宕"
+status: "已達成"
 target_date: "2023-01-31"
 target_value: null
 responsible_agency: "交通部"
@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國110年12月24日院臺施字第1100099143號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/111/34/LCIDC01_1113401_00006.doc"
 created_at: "2026-01-26"
-last_updated: "2026-01-29"
+last_updated: "2026-03-23"
 ---
 
 ## 承諾原文
@@ -48,3 +48,10 @@ last_updated: "2026-01-29"
 **來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/49/LCIDC01_1114901_00007.doc
 **內容摘要**：文件內容涉及工廠登記與外籍移工聘用的進度更新，與承諾中的安全評價項目無直接關聯。
 **AI 判斷**：進度更新
+
+### 2026-03-23 [狀態變更]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國111年3月18日院臺專字第1110083922號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/46/LCIDC01_1114601_00005.doc
+**內容摘要**：文件證明了計畫已在預定時間內達成，並提供了執行進度和融資比率等詳細訊息。
+**AI 判斷**：達成證據
