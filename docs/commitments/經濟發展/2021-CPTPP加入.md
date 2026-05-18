@@ -13,7 +13,7 @@ source:
   ey_number: "（行政院函　中華民國110年1月15日院臺施字第1100080341號）"
   url: "https://lci.ly.gov.tw/LyLCEW/communique1/work/110/25/LCIDC01_1102502_00002.doc"
 created_at: "2026-01-26"
-last_updated: "2026-01-27"
+last_updated: "2026-05-19"
 ---
 
 ## 承諾原文
@@ -58,3 +58,10 @@ last_updated: "2026-01-27"
 **來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/109/04/LCIDC01_1090401_00005.doc
 **內容摘要**：文件更新了臺灣加入CPTPP的進展，包括法規調整、影響評估及國內溝通情況。未來將繼續與成員國接觸以爭取共識。
 **AI 判斷**：進度更新
+
+### 2026-05-19 [進度更新]
+**來源類型**：立法院答復
+**文件編號**：（行政院函　中華民國111年3月11日院臺專字第1110083232號）
+**來源連結**：https://lci.ly.gov.tw/LyLCEW/communique1/work/111/42/LCIDC01_1114201_00006.doc
+**內容摘要**：該文件中提到的CPTPP相關內容顯示政府持續對於成員國接觸，為加入CPTPP的過程中重要的一步。
+**AI 判斷**：相關資訊
